@@ -1,0 +1,65 @@
+[
+  {
+    "asset": "asphalt_02",
+    "source": "https://polyhaven.com/a/asphalt_02",
+    "license": "CC0",
+    "maps": "diffuse, OpenGL normal, roughness; roughness inverted into Unity smoothness alpha"
+  },
+  {
+    "asset": "concrete_wall_003",
+    "source": "https://polyhaven.com/a/concrete_wall_003",
+    "license": "CC0",
+    "maps": "diffuse, OpenGL normal, roughness; roughness inverted into Unity smoothness alpha"
+  },
+  {
+    "asset": "concrete_floor_worn_001",
+    "source": "https://polyhaven.com/a/concrete_floor_worn_001",
+    "license": "CC0",
+    "maps": "diffuse, OpenGL normal, roughness; roughness inverted into Unity smoothness alpha"
+  },
+  {
+    "asset": "concrete_tile_facade",
+    "source": "https://polyhaven.com/a/concrete_tile_facade",
+    "license": "CC0",
+    "maps": "diffuse, OpenGL normal, roughness; roughness inverted into Unity smoothness alpha"
+  },
+  {
+    "asset": "Noto Sans TC",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanstc",
+    "license": "SIL Open Font License 1.1"
+  },
+  {
+    "asset": "Noto Sans CJK TC Regular static font",
+    "source": "https://github.com/notofonts/noto-cjk/tree/main/Sans/OTF/TraditionalChinese",
+    "license": "SIL Open Font License 1.1",
+    "file": "Assets/TaiwanRider/Art/Fonts/NotoSansTC.otf"
+  },
+  {
+    "asset": "Original metric scooter, sedan, building meshes, signs, sky shader and synthetic engine",
+    "source": "Tools/model_assets.py and Tools/prepare_assets.py",
+    "license": "Original project work",
+    "details": "Scooter dimensions based on publicly stated Yamaha AXIS Z specifications; original generic mesh with no Yamaha logo. Sedan is fictional. Shop names and placement are illustrative, not a survey."
+  },
+  {
+    "asset": "Gongguan road centre lines",
+    "source": "https://www.openstreetmap.org/way/316698035",
+    "license": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors",
+    "license_url": "https://www.openstreetmap.org/copyright",
+    "source_file": "gongguan-osm.json",
+    "derived_file": "Assets/TaiwanRider/Data/RouteSurvey.json",
+    "details": "OSM centreline and junction used. Width 12.4 m is an estimate; street elevation, facades, markings and shop identities are reconstructed."
+  },
+  {
+    "asset": "Noto Sans CJK TC Regular static font",
+    "source": "https://github.com/notofonts/noto-cjk/tree/main/Sans/OTF/TraditionalChinese",
+    "license": "SIL Open Font License 1.1",
+    "file": "Assets/TaiwanRider/Art/Fonts/NotoSansTC.otf"
+  },
+  {
+    "asset": "Original metric scooter, sedan, building meshes, signs, sky shader and synthetic engine",
+    "source": "Tools/model_assets.py and Tools/prepare_assets.py",
+    "license": "Original project work",
+    "details": "Scooter dimensions based on publicly stated Yamaha AXIS Z specifications; original generic mesh with no Yamaha logo. Sedan is fictional. Shop names and placement are illustrative, not a survey."
+  }
+]

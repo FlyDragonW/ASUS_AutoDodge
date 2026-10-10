@@ -26,10 +26,10 @@ These are direct Unity camera captures **without in-game UI**. Colored lines are
 
 | Component | Implemented behavior |
 | --- | --- |
-| Simulator | Gongguan road scene in Unity 6 (6000.4.10f1) with URP 17.4; car cut-in and side-street scooter scenarios. |
-| Sensing | `RadarSensor.cs` casts 68 `Physics.Raycast` rays per physics update: 44 around the rider and 24 concentrated within ±40° ahead. Range varies by direction: up to 32 m ahead, 16 m to the side, and 10 m behind. |
+| Simulator | [Gongguan road scene](Assets/TaiwanRider/Scenes/GongguanRide.unity) in Unity 6 (6000.4.10f1) with URP 17.4; car cut-in and side-street scooter scenarios. |
+| Sensing | [RadarSensor.cs](Assets/TaiwanRider/Runtime/RadarSensor.cs) casts 68 `Physics.Raycast` rays per physics update: 44 around the rider and 24 concentrated within ±40° ahead. Range varies by direction: up to 32 m ahead, 16 m to the side, and 10 m behind. |
 | Risk estimate | Tracks collider positions across scans, estimates relative motion, and evaluates a roughly 1.8 s collision horizon. |
-| Decision and control | `AutomaticAvoidance.cs` chooses among cruise, brake, evade left/right, recover, and emergency stop, then sends throttle, brake, and steering commands to the scooter controller. |
+| Decision and control | [AutomaticAvoidance.cs](Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs) chooses among cruise, brake, evade left/right, recover, and emergency stop, then sends throttle, brake, and steering commands to the scooter controller. |
 
 The [recorded validation run](Validation/RadarControls/acceptance.json) has **32/32 checks passing and 0 recorded errors**. In the four scripted hazard runs (car cut-in and crossing scooter at 40 and 50 km/h), the scooter intervened and reached the finish without a recorded collision. The report also checks clear-road cruising, sensor display toggling, camera views, retry, pause, and manual takeover. These results describe those scripted Unity runs only; they are not a measured real-world crash reduction or evidence of generalization.
 
@@ -66,9 +66,17 @@ The rule-based controller gives us an interpretable baseline and a safety fallba
 
 The first adoption hypothesis is a scenario-based evaluation kit for scooter makers and rider-assistance research teams: repeatable urban hazards, baseline controller, and comparable safety metrics. A training mode for riding schools is a possible later extension. We have not validated customer demand or a business model yet. Any on-vehicle version must replace simulated range data with physical sensors and pass independent safety testing.
 
-## Demo controls and repository status
+## Run the project
 
-Choose normal riding, car cut-in, or crossing scooter from the game menu. Automatic mode starts at 40 km/h.
+1. Install **Unity Editor 6000.4.10f1**. Install Git LFS, then clone this repository and run `git lfs pull` to fetch the textures, models, and fonts.
+2. Open the repository folder as a Unity project. Open [`Assets/TaiwanRider/Scenes/GongguanRide.unity`](Assets/TaiwanRider/Scenes/GongguanRide.unity) and press **Play**.
+3. Choose normal riding, car cut-in, or crossing scooter in the main menu. The automatic demo starts at 40 km/h.
+
+The project includes the Unity scene, scripts, art assets, `.meta` files, package manifest, and build settings. The [asset notices](Sources/THIRD_PARTY_NOTICES.txt) and [source manifest](Sources/asset-manifest.json) document external material; the [editor tests](Assets/TaiwanRider/Tests/Editor/RiderSceneTests.cs) check key scene and component references. A packaged Windows player is not part of this repository.
+
+## Demo controls
+
+These controls work in the Unity Play view:
 
 | Action | Key |
 | --- | --- |
@@ -77,8 +85,6 @@ Choose normal riding, car cut-in, or crossing scooter from the game menu. Automa
 | Show / hide Raycast visualization | G |
 | Manual throttle / brake / steer | W / S / A / D |
 | Retry / pause | R / Esc |
-
-This GitHub snapshot contains the Unity starter project, screenshots, and validation report. The gameplay-specific Gongguan scene and scripts are **not yet committed**, so the current public checkout cannot reproduce the demo by itself. The evidence above is from the local prototype; publishing a runnable project snapshot is a required next step before independent review.
 
 ---
 

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598a561d0c4898645aa4c326d1fe4106, type: 3}
+  m_Name: Scenario2
+  m_EditorClassIdentifier: TaiwanRider.Runtime::TaiwanRider.ScenarioDefinition
+  kind: 2
+  title: "\u7559\u610F\u5DF7\u53E3\u6A5F\u8ECA"
+  description: "\u5DF7\u53E3\u6A5F\u8ECA\u53EF\u80FD\u9032\u5165\u4F60\u7684\u8DEF\u7DDA\u3002\u89C0\u5BDF\u906E\u64CB\u5F8C\u65B9\u7684\u52D5\u614B\u3002"
+  seed: 127
+  conflictZ: 0
+  triggerTimeToArrival: 1

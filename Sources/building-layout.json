@@ -1,0 +1,387 @@
+[
+  {
+    "name": "Building_-1_0",
+    "side": -1,
+    "center": -104.4,
+    "width": 7.2,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_1",
+    "side": -1,
+    "center": -96.8,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_2",
+    "side": -1,
+    "center": -88.8,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_3",
+    "side": -1,
+    "center": -80.1,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_4",
+    "side": -1,
+    "center": -71.8,
+    "width": 7.2,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_5",
+    "side": -1,
+    "center": -64.99999999999999,
+    "width": 6.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_-1_6",
+    "side": -1,
+    "center": -57.09999999999999,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_7",
+    "side": -1,
+    "center": -49.19999999999999,
+    "width": 6.4,
+    "height": 17.8
+  },
+  {
+    "name": "Building_-1_8",
+    "side": -1,
+    "center": -41.99999999999999,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_9",
+    "side": -1,
+    "center": -34.79999999999999,
+    "width": 6.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_-1_10",
+    "side": -1,
+    "center": -27.599999999999994,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_11",
+    "side": -1,
+    "center": -18.899999999999995,
+    "width": 9.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_-1_12",
+    "side": -1,
+    "center": -10.199999999999994,
+    "width": 8.0,
+    "height": 17.8
+  },
+  {
+    "name": "Building_-1_13",
+    "side": -1,
+    "center": -1.4999999999999938,
+    "width": 9.4,
+    "height": 17.8
+  },
+  {
+    "name": "Building_-1_14",
+    "side": -1,
+    "center": 7.900000000000007,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_15",
+    "side": -1,
+    "center": 15.800000000000008,
+    "width": 6.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_16",
+    "side": -1,
+    "center": 22.200000000000006,
+    "width": 6.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_-1_17",
+    "side": -1,
+    "center": 30.100000000000005,
+    "width": 9.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_-1_18",
+    "side": -1,
+    "center": 39.50000000000001,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_19",
+    "side": -1,
+    "center": 48.900000000000006,
+    "width": 9.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_-1_20",
+    "side": -1,
+    "center": 58.300000000000004,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_21",
+    "side": -1,
+    "center": 66.2,
+    "width": 6.4,
+    "height": 17.8
+  },
+  {
+    "name": "Building_-1_22",
+    "side": -1,
+    "center": 74.10000000000001,
+    "width": 9.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_-1_23",
+    "side": -1,
+    "center": 82.00000000000001,
+    "width": 6.4,
+    "height": 17.8
+  },
+  {
+    "name": "Building_-1_24",
+    "side": -1,
+    "center": 88.80000000000001,
+    "width": 7.2,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_25",
+    "side": -1,
+    "center": 95.60000000000002,
+    "width": 6.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_26",
+    "side": -1,
+    "center": 102.40000000000002,
+    "width": 7.2,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_-1_27",
+    "side": -1,
+    "center": 109.60000000000002,
+    "width": 7.2,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_28",
+    "side": 1,
+    "center": -103.3,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_29",
+    "side": 1,
+    "center": -95.0,
+    "width": 7.2,
+    "height": 17.8
+  },
+  {
+    "name": "Building_1_30",
+    "side": 1,
+    "center": -87.8,
+    "width": 7.2,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_31",
+    "side": 1,
+    "center": -80.19999999999999,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_32",
+    "side": 1,
+    "center": -71.49999999999999,
+    "width": 9.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_1_33",
+    "side": 1,
+    "center": -63.59999999999998,
+    "width": 6.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_34",
+    "side": 1,
+    "center": -56.79999999999998,
+    "width": 7.2,
+    "height": 17.8
+  },
+  {
+    "name": "Building_1_35",
+    "side": 1,
+    "center": -49.19999999999998,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_36",
+    "side": 1,
+    "center": -41.99999999999998,
+    "width": 6.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_1_37",
+    "side": 1,
+    "center": -34.09999999999998,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_38",
+    "side": 1,
+    "center": -25.399999999999984,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_39",
+    "side": 1,
+    "center": -18.199999999999985,
+    "width": 6.4,
+    "height": 17.8
+  },
+  {
+    "name": "Building_1_40",
+    "side": 1,
+    "center": -11.399999999999984,
+    "width": 7.2,
+    "height": 12.0
+  },
+  {
+    "name": "Building_1_41",
+    "side": 1,
+    "center": 10.0,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_42",
+    "side": 1,
+    "center": 18.0,
+    "width": 8.0,
+    "height": 17.8
+  },
+  {
+    "name": "Building_1_43",
+    "side": 1,
+    "center": 26.7,
+    "width": 9.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_44",
+    "side": 1,
+    "center": 35.4,
+    "width": 8.0,
+    "height": 17.8
+  },
+  {
+    "name": "Building_1_45",
+    "side": 1,
+    "center": 43.4,
+    "width": 8.0,
+    "height": 17.8
+  },
+  {
+    "name": "Building_1_46",
+    "side": 1,
+    "center": 50.6,
+    "width": 6.4,
+    "height": 17.8
+  },
+  {
+    "name": "Building_1_47",
+    "side": 1,
+    "center": 57.4,
+    "width": 7.2,
+    "height": 12.0
+  },
+  {
+    "name": "Building_1_48",
+    "side": 1,
+    "center": 65.7,
+    "width": 9.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_1_49",
+    "side": 1,
+    "center": 74.4,
+    "width": 8.0,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_50",
+    "side": 1,
+    "center": 82.0,
+    "width": 7.2,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_51",
+    "side": 1,
+    "center": 88.80000000000001,
+    "width": 6.4,
+    "height": 14.899999999999999
+  },
+  {
+    "name": "Building_1_52",
+    "side": 1,
+    "center": 95.20000000000002,
+    "width": 6.4,
+    "height": 12.0
+  },
+  {
+    "name": "Building_1_53",
+    "side": 1,
+    "center": 102.00000000000001,
+    "width": 7.2,
+    "height": 12.0
+  },
+  {
+    "name": "Building_1_54",
+    "side": 1,
+    "center": 110.30000000000003,
+    "width": 9.4,
+    "height": 14.899999999999999
+  }
+]

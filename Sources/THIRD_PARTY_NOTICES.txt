@@ -1,0 +1,34 @@
+Gongguan Rider — asset notices
+
+Road centreline: © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright
+Source and derived route data are provided in this project. Width and street-level details are inferred.
+
+PBR surfaces: Poly Haven, CC0. https://polyhaven.com/license
+asphalt_02; concrete_wall_003; concrete_floor_worn_001; concrete_tile_facade.
+
+Font: Noto Sans TC / Noto Sans CJK TC, SIL Open Font License 1.1. See FONT_LICENSE.txt / Art/Fonts/OFL.txt.
+
+Model dimensions reference: Yamaha AXIS Z 125 (2025). https://www.yamaha-motor.com.tw/news/news-202508-axis-z
+Original model; no affiliation or endorsement. Simplified assisted riding, not a validated dynamics model.
+
+Reference photographs below are included only in Sources/References, not used as in-game textures:
+
+File:Roosevelt Road Sec.4 Lane 78, Taipei (near Alley 2).jpg
+https://commons.wikimedia.org/wiki/File:Roosevelt_Road_Sec.4_Lane_78,_Taipei_(near_Alley_2).jpg
+Author: <a href="//commons.wikimedia.org/wiki/User:Kiyoteru_Awaji" title="User:Kiyoteru Awaji">Kiyoteru Awaji</a>
+License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0
+
+File:GongGuan Night Market, Taipei 20191008 04.jpg
+https://commons.wikimedia.org/wiki/File:GongGuan_Night_Market,_Taipei_20191008_04.jpg
+Author: <a href="//commons.wikimedia.org/w/index.php?title=User:Giantmudcrab&amp;action=edit&amp;redlink=1" class="new" title="User:Giantmudcrab (page does not exist)">Giantmudcrab</a>
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+
+File:GongGuan Night Market, Taipei 20191008 03.jpg
+https://commons.wikimedia.org/wiki/File:GongGuan_Night_Market,_Taipei_20191008_03.jpg
+Author: <a href="//commons.wikimedia.org/w/index.php?title=User:Giantmudcrab&amp;action=edit&amp;redlink=1" class="new" title="User:Giantmudcrab (page does not exist)">Giantmudcrab</a>
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+
+File:TCPD SWAT ANA-0922 left side on Tingzhou Road 20240907.jpg
+https://commons.wikimedia.org/wiki/File:TCPD_SWAT_ANA-0922_left_side_on_Tingzhou_Road_20240907.jpg
+Author: <a href="//commons.wikimedia.org/wiki/User:Solomon203" title="User:Solomon203">Solomon203</a>
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
