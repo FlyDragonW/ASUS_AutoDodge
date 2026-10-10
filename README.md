@@ -18,7 +18,12 @@ Direct Unity camera captures, with **no in-game UI**. Colored rays show the simu
 
 ## What is implemented
 
-The [Unity 6 scene](Assets/TaiwanRider/Scenes/GongguanRide.unity) models a Gongguan-inspired road with two scripted hazards. [RadarSensor.cs](Assets/TaiwanRider/Runtime/RadarSensor.cs) casts 68 `Physics.Raycast` rays per physics update (44 surrounding, 24 concentrated ahead), with ranges up to 32 m forward, 16 m sideways, and 10 m behind. It tracks collider positions and estimates relative motion. [AutomaticAvoidance.cs](Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs) predicts conflicts within about 1.8 seconds and chooses cruise, brake, evade, recover, or emergency stop. The action drives the scooter's throttle, brakes, and steering.
+The [Unity 6 scene](Assets/TaiwanRider/Scenes/GongguanRide.unity) models a Gongguan-inspired road with two scripted hazards. Its rule-based control loop runs each physics update:
+
+1. **Sense:** [RadarSensor.cs](Assets/TaiwanRider/Runtime/RadarSensor.cs) casts 68 `Physics.Raycast` rays: 44 around the scooter and 24 concentrated ahead. They reach up to 32 m forward, 16 m sideways, and 10 m behind.
+2. **Track and predict:** Consecutive hits on the same collider estimate its velocity. [AutomaticAvoidance.cs](Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs) compares that motion with the scooter's velocity and collider bounds to identify possible intersections within about 1.8 seconds.
+3. **Choose a response:** Fast lateral crossings trigger braking. For other conflicts, the controller checks whether the left or right route offset is clear; it steers around the obstacle if possible, or makes an emergency stop if both sides are blocked.
+4. **Act and recover:** A look-ahead point on the known route sets steering, while speed control sets throttle and brake. After the hazard passes, the scooter gradually returns to its original lane.
 
 The [validation report](Validation/RadarControls/acceptance.json) records **32/32 passing checks**. At both 40 and 50 km/h, the scripted car cut-in triggered an evasive maneuver and the crossing scooter triggered braking; all four runs reached the finish without a recorded collision. A clear-road run recorded no unnecessary intervention. These results apply only to the scripted Unity scenarios.
 
