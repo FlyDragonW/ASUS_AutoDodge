@@ -6,7 +6,9 @@ The current Unity demo uses Raycast sensing and a rule-based controller to avoid
 
 ## Demo
 
-Direct Unity camera captures, with **no in-game UI**. Colored rays show the simulated sensor.
+[Watch the 14-second demo (MP4, 720p)](Validation/Demo/RideReflex-demo.mp4) - car cut-in, then crossing scooter, at a 40 km/h cruise target.
+
+The video and screenshots are direct Unity camera captures with **no in-game UI**. Colored rays show the simulated sensor.
 
 ![The scooter steers left around a car cutting into its path](Validation/RadarControls/car-cut-in-no-ui.png)
 
