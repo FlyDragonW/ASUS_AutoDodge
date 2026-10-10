@@ -1,0 +1,166 @@
+{
+    "capturedAtUtc": "2026-10-07T17:19:34.4128113Z",
+    "checks": [
+        {
+            "name": "Ray budget reduced by 40 percent",
+            "passed": true,
+            "detail": "casts=68, previous=113"
+        },
+        {
+            "name": "scenario 1 / 40 km/h / third person / rays True reaches finish",
+            "passed": true,
+            "detail": "hit=, z=76.07278, states=0.00:Cruise@clear 9.43:EvadeLeft@CarCutIn 11.88:Recover@clear 14.39:Cruise@clear "
+        },
+        {
+            "name": "scenario 1 / 40 km/h / third person / rays True senses and intervenes",
+            "passed": true,
+            "detail": "event=9.358863, action=9.406045"
+        },
+        {
+            "name": "scenario 1 / 40 km/h / third person / rays True correct radar visibility",
+            "passed": true,
+            "detail": "rendered beams=68, scans=902"
+        },
+        {
+            "name": "scenario 1 / 40 km/h / third person / rays True preserves view and auto control",
+            "passed": true,
+            "detail": "first person=False, auto=True"
+        },
+        {
+            "name": "scenario 1 / 40 km/h / third person / rays True steers around car",
+            "passed": true,
+            "detail": "lateral movement=2.27864"
+        },
+        {
+            "name": "scenario 1 / 40 km/h / third person / rays True stable recovery",
+            "passed": true,
+            "detail": "interventions=1"
+        },
+        {
+            "name": "scenario 2 / 40 km/h / first person / rays True reaches finish",
+            "passed": true,
+            "detail": "hit=, z=76.0836, states=0.00:Cruise@clear 9.49:Brake@ScooterCrossing 10.57:Cruise@clear "
+        },
+        {
+            "name": "scenario 2 / 40 km/h / first person / rays True senses and intervenes",
+            "passed": true,
+            "detail": "event=9.443248, action=9.463534"
+        },
+        {
+            "name": "scenario 2 / 40 km/h / first person / rays True correct radar visibility",
+            "passed": true,
+            "detail": "rendered beams=68, scans=969"
+        },
+        {
+            "name": "scenario 2 / 40 km/h / first person / rays True preserves view and auto control",
+            "passed": true,
+            "detail": "first person=True, auto=True"
+        },
+        {
+            "name": "scenario 1 / 50 km/h / first person / rays False reaches finish",
+            "passed": true,
+            "detail": "hit=, z=76.03773, states=0.00:Cruise@clear 8.94:EvadeLeft@CarCutIn 10.87:Recover@clear 13.31:Cruise@clear "
+        },
+        {
+            "name": "scenario 1 / 50 km/h / first person / rays False senses and intervenes",
+            "passed": true,
+            "detail": "event=8.851624, action=8.90596"
+        },
+        {
+            "name": "scenario 1 / 50 km/h / first person / rays False correct radar visibility",
+            "passed": true,
+            "detail": "rendered beams=0, scans=808"
+        },
+        {
+            "name": "scenario 1 / 50 km/h / first person / rays False preserves view and auto control",
+            "passed": true,
+            "detail": "first person=True, auto=True"
+        },
+        {
+            "name": "scenario 1 / 50 km/h / first person / rays False steers around car",
+            "passed": true,
+            "detail": "lateral movement=2.218886"
+        },
+        {
+            "name": "scenario 1 / 50 km/h / first person / rays False stable recovery",
+            "passed": true,
+            "detail": "interventions=1"
+        },
+        {
+            "name": "scenario 2 / 50 km/h / third person / rays False reaches finish",
+            "passed": true,
+            "detail": "hit=, z=76.03202, states=0.00:Cruise@clear 9.01:Brake@ScooterCrossing 10.14:Cruise@clear "
+        },
+        {
+            "name": "scenario 2 / 50 km/h / third person / rays False senses and intervenes",
+            "passed": true,
+            "detail": "event=8.967345, action=8.990018"
+        },
+        {
+            "name": "scenario 2 / 50 km/h / third person / rays False correct radar visibility",
+            "passed": true,
+            "detail": "rendered beams=0, scans=869"
+        },
+        {
+            "name": "scenario 2 / 50 km/h / third person / rays False preserves view and auto control",
+            "passed": true,
+            "detail": "first person=False, auto=True"
+        },
+        {
+            "name": "Clear road cruise",
+            "passed": true,
+            "detail": "interventions=0, hit="
+        },
+        {
+            "name": "First person visible radar",
+            "passed": true,
+            "detail": "beams=68"
+        },
+        {
+            "name": "Hiding rays keeps sensing and steering",
+            "passed": true,
+            "detail": "scan delta=13, throttle=1"
+        },
+        {
+            "name": "Changing view preserves hidden rays and auto",
+            "passed": true,
+            "detail": "third person auto with hidden rays"
+        },
+        {
+            "name": "Settings during pause keep simulation frozen",
+            "passed": true,
+            "detail": "paused=True"
+        },
+        {
+            "name": "Retry keeps first person and hidden rays",
+            "passed": true,
+            "detail": "view/radar/auto preserved"
+        },
+        {
+            "name": "Demo retry reset",
+            "passed": true,
+            "detail": "state=Cruise"
+        },
+        {
+            "name": "Manual takeover keeps first person",
+            "passed": true,
+            "detail": "manual first person"
+        },
+        {
+            "name": "Enabling auto keeps first person and hidden rays",
+            "passed": true,
+            "detail": "first person auto"
+        },
+        {
+            "name": "Manual takeover keeps third person",
+            "passed": true,
+            "detail": "manual third person"
+        },
+        {
+            "name": "Enabling auto keeps third person",
+            "passed": true,
+            "detail": "third person auto"
+        }
+    ],
+    "errors": []
+}
