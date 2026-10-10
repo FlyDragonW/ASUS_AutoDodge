@@ -169,3 +169,6 @@ Packages/packages-lock.json linguist-generated
 
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
+
+# Keep the small demo as a regular Git file so GitHub can preview it.
+Validation/Demo/RideReflex-demo.mp4 -filter -diff -merge -text
