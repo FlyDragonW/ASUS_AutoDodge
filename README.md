@@ -8,7 +8,7 @@ The current Unity demo uses Raycast sensing and a rule-based controller to avoid
 
 [Full 14-second demo (MP4, 540p, 3 MB)](Validation/Demo/RideReflex-demo.mp4) - car cut-in, then crossing scooter, at a 40 km/h cruise target.
 
-The video and animated previews are direct Unity camera captures with **no in-game UI**. Colored rays show the simulated sensor.
+The video, animated previews, and screenshot are direct Unity camera captures with **no in-game UI**. Colored rays show the simulated sensor.
 
 ![Animated preview: the scooter steers left around a car cutting into its path](Validation/Demo/RideReflex-car-cut-in.webp)
 
@@ -17,6 +17,10 @@ The video and animated previews are direct Unity camera captures with **no in-ga
 ![Animated preview: the scooter brakes for a scooter crossing from a side street](Validation/Demo/RideReflex-crossing-scooter.webp)
 
 **Crossing scooter:** detect lateral movement, brake to yield, then resume cruising.
+
+![First-person scooter view during the car cut-in test, with Raycast sensor rays and no in-game UI](Validation/Demo/RideReflex-first-person.png)
+
+**First-person view:** the rider sees the road and simulated sensor rays from the scooter cockpit.
 
 ## What is implemented
 
