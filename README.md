@@ -1,4 +1,4 @@
-# Gongguan Rider
+# RideReflex
 
 **A scooter hazard-avoidance prototype for urban traffic.** Proposed entry for the [ASUS UGen AI League](https://contest.bhuntr.com/en/39jg9vimiynrhlksze/home/) in **Everyday AI / Battlefield Lightning**.
 

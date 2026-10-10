@@ -430,17 +430,17 @@ namespace TaiwanRider.Editor
         [MenuItem("Taiwan Rider/Build Windows player")]
         public static void BuildWindows()
         {
-            Ensure("Builds/GongguanRider");
-            PlayerSettings.productName="Gongguan Rider";PlayerSettings.companyName="TaiwanRider";
+            Ensure("Builds/RideReflex");
+            PlayerSettings.productName="RideReflex";PlayerSettings.companyName="TaiwanRider";
             PlayerSettings.defaultScreenWidth=1920;PlayerSettings.defaultScreenHeight=1080;
             PlayerSettings.fullScreenMode=FullScreenMode.Windowed;PlayerSettings.runInBackground=true;
-            var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{Root+"/Scenes/GongguanRide.unity"},locationPathName="Builds/GongguanRider/GongguanRider.exe",target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
+            var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{Root+"/Scenes/GongguanRide.unity"},locationPathName="Builds/RideReflex/RideReflex.exe",target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
             var result=new {result=report.summary.result.ToString(),errors=report.summary.totalErrors,size=report.summary.totalSize,seconds=report.summary.totalTime.TotalSeconds};
             File.WriteAllText("Builds/build-summary.json",Newtonsoft.Json.JsonConvert.SerializeObject(result,Newtonsoft.Json.Formatting.Indented));
             if(report.summary.result!=BuildResult.Succeeded)throw new Exception("Player build failed: "+report.summary.result);
-            foreach(string file in new[]{"asset-manifest.json","THIRD_PARTY_NOTICES.txt"})if(File.Exists("Sources/"+file))File.Copy("Sources/"+file,"Builds/GongguanRider/"+file,true);
-            File.Copy(Root+"/Art/Fonts/OFL.txt","Builds/GongguanRider/FONT_LICENSE.txt",true);
-            Debug.Log("Windows player ready: Builds/GongguanRider/GongguanRider.exe");
+            foreach(string file in new[]{"asset-manifest.json","THIRD_PARTY_NOTICES.txt"})if(File.Exists("Sources/"+file))File.Copy("Sources/"+file,"Builds/RideReflex/"+file,true);
+            File.Copy(Root+"/Art/Fonts/OFL.txt","Builds/RideReflex/FONT_LICENSE.txt",true);
+            Debug.Log("Windows player ready: Builds/RideReflex/RideReflex.exe");
         }
     }
 }
