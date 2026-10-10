@@ -1,84 +1,88 @@
 # Gongguan Rider
 
-**A simulation-first scooter hazard-avoidance prototype, built in Taipei and designed to grow into local, camera-based AI.**
+**A scooter hazard-avoidance simulator for dense urban traffic, with a path from explainable rules to on-device vision AI.**
 
-Proposed for the [ASUS UGen AI League](https://contest.bhuntr.com/en/39jg9vimiynrhlksze/home/) under **Everyday AI / Battlefield Lightning (UGen300)**. The current playable prototype uses simulated radar and deterministic rules; camera perception, machine learning, and UGen300 deployment are **planned work**, not features of the present build.
+**[ASUS UGen AI League 2026](https://contest.bhuntr.com/en/39jg9vimiynrhlksze/home/) · target theme: Everyday AI · target battlefield: Lightning (ASUS UGen300)**
 
-## The idea in 30 seconds
+> **Submission snapshot:** The playable Unity demo uses 68 physics Raycasts as a simulated range sensor and a rule-based controller. Camera recognition, machine learning, and UGen300 inference are the proposed next stage; they are not implemented in this snapshot.
 
-Scooters meet sudden car cut-ins and vehicles crossing from side streets in dense urban traffic. Gongguan Rider turns those encounters into repeatable Unity scenarios where a rider agent must sense the hazard, decide whether to brake or steer, and return to its lane. The first version establishes a measurable safety baseline. The next version will add on-device visual perception so the same decision loop can be tested against less scripted situations without sending camera footage to the cloud.
+## Problem and opportunity
 
-The immediate use case is a **scenario and evaluation platform** for rider-assistance research and training. A road-going assistance system would require real sensors, much broader validation, and safety engineering beyond this prototype.
+A car cutting into a scooter's lane and another scooter crossing from a side street may both appear as nearby obstacles, but they require different responses. Gongguan Rider makes these short, lateral urban conflicts repeatable in a Gongguan-inspired Unity scene. The rider agent must detect the hazard, choose between yielding and steering around it, and return to its lane.
 
-## See the current prototype
+Our first use case is a **scenario-based evaluation kit for scooter rider-assistance research**. Teams can replay a dangerous encounter, inspect why the controller intervened, and compare future AI-assisted decisions with a working baseline before testing on physical vehicles.
 
-These are direct Unity camera captures **without in-game UI**. Colored lines are the simulated Raycast sensor visualized in the 3D scene.
+## Working demo
+
+The images below are direct Unity camera captures **without in-game UI**. Colored lines visualize the simulated sensor in the 3D scene.
 
 ![The scooter steers left around a car cutting into its path](Validation/RadarControls/car-cut-in-no-ui.png)
 
-**Car cut-in:** forward rays detect the car; the controller checks the predicted collision and available side space, steers left, then recovers toward the original lane. Red rays mark the current threat.
+**Car cut-in:** the controller predicts a conflict, checks side clearance, steers left, and recovers toward the lane. Red rays mark the current threat.
 
-![The scooter brakes for another scooter crossing from a side street](Validation/RadarControls/scooter-crossing-no-ui.png)
+![The scooter brakes for a scooter crossing from a side street](Validation/RadarControls/scooter-crossing-no-ui.png)
 
-**Crossing scooter:** the controller detects lateral motion, brakes to yield, and resumes cruising when the risk clears. Cyan rays have no hit, orange rays hit obstacles, and the ground curve shows the target path.
+**Crossing scooter:** the controller detects lateral movement, brakes to yield, and resumes cruising after the risk clears. Cyan rays have no hit; orange rays hit obstacles; the ground curve marks the target path.
 
-## What works today
+### Recorded results
 
-| Component | Implemented behavior |
+| Scripted Unity run | Observed controller response | Result |
+| --- | --- | --- |
+| Car cut-in at 40 and 50 km/h | Evade left → recover → cruise | Both runs reached the finish without a recorded collision. |
+| Side-street scooter at 40 and 50 km/h | Brake → cruise | Both runs reached the finish without a recorded collision. |
+| Clear road | Continue cruising | No unnecessary intervention recorded. |
+
+The [validation report](Validation/RadarControls/acceptance.json) records **32/32 passing checks and 0 errors**. It also covers view changes, hiding the sensor visualization while detection stays active, pause/retry, and manual takeover. These are scripted simulation results, **not** evidence of road safety or performance on unseen traffic.
+
+## Implemented system
+
+| Layer | Current implementation |
 | --- | --- |
-| Simulator | [Gongguan road scene](Assets/TaiwanRider/Scenes/GongguanRide.unity) in Unity 6 (6000.4.10f1) with URP 17.4; car cut-in and side-street scooter scenarios. |
-| Sensing | [RadarSensor.cs](Assets/TaiwanRider/Runtime/RadarSensor.cs) casts 68 `Physics.Raycast` rays per physics update: 44 around the rider and 24 concentrated within ±40° ahead. Range varies by direction: up to 32 m ahead, 16 m to the side, and 10 m behind. |
-| Risk estimate | Tracks collider positions across scans, estimates relative motion, and evaluates a roughly 1.8 s collision horizon. |
-| Decision and control | [AutomaticAvoidance.cs](Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs) chooses among cruise, brake, evade left/right, recover, and emergency stop, then sends throttle, brake, and steering commands to the scooter controller. |
-
-The [recorded validation run](Validation/RadarControls/acceptance.json) has **32/32 checks passing and 0 recorded errors**. In the four scripted hazard runs (car cut-in and crossing scooter at 40 and 50 km/h), the scooter intervened and reached the finish without a recorded collision. The report also checks clear-road cruising, sensor display toggling, camera views, retry, pause, and manual takeover. These results describe those scripted Unity runs only; they are not a measured real-world crash reduction or evidence of generalization.
-
-The “radar” here is geometric Raycast sensing in a game engine. It does **not** model radio propagation, sensor noise, weather interference, or a physical radar unit.
-
-## Why this is a useful AI starting point
-
-- **Scooter-specific hazards:** car cut-ins and side-street crossings demand different actions, even when both first appear as an obstacle ahead.
-- **A closed-loop baseline:** sensing, prediction, maneuver selection, and vehicle response already run together. A future vision model must improve decisions in the same scenarios, not merely recognize objects in isolated images.
-- **Testable failures:** the scripted runs and saved report make it possible to replay a hazardous encounter, change the scene, and compare a vision-assisted controller against the rules-only version.
-
-## Technical architecture
+| World | [Gongguan ride scene](Assets/TaiwanRider/Scenes/GongguanRide.unity), built with Unity 6 (6000.4.10f1) and URP 17.4. Road alignment uses [OpenStreetMap centerline data](Sources/gongguan-osm.json); road width and streetscape details are reconstructed estimates. |
+| Sensing | [RadarSensor.cs](Assets/TaiwanRider/Runtime/RadarSensor.cs) runs 68 `Physics.Raycast` queries per physics update: 44 around the scooter and 24 within ±40° ahead. Maximum range is 32 m forward, 16 m sideways, and 10 m behind. |
+| Prediction | Consecutive collider observations estimate relative motion; [AutomaticAvoidance.cs](Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs) checks a roughly 1.8 s collision horizon. |
+| Action | A transparent state machine chooses cruise, brake, evade left/right, recover, or emergency stop and drives throttle, braking, and steering through the scooter controller. |
 
 ```text
-Implemented today
-Unity traffic actors → 68 Raycasts → contact/relative-motion tracking
-                     → collision-risk estimate → rule-based safety policy
-                     → throttle / brake / steering → Unity scooter
-
-Planned AI extension
-RGB camera → compact vision model on ASUS UGen300 → road-user / drivable-space cues
-           → temporal tracking + risk fusion → safety policy → rider action
+Unity traffic → simulated range rays → contact tracking → collision-risk estimate
+              → rule-based safety policy → throttle / brake / steering → scooter
 ```
 
-The rule-based controller gives us an interpretable baseline and a safety fallback while we develop perception. The planned vision model will supply cues that fixed geometric rules miss in more varied scenes; its outputs will be compared with the baseline on held-out scenarios. ASUS positions the [UGen300](https://press.asus.com/news/press-releases/asus-ugen300-usb-ai-accelerator-generative-ai-edge/) as a local AI accelerator for vision and other inference workloads. Hardware integration and its actual throughput, latency, and power use remain to be measured.
+The current “radar” is a geometric game-engine approximation. It does not simulate radio propagation, noise, weather interference, or a physical radar unit.
 
-## Development and evaluation plan
+## Edge AI plan for Battlefield Lightning
 
-| Step | Deliverable | Evidence we will collect |
+The planned extension uses camera images to identify road users and drivable space, then combines those cues with temporal motion estimates before the safety policy acts. The host handles tracking and control; the [ASUS UGen300](https://press.asus.com/news/press-releases/asus-ugen300-usb-ai-accelerator-generative-ai-edge/) is the proposed local inference accelerator. No camera footage needs to leave the device during inference.
+
+```text
+Unity RGB frames → compact vision model on UGen300 → road-user / road-space cues
+                 → host-side tracking and risk fusion → explicit safety policy
+                 → simulated scooter controls
+```
+
+The existing controller is the **rules-only baseline and fallback**. This makes the AI contribution testable: a vision-assisted controller must handle more varied hazards without increasing unsafe or unnecessary interventions.
+
+| Stage II milestone | Deliverable | Evaluation |
 | --- | --- | --- |
-| 1. Expand scenarios | Vary traffic spawn timing, road layout, lighting, weather, and camera viewpoint; keep unseen combinations for evaluation. | Scenario manifest and train/test split with no reused scripted sequence in the held-out set. |
-| 2. Add vision | Label camera frames for vehicles and drivable space; train a compact model and run local inference on UGen300. | Perception quality, frame rate, end-to-end latency, and device power on the target hardware. |
-| 3. Close the loop | Fuse visual cues with motion history; retain an explicit braking/steering safety policy and compare it with the current rules-only baseline. | Collision and near-miss rate, minimum clearance, false braking, and intervention time across unseen scenarios. |
+| Build data | Vary road layout, actor timing, lighting, and camera viewpoint; derive labels from the simulator; reserve unseen combinations for testing. | Published scenario split and failure cases, separated by scenario rather than adjacent video frames. |
+| Run local perception | Train a compact road-user and drivable-space model and deploy compatible inference on UGen300. | Recognition quality, frame rate, end-to-end latency, and device power measured on the actual hardware. |
+| Close the loop | Fuse vision with motion history and the explicit safety policy; compare against the current controller on the same held-out scenarios. | Collision and near-miss rate, minimum clearance, false braking, and intervention time. |
 
-The first adoption hypothesis is a scenario-based evaluation kit for scooter makers and rider-assistance research teams: repeatable urban hazards, baseline controller, and comparable safety metrics. A training mode for riding schools is a possible later extension. We have not validated customer demand or a business model yet. Any on-vehicle version must replace simulated range data with physical sensors and pass independent safety testing.
+The first product hypothesis is a repeatable scenario and benchmark package for scooter makers and rider-assistance teams. A later on-vehicle application would need physical sensors, real-world data, independent safety validation, and a separate deployment design; this simulator is not a road-ready assistance system.
 
-## Run the project
+## Reproduce the demo
 
-1. Install **Unity Editor 6000.4.10f1**. Install Git LFS, then clone this repository and run `git lfs pull` to fetch the textures, models, and fonts.
-2. Open the repository folder as a Unity project. Open [`Assets/TaiwanRider/Scenes/GongguanRide.unity`](Assets/TaiwanRider/Scenes/GongguanRide.unity) and press **Play**.
-3. Choose normal riding, car cut-in, or crossing scooter in the main menu. The automatic demo starts at 40 km/h.
+Install **Unity Editor 6000.4.10f1** and Git LFS. Fetch the full repository, including large art assets:
 
-The project includes the Unity scene, scripts, art assets, `.meta` files, package manifest, and build settings. The [asset notices](Sources/THIRD_PARTY_NOTICES.txt) and [source manifest](Sources/asset-manifest.json) document external material; the [editor tests](Assets/TaiwanRider/Tests/Editor/RiderSceneTests.cs) check key scene and component references. A packaged Windows player is not part of this repository.
+```bash
+git clone https://github.com/FlyDragonW/ASUS_AutoDodge.git
+cd ASUS_AutoDodge
+git lfs pull
+```
 
-## Demo controls
+Open the repository folder in Unity, then open [`Assets/TaiwanRider/Scenes/GongguanRide.unity`](Assets/TaiwanRider/Scenes/GongguanRide.unity) and press **Play**. Choose normal riding, car cut-in, or crossing scooter from the menu; automatic mode starts at 40 km/h. The repository contains the Unity source project, not a packaged Windows player.
 
-These controls work in the Unity Play view:
-
-| Action | Key |
+| Control | Key |
 | --- | --- |
 | Toggle automatic control / manual takeover | F2 |
 | Switch first / third person | V |
@@ -86,6 +90,8 @@ These controls work in the Unity Play view:
 | Manual throttle / brake / steer | W / S / A / D |
 | Retry / pause | R / Esc |
 
+The [Unity editor tests](Assets/TaiwanRider/Tests/Editor/RiderSceneTests.cs) check scene and component references. Asset origins and reuse terms are documented in the [source manifest](Sources/asset-manifest.json) and [third-party notices](Sources/THIRD_PARTY_NOTICES.txt).
+
 ---
 
-**繁體中文摘要：**本專案以台北公館機車情境驗證自動避閃。現階段使用 Unity Raycast 模擬雷達，依相對運動與約 1.8 秒碰撞風險，透過規則式控制煞車、繞行與回正。已保存汽車切入與機車橫越的無 UI 實機截圖和測試紀錄。下一階段規劃在 ASUS UGen300 上加入相機辨識及機器學習，並以未見過的場景量測避閃成效、誤煞、延遲與功耗；目前尚未完成 AI 或硬體部署。
+**繁體中文摘要：**公館機車自動避閃是可重現的 Unity 都市交通模擬原型。目前以 Raycast 模擬距離感測，利用相對運動預測風險，透過規則式控制煞車、繞行與回正；四組腳本化危險情境皆抵達終點，驗證紀錄為 32/32 通過。下一階段規劃以 ASUS UGen300 執行本地相機辨識，並在未見過的情境中與現有基準比較碰撞、誤煞、反應時間、延遲和功耗。**相機 AI 與 UGen300 部署目前尚未完成。**
