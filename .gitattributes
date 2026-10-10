@@ -170,5 +170,6 @@ Packages/packages-lock.json linguist-generated
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
 
-# Keep the small demo as a regular Git file so GitHub can preview it.
+# Keep the small demo and animated previews as regular Git files.
 Validation/Demo/RideReflex-demo.mp4 -filter -diff -merge -text
+Validation/Demo/*.webp -filter -diff -merge -text
