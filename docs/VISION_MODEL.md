@@ -56,13 +56,13 @@ An initial diagnostic run exposed a weak, 0.289-confidence incorrect class assoc
 
 ## Demo capture
 
-The [87-second demo](../Validation/Demo/RideReflex-vision-demo.mp4) opens with the Gongguan / Tingzhou Road Section 3 digital-twin prototype used to generate training images and test avoidance. At **20–38 seconds**, the Raycast walkthrough displays the actual 68 sensor beams. The game HUD remains hidden throughout. No slide screens or voiceover audio are included; [Chinese narration](DEMO_NARRATION_zh-TW.txt) and [bilingual subtitles](../Validation/Demo/RideReflex-vision-demo.srt) are provided.
+The [80-second demo](../Validation/Demo/RideReflex-vision-demo.mp4) introduces the Gongguan / Tingzhou Road Section 3 digital twin, then follows **trained vision model → Raycast distance sensing → false-alarm comparison → dense-fog fallback → UGen300 plans**. At **21–39 seconds**, the Raycast walkthrough displays actual sensor beams. The game HUD remains hidden throughout. No slide screens or voiceover audio are included; [Chinese narration](DEMO_NARRATION_zh-TW.txt) and [bilingual subtitles](../Validation/Demo/RideReflex-vision-demo.srt) are provided.
 
-Camera detection boxes are drawn from recorded model outputs on the exact inference input, held until the next completed result. The displayed boxes require confidence ≥ 0.60, with at most six sufficiently large boxes shown. The fog crash illustrates poor visibility; it does not demonstrate fog recognition.
+Camera detection boxes are drawn from recorded model outputs on the exact inference input, held until the next completed result. The displayed boxes require confidence ≥ 0.60, with at most six sufficiently large boxes shown.
 
 ### Vision-only warning versus vision + Raycast
 
-The synchronized segment at **60–73 seconds** compares a **simple image-box warning baseline** with the existing fusion controller. Both share the same known-route follower and a 40 km/h cruise target. The visual baseline consumes only RGB detections for warning decisions; it does not read metric distance, Raycast contacts, collider bounds or scenario labels. It is an illustrative hand-written policy, not a trained driving model or a representative benchmark of all monocular systems.
+The synchronized segment at **39–52 seconds** compares a **simple image-box warning baseline** with the existing fusion controller. Both share the same known-route follower and a 40 km/h cruise target. The visual baseline consumes only RGB detections for warning decisions; it does not read metric distance, Raycast contacts, collider bounds or scenario labels. It is an illustrative hand-written policy, not a trained driving model or a representative benchmark of all monocular systems.
 
 [VisionOnlyWarningBaseline.cs](../Assets/TaiwanRider/Runtime/VisionOnlyWarningBaseline.cs) triggers braking after two consecutive observations of the same class with IoU ≥ 0.25, confidence ≥ 0.60, box center in the central 20% of the image, box height ≥ 7% of image height and box bottom below the image midpoint. Evidence and the warning hold expire after 0.35 seconds. These thresholds were chosen while developing this demonstration, not calibrated on an independent test set.
 
@@ -85,6 +85,28 @@ To record the check with FFmpeg available:
 ```
 
 The comparison baseline is added only by this check; ordinary gameplay continues to use the existing fusion controller.
+
+### Dense-fog fallback
+
+At **52–67 seconds**, two new first-person recordings approach the same stationary car blocking the lane. Both have live model inference enabled, the same 40 km/h target, Unity `ExponentialSquared` fog density **0.45**, and **8 m far clipping on both the gameplay and perception cameras**. The same 45 decorative parked vehicles are hidden in both runs. The visual baseline and its thresholds are unchanged from the roadside-car comparison.
+
+| Controller | Observed outcome |
+|---|---|
+| Simple vision-only image-box warning | No warning triggered; collision at about **10.3 s** from run start. |
+| Vision + Raycast | First intervention at **8.53 s**, decision source **Raycast**, with no visual confirmation. Finished without collision; minimum collider clearance **0.92 m**. |
+
+This is a demonstration of the existing fallback, not successful camera recognition through fog. Unity physics rays are unaffected by visual fog and camera clipping. One controlled pair does not establish a general fog capability, and physical radar / distance-sensor performance in bad weather has not been tested. Capture uses fixed 30 fps and is separate from the real-time latency measurements. [Raw outcomes, inference summary and capture settings](../Validation/VisionV1/fog-comparison.json) preserve the evidence.
+
+Reproduce the fog pair with the same scene and assets:
+
+```powershell
+& '<Unity Editor>/Unity.exe' -batchmode -projectPath '<checkout>' `
+  -executeMethod TaiwanRider.Editor.VisionFogCapture.Begin `
+  -fogOutput '<absolute output directory>' -ffmpegPath '<ffmpeg.exe>' `
+  -logFile '<absolute log file>'
+```
+
+The capture helper applies weather only in Play mode and does not save scene changes. Its fog-aware label shader prevents distant street signs from remaining visible through the mist.
 
 ## Controls and diagnostics
 

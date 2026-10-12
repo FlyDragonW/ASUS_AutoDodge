@@ -4,96 +4,91 @@
 We recreated Section 3 of Tingzhou Road in Gongguan as a digital twin.
 
 2
-00:00:04,500 --> 00:00:08,000
-用來產生訓練影像，並測試自動避閃。
-It supplies training images and a testbed for automatic avoidance.
+00:00:04,500 --> 00:00:07,800
+用來產生訓練影像，也能反覆測試自動避閃。
+It generates training images and lets us repeat avoidance tests.
 
 3
-00:00:08,000 --> 00:00:11,000
-突然切入的車，可能讓騎士來不及反應。
-A sudden cut-in may leave too little time for a rider to react.
+00:00:07,800 --> 00:00:12,600
+我們用這些影像，訓練了第一版視覺模型。
+We used these images to train our first vision model.
 
 4
-00:00:11,000 --> 00:00:14,000
-沒開避閃時，碰撞會把騎士撞飛。
-With avoidance off, this collision throws the rider off.
+00:00:12,600 --> 00:00:16,600
+畫面上的框，就是模型辨識出的汽車和機車。
+These boxes show the cars and motorcycles detected by the model.
 
 5
-00:00:14,000 --> 00:00:20,000
-濃霧中，停在路中間的車，可能要靠近才看得清楚。
-In dense fog, a car stopped in the lane may only become visible up close.
+00:00:16,600 --> 00:00:21,400
+但光知道有車，還不夠判斷會不會撞上。
+Recognizing a vehicle alone does not tell us whether it is in our path.
 
 6
-00:00:20,000 --> 00:00:25,000
-在這個場景裡，我們先用 Raycast 模擬距離感測。
-In this environment, we first use raycasts to simulate distance sensing.
+00:00:21,400 --> 00:00:26,200
+所以我們加入 Raycast，模擬雷達的距離感測。
+We add raycasts to simulate radar-like distance sensing.
 
 7
-00:00:25,000 --> 00:00:30,000
-這些射線會偵測障礙物，幫助系統減速和繞開。
-These rays detect obstacles and help the controller slow down and steer around them.
+00:00:26,200 --> 00:00:31,000
+量出障礙物的距離，並估計它的移動方向。
+They measure obstacle distance and estimate its motion.
 
 8
-00:00:30,000 --> 00:00:33,000
-遇到機車從巷口橫越，
-When another scooter crosses from a side street,
+00:00:31,000 --> 00:00:35,300
+辨識結果會和射線偵測到的物體配對。
+Visual detections are matched to objects detected by the rays.
 
 9
-00:00:33,000 --> 00:00:38,000
-系統就先煞車，讓對方通過，再回到巡航。
-the system brakes, lets it pass, and resumes cruising.
+00:00:35,300 --> 00:00:39,600
+再交給規則控制器，決定煞車或繞開。
+A rule-based controller then decides whether to brake or steer around.
 
 10
-00:00:38,000 --> 00:00:42,500
-現在，我們也訓練了第一版視覺模型。
-We have now trained our first vision model.
+00:00:39,600 --> 00:00:43,400
+像這台停在路邊的車，其實沒有擋住路徑。
+This roadside car is visible, but it is not blocking our path.
 
 11
-00:00:42,500 --> 00:00:47,000
-畫面上的框，是模型實際辨識出的汽車和機車。
-These boxes are actual car and motorcycle detections from the model.
+00:00:43,400 --> 00:00:47,400
+只看影像框的左邊，卻把它當成威脅而煞車。
+The image-box rule on the left treats it as a hazard and brakes.
 
 12
-00:00:47,000 --> 00:00:52,000
-辨識結果會和 Raycast 的距離、移動資訊配對。
-The detections are matched with distance and motion from raycasts.
+00:00:47,400 --> 00:00:52,200
+右邊結合 Raycast 確認能通過，就能少一次虛警。
+On the right, raycast geometry confirms clearance and avoids this false alarm.
 
 13
-00:00:52,000 --> 00:00:56,000
-再由既有的規則控制器，決定煞車或避讓。
-Our rule-based controller then decides when to brake or steer.
+00:00:52,200 --> 00:00:55,500
+濃霧則是另一個挑戰。
+Dense fog presents another challenge.
 
 14
-00:00:56,000 --> 00:01:00,000
-視覺結果不確定時，仍保留 Raycast 的避閃。
-When visual evidence is uncertain, Raycast avoidance remains available.
+00:00:55,500 --> 00:00:58,800
+等相機看清楚前方違停的車，可能已經來不及。
+A car stopped in the lane may become visible too late to react.
 
 15
-00:01:00,000 --> 00:01:04,000
-只看影像框，路邊的車也可能被判成威脅。
-An image-box warning rule can flag a roadside car as a threat.
+00:00:58,800 --> 00:01:02,600
+這時即使視覺沒有可靠的辨識結果，
+Even without reliable visual detections,
 
 16
-00:01:04,000 --> 00:01:08,000
-左邊因此煞車，右邊則結合 Raycast 確認路徑。
-The left run brakes; the right uses raycast geometry to check the path.
+00:01:02,600 --> 00:01:06,400
+Raycast 仍能提供距離資訊，讓系統避開障礙。
+raycasts still provide distance information for avoidance in this simulation.
 
 17
-00:01:08,000 --> 00:01:13,000
-確認前方能通過，就繼續行駛，減少不必要的反應。
-With a clear path, it keeps moving and avoids the unnecessary response.
-
-18
-00:01:13,000 --> 00:01:17,000
+00:01:06,400 --> 00:01:10,200
 下一步，我們會把模型部署到 UGen300，
 Next, we plan to deploy the model on UGen300,
 
-19
-00:01:17,000 --> 00:01:21,000
-實際量測延遲、耗電，還有量化後的辨識表現。
+18
+00:01:10,200 --> 00:01:14,000
+量測反應延遲、耗電，以及量化後的辨識表現。
 and measure latency, power use, and detection quality after quantization.
 
-20
-00:01:21,000 --> 00:01:27,000
-再加入更多道路和真實影像，驗證不同路況下的效果。
-We will add more roads and real camera data to evaluate a wider range of conditions.
+19
+00:01:14,000 --> 00:01:19,800
+再加入更多道路和真實影像，測試不同路況下能不能穩定運作。
+We will add more roads and real camera data to test reliability across conditions.

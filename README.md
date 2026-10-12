@@ -8,13 +8,22 @@ We have completed a working pipeline: **generate synthetic training images in Un
 
 ## Watch the demo
 
-[Watch the 87-second demo — MP4, 720p, 8.4 MB](Validation/Demo/RideReflex-vision-demo.mp4) · [Chinese voiceover script](docs/DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](Validation/Demo/RideReflex-vision-demo.srt)
+[Watch the 80-second demo — MP4, 720p](Validation/Demo/RideReflex-vision-demo.mp4) · [Chinese voiceover script](docs/DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](Validation/Demo/RideReflex-vision-demo.srt)
 
-The video has Chinese / English subtitles: **0–8 s** introduces the digital twin, **20–38 s** shows live Raycast beams, and **60–73 s** compares a simple vision-only warning baseline with vision + Raycast in a roadside-car scenario. It also shows unassisted collisions and actual model detections. All footage comes from Unity with **no in-game UI or slide screens**. Detection boxes are drawn from the model's recorded outputs. The soundtrack is left open for voiceover.
+The video follows **digital twin → trained vision model → Raycast distance sensing → fewer false alarms → dense-fog fallback → UGen300 plans**. It has Chinese / English subtitles, with **no in-game UI or slide screens**. Detection boxes come from actual model outputs. The soundtrack is left open for voiceover.
+
+| Time | What to watch |
+|---|---|
+| 0:00–0:08 | Gongguan / Tingzhou Road Section 3 digital twin for training and testing |
+| 0:08–0:21 | Trained car / motorcycle detector and its actual predictions |
+| 0:21–0:39 | Live Raycast beams, distance sensing and rule-based avoidance |
+| 0:39–0:52 | Roadside car: simple vision-only warning versus vision + Raycast |
+| 0:52–1:07 | Dense fog: visual warning misses the obstacle; Raycast fallback avoids it |
+| 1:07–1:20 | Planned UGen300 deployment, measurement and broader data |
 
 ![Actual car / motorcycle model outputs captured during a Unity run](Validation/Demo/RideReflex-vision-preview.webp)
 
-The dense-fog crash illustrates the visibility problem. Camera recognition through dense fog has not been validated.
+The fog comparison uses the same simulated visibility in both runs. Raycast geometry remains available when the model provides no reliable visual evidence. This demonstrates fallback in Unity; real sensor behavior in fog has not been tested.
 
 ### Latest screenshots
 
@@ -54,11 +63,12 @@ Visual classification can extend the prediction horizon from **1.8 s** to **2.2 
 | Detection | **84.2% mAP@50** | 200 synthetic test images; the splits share vehicle meshes and street scenery. |
 | Closed-loop runs | **9/9 routes completed without a recorded collision** | Four Raycast / fusion pairs and one mid-run vision-disable test, at a 40 km/h cruise target. Each case was run once in the final check. |
 | Roadside-car example | **1 unnecessary vision-only warning / 0 fusion interventions** | One controlled pair using a simple image-box warning baseline; both runs passed the roadside car without collision. |
+| Dense-fog example | **Visual baseline collided / fusion completed without collision** | One controlled pair with identical fog; fusion intervened using Raycast, without visual confirmation. |
 | Capture-to-result latency | **52.9 ms mean / 79.4 ms P95** | 647 inferences on an RTX 3060 Laptop GPU; includes capture, scheduling, execution and readback. |
 
 The roadside car is correctly recognized by both runs; the error is an unnecessary **hazard warning**, not an incorrect object class. During the four seconds after the warning, the image-box baseline slowed to **18.1 km/h**, while fusion stayed at **40.0 km/h**. In a separate in-lane obstacle check, both controllers responded without collision. The vision-only baseline uses manually chosen image thresholds and shares the same route follower; this example does not establish superiority over all camera-only systems.
 
-The comparison uses fixed 30 fps capture and hides other parked-vehicle props identically in both runs to isolate one vehicle. [Baseline rules, setup and capture evidence](docs/VISION_MODEL.md#demo-capture) document the scope. Latency above comes from the separate real-time integration check.
+The comparison uses fixed 30 fps capture and hides other parked-vehicle props identically in both runs to isolate one vehicle. [Baseline rules, setup and capture evidence](docs/VISION_MODEL.md#demo-capture) document the scope. The [fog capture report](Validation/VisionV1/fog-comparison.json) records both runs, visibility settings and the fallback decision. Latency above comes from the separate real-time integration check.
 
 These results describe fixed Unity scenarios. Raycasts are idealized distance sensing with collider bounds, and the controller knows the route. The model does not yet identify drivable space. General road safety, real-camera accuracy and UGen300 performance remain to be evaluated.
 
