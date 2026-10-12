@@ -36,6 +36,7 @@ namespace TaiwanRider.Editor
     {
         static string Folder = Path.GetFullPath("Validation/VisionFog/" + DateTime.Now.ToString("yyyyMMdd-HHmmss"));
         static string Ffmpeg = "ffmpeg";
+        static bool ShowRays, FusionOnly;
         const int Width = 1920, Height = 1080, Fps = 30;
         [Serializable] public class VisionFrame
         {
@@ -58,7 +59,8 @@ namespace TaiwanRider.Editor
             public bool uiVisible, raysVisible, firstPerson, visionEnabled, parkedCar, visionOnly, roadBlocked, passed;
             public string weather = "Unity ExponentialSquared fog; physics rays are unaffected. Not a physical radar-weather test.";
             public float fogDensity, cameraFarClip, perceptionFarClip, maximumCarDisplacement, maxRiderRise;
-            public int impactFrame = -1;
+            public int impactFrame = -1, maxRenderedBeams;
+            public bool perceptionExcludesRays = true;
             public string firstDecisionSource;
             public float parkedOffset, minimumClearance = 1000, minimumSpeedAfterSixSeconds = 1000, firstVisualWarningAt = -1;
             public int visualWarningEvents, fusionInterventions, backgroundParkedVehiclesHidden;
@@ -120,6 +122,8 @@ namespace TaiwanRider.Editor
             {
                 if (args[i] == "-fogOutput") Folder = Path.GetFullPath(args[i + 1]);
                 if (args[i] == "-ffmpegPath") Ffmpeg = args[i + 1];
+                if (args[i] == "-fogShowRays") ShowRays = bool.Parse(args[i + 1]);
+                if (args[i] == "-fogFusionOnly") FusionOnly = bool.Parse(args[i + 1]);
             }
             Directory.CreateDirectory(Folder);
             Application.runInBackground = true;
@@ -148,6 +152,7 @@ namespace TaiwanRider.Editor
             string[] names = { "18-fog-vision-only", "19-fog-fusion" };
             for (int i = 0; i < names.Length; i++)
             {
+                if (FusionOnly && i == 0) continue;
                 bool parked = true, fusion = i % 2 == 1;
                 bool blocked = true;
                 baseline.ResetBaseline();
@@ -155,7 +160,7 @@ namespace TaiwanRider.Editor
                 vision.SetFusionEnabled(true);
                 session.car.enabled = true;
                 session.Demo.SetThirdPerson(!parked);
-                session.Demo.SetRadarVisible(false);
+                session.Demo.SetRadarVisible(ShowRays && fusion);
                 session.StartRun(1);
                 if (parked)
                 {
@@ -197,6 +202,8 @@ namespace TaiwanRider.Editor
                 report.fusionInterventions = session.Demo.Pilot.InterventionCount;
                 report.passed = fusion ? !report.result.collision && report.result.finished && report.fusionInterventions > 0 && report.firstDecisionSource == "Raycast" : report.result.collision;
                 report.passed &= report.cameraFarClip == 8 && report.perceptionFarClip == 8 && report.maximumCarDisplacement < .001f;
+                report.passed &= !report.uiVisible && report.raysVisible == (ShowRays && fusion);
+                if (ShowRays && fusion) report.passed &= report.maxRenderedBeams == 68;
                 allPassed &= report.passed;
                 File.WriteAllText(Path.Combine(Folder, report.name + ".json"), JsonUtility.ToJson(report, true));
                 Debug.Log("VISION_FOG_DONE " + report.name + " frames=" + frame + " action=" + report.firstInterventionAt + " warning=" + report.visualWarningEvents + " pilot=" + report.fusionInterventions + " passed=" + report.passed + " clearance=" + report.minimumClearance);
@@ -212,7 +219,9 @@ namespace TaiwanRider.Editor
             if (!recording || failed) return;
             try
             {
-                if (session.ShowUI || session.Demo.Display.Visible) throw new Exception("UI or radar rays enabled during clean capture");
+                if (session.ShowUI || session.Demo.Display.Visible != (ShowRays && !report.visionOnly))
+                    throw new Exception("Unexpected UI or ray visualization state");
+                report.maxRenderedBeams = Mathf.Max(report.maxRenderedBeams, session.Demo.Display.RenderedBeamCount);
                 if (vision.Error != null) throw new Exception(vision.Error);
                 var pilot = session.Demo.Pilot;
                 if (frame % 3 == 0 || pilot.State != previousState || pilot.InterventionCount != previousInterventions || baseline.WarningActive != previousWarning)

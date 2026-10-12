@@ -88,7 +88,7 @@ The comparison baseline is added only by this check; ordinary gameplay continues
 
 ### Dense-fog fallback
 
-At **52–67 seconds**, two new first-person recordings approach the same stationary car blocking the lane. Both have live model inference enabled, the same 40 km/h target, Unity `ExponentialSquared` fog density **0.45**, and **8 m far clipping on both the gameplay and perception cameras**. The same 45 decorative parked vehicles are hidden in both runs. The visual baseline and its thresholds are unchanged from the roadside-car comparison.
+At **52–67 seconds**, two new first-person recordings approach the same stationary car blocking the lane. Both have live model inference enabled, the same 40 km/h target, Unity `ExponentialSquared` fog density **0.45**, and **8 m far clipping on both the gameplay and perception cameras**. The same 45 decorative parked vehicles are hidden in both runs. The visual baseline and its thresholds are unchanged from the roadside-car comparison. During the fusion shot (**58.6–66.6 s**), live Raycast beams are visible while the game HUD stays hidden. The dedicated perception camera still excludes the ray visualization, so it receives only the foggy RGB scene.
 
 | Controller | Observed outcome |
 |---|---|
@@ -102,7 +102,8 @@ Reproduce the fog pair with the same scene and assets:
 ```powershell
 & '<Unity Editor>/Unity.exe' -batchmode -projectPath '<checkout>' `
   -executeMethod TaiwanRider.Editor.VisionFogCapture.Begin `
-  -fogOutput '<absolute output directory>' -ffmpegPath '<ffmpeg.exe>' `
+  -fogOutput '<absolute output directory>' -fogShowRays true `
+  -ffmpegPath '<ffmpeg.exe>' `
   -logFile '<absolute log file>'
 ```
 

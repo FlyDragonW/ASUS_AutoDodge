@@ -18,12 +18,12 @@ The video follows **digital twin → trained vision model → Raycast distance s
 | 0:08–0:21 | Trained car / motorcycle detector and its actual predictions |
 | 0:21–0:39 | Live Raycast beams, distance sensing and rule-based avoidance |
 | 0:39–0:52 | Roadside car: simple vision-only warning versus vision + Raycast |
-| 0:52–1:07 | Dense fog: visual warning misses the obstacle; Raycast fallback avoids it |
+| 0:52–1:07 | Dense fog: visual warning misses the obstacle; fallback avoids it with live Raycast beams shown |
 | 1:07–1:20 | Planned UGen300 deployment, measurement and broader data |
 
 ![Actual car / motorcycle model outputs captured during a Unity run](Validation/Demo/RideReflex-vision-preview.webp)
 
-The fog comparison uses the same simulated visibility in both runs. Raycast geometry remains available when the model provides no reliable visual evidence. This demonstrates fallback in Unity; real sensor behavior in fog has not been tested.
+The fog comparison uses the same simulated visibility in both runs. The fusion segment displays live Raycast beams; these visualization rays are excluded from the model camera input. Raycast geometry remains available when the model provides no reliable visual evidence. This demonstrates fallback in Unity; real sensor behavior in fog has not been tested.
 
 ### Latest screenshots
 
