@@ -56,19 +56,39 @@ An initial diagnostic run exposed a weak, 0.289-confidence incorrect class assoc
 
 ## Demo capture
 
-The [87-second demo](../Validation/Demo/RideReflex-vision-demo.mp4) includes actual model output and a synchronized first-person parked-car comparison. Camera boxes are drawn from recorded detections on the exact inference input; each input is held until the next completed result. The displayed boxes require confidence ≥ 0.60, with at most six sufficiently large boxes shown.
+The [87-second demo](../Validation/Demo/RideReflex-vision-demo.mp4) opens with the Gongguan / Tingzhou Road Section 3 digital-twin prototype used to generate training images and test avoidance. At **20–38 seconds**, the Raycast walkthrough displays the actual 68 sensor beams. The game HUD remains hidden throughout. No slide screens or voiceover audio are included; [Chinese narration](DEMO_NARRATION_zh-TW.txt) and [bilingual subtitles](../Validation/Demo/RideReflex-vision-demo.srt) are provided.
 
-The comparison uses identical initial conditions, a 40 km/h cruise target and the same trim on both videos. Fusion intervened at **7.9333 s**, versus **8.3667 s** for Raycast only: **0.4333 s earlier** (13 capture frames). Both runs finished without a recorded collision. This is a separate presentation capture at fixed `Time.captureFramerate = 30`; it is not the source of the 0.40 s real-time comparison or the 52.9 / 79.4 ms latency measurements above.
+Camera detection boxes are drawn from recorded model outputs on the exact inference input, held until the next completed result. The displayed boxes require confidence ≥ 0.60, with at most six sufficiently large boxes shown. The fog crash illustrates poor visibility; it does not demonstrate fog recognition.
 
-- [Raycast capture record](../Validation/VisionV1/video-capture-raycast.json)
-- [Fusion capture record](../Validation/VisionV1/video-capture-fusion.json)
-- [Chinese voiceover script](DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](../Validation/Demo/RideReflex-vision-demo.srt)
+### Vision-only warning versus vision + Raycast
 
-All footage hides the game HUD and sensor rays. Titles, subtitles and detection boxes are added in editing. No slide screens or voiceover audio are included; the script is ready for recording. The fog crash illustrates poor visibility and does not demonstrate fog recognition.
+The synchronized segment at **60–73 seconds** compares a **simple image-box warning baseline** with the existing fusion controller. Both share the same known-route follower and a 40 km/h cruise target. The visual baseline consumes only RGB detections for warning decisions; it does not read metric distance, Raycast contacts, collider bounds or scenario labels. It is an illustrative hand-written policy, not a trained driving model or a representative benchmark of all monocular systems.
+
+[VisionOnlyWarningBaseline.cs](../Assets/TaiwanRider/Runtime/VisionOnlyWarningBaseline.cs) triggers braking after two consecutive observations of the same class with IoU ≥ 0.25, confidence ≥ 0.60, box center in the central 20% of the image, box height ≥ 7% of image height and box bottom below the image midpoint. Evidence and the warning hold expire after 0.35 seconds. These thresholds were chosen while developing this demonstration, not calibrated on an independent test set.
+
+| Controlled scenario | Image-box baseline | Vision + Raycast |
+|---|---|---|
+| Car beside the route, lateral offset 5.0 m | **1 unnecessary warning**, no collision | **0 interventions**, completed, no collision |
+| Car blocking the route, lateral offset 2.65 m | Braked; no collision | Avoided the car; completed, no collision |
+
+For the roadside pair, the visual warning began at **9.07 s**. Over the following four seconds, minimum speed was **18.1 km/h** with the visual baseline and **40.0 km/h** with fusion. Fusion passed with **1.28 m** minimum collider clearance. Here the car classification is correct; the false positive is the decision to treat a non-blocking roadside vehicle as a hazard. Raycast geometry supplies the missing clearance / path information. This illustrates the value of adding geometry to this specific image-space rule; it does not show that fusion outperforms Raycast-only control.
+
+This is a controlled single-vehicle experiment: 45 decorative parked vehicles are hidden identically in both runs, while the test car and street remain. The paired clips start from the same state and use identical trims, with no retiming. Each full run records 22 seconds at `Time.captureFramerate = 30`. These captures are separate from the real-time latency and earlier parked-car timing measurements above. The [raw comparison report](../Validation/VisionV1/false-positive-comparison.json) contains setup, thresholds, per-frame telemetry, the recorded scene SHA-256 and all four outcomes. Identical visual reproduction requires the same scene and assets.
+
+To record the check with FFmpeg available:
+
+```powershell
+& '<Unity Editor>/Unity.exe' -batchmode -projectPath '<checkout>' `
+  -executeMethod TaiwanRider.Editor.VisionFalsePositiveCapture.Begin `
+  -falsePositiveOutput '<absolute output directory>' -ffmpegPath '<ffmpeg.exe>' `
+  -logFile '<absolute log file>'
+```
+
+The comparison baseline is added only by this check; ordinary gameplay continues to use the existing fusion controller.
 
 ## Controls and diagnostics
 
-Press **H** in Play mode to toggle vision fusion. **F2** toggles automatic control, **V** switches the presentation camera, and **G** toggles the ray visualization. The normal demo HUD reports detections, contact matches and end-to-end latency; all captures in the automated checks hide the HUD and rays.
+Press **H** in Play mode to toggle vision fusion. **F2** toggles automatic control, **V** switches the presentation camera, and **G** toggles the ray visualization. The normal demo HUD reports detections, contact matches and end-to-end latency; the original integration checks hide the HUD and rays. The narrated demo intentionally shows rays during its Raycast walkthrough.
 
 `AutomaticAvoidance.LastDecisionSource` distinguishes:
 

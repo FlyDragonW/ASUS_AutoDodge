@@ -1,37 +1,37 @@
 ﻿1
-00:00:00,000 --> 00:00:03,500
-如果前面的車突然切進來，
-If a car suddenly cuts in front of you,
+00:00:00,000 --> 00:00:04,500
+我們把公館汀州路三段，打造成數位孿生場景。
+We recreated Section 3 of Tingzhou Road in Gongguan as a digital twin.
 
 2
-00:00:03,500 --> 00:00:07,000
-騎士可能只剩很短的時間反應。
-there may be very little time to react.
+00:00:04,500 --> 00:00:08,000
+用來產生訓練影像，並測試自動避閃。
+It supplies training images and a testbed for automatic avoidance.
 
 3
-00:00:07,000 --> 00:00:11,000
-這段模擬沒有開避閃，碰撞後騎士被撞飛。
-With avoidance off in this simulation, the collision throws the rider off.
+00:00:08,000 --> 00:00:11,000
+突然切入的車，可能讓騎士來不及反應。
+A sudden cut-in may leave too little time for a rider to react.
 
 4
-00:00:11,000 --> 00:00:15,500
-這裡用濃霧，模擬能見度很差的情況。
-This dense-fog simulation illustrates poor visibility.
+00:00:11,000 --> 00:00:14,000
+沒開避閃時，碰撞會把騎士撞飛。
+With avoidance off, this collision throws the rider off.
 
 5
-00:00:15,500 --> 00:00:20,000
-停在路中間的車，可能要靠近才看得清楚。
-A car stopped in the lane may only become visible up close.
+00:00:14,000 --> 00:00:20,000
+濃霧中，停在路中間的車，可能要靠近才看得清楚。
+In dense fog, a car stopped in the lane may only become visible up close.
 
 6
 00:00:20,000 --> 00:00:25,000
-所以，我們先在 Unity 做出自動避閃原型。
-So we built an avoidance prototype in Unity.
+在這個場景裡，我們先用 Raycast 模擬距離感測。
+In this environment, we first use raycasts to simulate distance sensing.
 
 7
 00:00:25,000 --> 00:00:30,000
-用 Raycast 模擬距離感測，遇到車輛切入就減速繞開。
-Raycasts simulate distance sensing, allowing the scooter to slow down and steer around a cut-in.
+這些射線會偵測障礙物，幫助系統減速和繞開。
+These rays detect obstacles and help the controller slow down and steer around them.
 
 8
 00:00:30,000 --> 00:00:33,000
@@ -70,18 +70,18 @@ When visual evidence is uncertain, Raycast avoidance remains available.
 
 15
 00:01:00,000 --> 00:01:04,000
-接著，用同一個路中停車情境比較。
-Here are matched runs with a car stopped in the lane.
+只看影像框，路邊的車也可能被判成威脅。
+An image-box warning rule can flag a roadside car as a threat.
 
 16
 00:01:04,000 --> 00:01:08,000
-右邊加入視覺分類，會更早開始避讓。
-On the right, visual classification activates earlier avoidance.
+左邊因此煞車，右邊則結合 Raycast 確認路徑。
+The left run brakes; the right uses raycast geometry to check the path.
 
 17
 00:01:08,000 --> 00:01:13,000
-這次對照，介入時間提前約零點四秒。
-In these runs, intervention begins about 0.4 seconds earlier.
+確認前方能通過，就繼續行駛，減少不必要的反應。
+With a clear path, it keeps moving and avoids the unnecessary response.
 
 18
 00:01:13,000 --> 00:01:17,000
