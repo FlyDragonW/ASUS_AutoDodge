@@ -1,0 +1,76 @@
+{
+    "capturedAtUtc": "2026-10-12T18:06:37.6099669Z",
+    "name": "10-parked-raycast-first",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 565,
+    "uiVisible": false,
+    "raysVisible": false,
+    "firstPerson": true,
+    "visionEnabled": false,
+    "parkedCar": true,
+    "timing": "Fixed 30 fps simulation capture for presentation. Real-time latency benchmark is separately recorded in Validation/VisionV1/report.json.",
+    "overlayProvenance": "Model-view RGB held from the exact inference input; JSON boxes are native Unity model outputs for that same input. No ground-truth boxes.",
+    "firstInterventionAt": 8.36666488647461,
+    "firstInterventionFrame": 252,
+    "visionAssistedInterventions": 0,
+    "wallSeconds": 18.47456839999999,
+    "result": {
+        "scenario": "CarCutIn",
+        "seed": 126,
+        "endedAtUtc": "2026-10-12T18:06:54.9986615Z",
+        "collision": false,
+        "finished": true,
+        "hazardTriggered": true,
+        "autoAvoidEnabled": true,
+        "avoidanceInterventions": 1,
+        "hitObject": "",
+        "elapsedSeconds": 18.033401489257814,
+        "reactionSeconds": -1.0,
+        "minimumClearanceMetres": 0.9169324040412903,
+        "peakSpeedKph": 39.99942398071289
+    },
+    "transitions": [
+        {
+            "frame": 0,
+            "gameSeconds": 0.0,
+            "speedKph": 0.0,
+            "state": "Cruise",
+            "source": "Raycast",
+            "visualClass": "",
+            "confidence": 0.0,
+            "ttc": -1.0
+        },
+        {
+            "frame": 252,
+            "gameSeconds": 8.399998664855957,
+            "speedKph": 39.85720443725586,
+            "state": "EvadeLeft",
+            "source": "Raycast",
+            "visualClass": "",
+            "confidence": 0.0,
+            "ttc": 1.7609326839447022
+        },
+        {
+            "frame": 346,
+            "gameSeconds": 11.533373832702637,
+            "speedKph": 37.15057373046875,
+            "state": "Recover",
+            "source": "Raycast",
+            "visualClass": "",
+            "confidence": 0.0,
+            "ttc": -1.0
+        },
+        {
+            "frame": 425,
+            "gameSeconds": 14.166742324829102,
+            "speedKph": 39.94795227050781,
+            "state": "Cruise",
+            "source": "Raycast",
+            "visualClass": "",
+            "confidence": 0.0,
+            "ttc": -1.0
+        }
+    ]
+}

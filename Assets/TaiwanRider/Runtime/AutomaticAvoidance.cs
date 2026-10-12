@@ -8,6 +8,7 @@ namespace TaiwanRider
     {
         public ScenarioRunner session;
         public RadarSensor radar;
+        public RiderVisionSensor vision;
         public ScooterController rider;
         public float cruiseSpeedKph=40;
         public float Throttle {get;private set;}
@@ -20,6 +21,14 @@ namespace TaiwanRider
         public int InterventionCount {get;private set;}
         public float FirstInterventionAt {get;private set;}=-1;
         public float FirstInterventionZ {get;private set;}
+        public int VisionAssistedInterventions {get;private set;}
+        public int VisionExtendedRiskSteps {get;private set;}
+        public string LastDecisionSource {get;private set;}="Raycast";
+        public string LastVisualClass {get;private set;}="";
+        public float LastVisualConfidence {get;private set;}
+        public float LastVisualAgeMs {get;private set;}
+        public float LastInterventionTtc {get;private set;}
+        public bool LastBaselineWouldReact {get;private set;}
         public bool IsControlling => session && session.DemoMode && rider.InputOverride==null;
         float stateSince,lastRiskAt,lastThreatSeen;
         Collider evadeTarget;
@@ -29,6 +38,7 @@ namespace TaiwanRider
             Throttle=Brake=Steer=0;State=AvoidanceState.Cruise;TargetOffset=2.65f;
             Threat=evadeTarget=null;TimeToCollision=float.PositiveInfinity;InterventionCount=0;FirstInterventionAt=-1;
             stateSince=lastRiskAt=lastThreatSeen=Time.fixedTime;
+            VisionAssistedInterventions=VisionExtendedRiskSteps=0;LastDecisionSource="Raycast";LastVisualClass="";LastVisualConfidence=LastVisualAgeMs=0;
         }
         static bool Slab(float position,float velocity,float radius,ref float entry,ref float exit)
         {
@@ -36,7 +46,7 @@ namespace TaiwanRider
             float a=(-radius-position)/velocity,b=(radius-position)/velocity;
             entry=Mathf.Max(entry,Mathf.Min(a,b));exit=Mathf.Min(exit,Mathf.Max(a,b));return entry<=exit;
         }
-        bool PredictedCollision(RadarSensor.Contact contact,out float ttc)
+        bool PredictedCollision(RadarSensor.Contact contact,out float ttc,float horizon=1.8f)
         {
             ttc=float.PositiveInfinity;
             if(contact.velocity.sqrMagnitude<.36f)
@@ -52,11 +62,11 @@ namespace TaiwanRider
             Quaternion frame=Quaternion.Inverse(session.route.Heading(rider.transform.position.z));
             Vector3 p=frame*(contact.position-rider.transform.position);
             Vector3 v=frame*(contact.velocity-rider.Body.linearVelocity);
-            float entry=0,exit=2f;
+            float entry=0,exit=horizon;
             if(p.z<-contact.extents.z-1.5f)return false;
             if(!Slab(p.x,v.x,contact.extents.x+.52f,ref entry,ref exit))return false;
             if(!Slab(p.z,v.z,contact.extents.z+1.0f,ref entry,ref exit))return false;
-            ttc=entry;return entry<=exit && exit>=0 && entry<1.8f;
+            ttc=entry;return entry<=exit && exit>=0 && entry<horizon;
         }
         bool SideAvailable(float offset,RadarSensor.Contact current)
         {
@@ -72,6 +82,15 @@ namespace TaiwanRider
         }
         void BeginIntervention(RadarSensor.Contact contact)
         {
+            LastBaselineWouldReact=PredictedCollision(contact,out _);
+            LastInterventionTtc=TimeToCollision;LastDecisionSource="Raycast";LastVisualClass="";LastVisualConfidence=LastVisualAgeMs=0;
+            if(vision && vision.TryGetEvidence(contact.collider,out var evidence))
+            {
+                LastVisualClass=evidence.detection.ClassName;LastVisualConfidence=evidence.detection.confidence;
+                LastVisualAgeMs=(float)((Time.realtimeSinceStartupAsDouble-evidence.capturedRealtime)*1000);
+                LastDecisionSource=LastBaselineWouldReact?"Raycast + vision confirmation":"Vision + raycast early intervention";
+                if(!LastBaselineWouldReact)VisionAssistedInterventions++;
+            }
             if(State==AvoidanceState.Cruise || State==AvoidanceState.Recover)
             {
                 InterventionCount++;if(FirstInterventionAt<0){FirstInterventionAt=session.elapsed;FirstInterventionZ=rider.transform.position.z;}
@@ -91,7 +110,8 @@ namespace TaiwanRider
             if(!IsControlling || !session.IsRunning || session.IsPaused || rider.HasCrashed){Throttle=Brake=Steer=0;return;}
             float now=Time.fixedTime;RadarSensor.Contact risk=null;TimeToCollision=float.PositiveInfinity;
             foreach(var contact in radar.Contacts)
-                if(PredictedCollision(contact,out float ttc) && ttc<TimeToCollision){TimeToCollision=ttc;risk=contact;}
+                if(PredictedCollision(contact,out float ttc,vision?vision.Horizon(contact.collider):1.8f) && ttc<TimeToCollision){TimeToCollision=ttc;risk=contact;}
+            if(risk!=null && !PredictedCollision(risk,out _))VisionExtendedRiskSteps++;
             Threat=risk!=null?risk.collider:evadeTarget;
             if(risk!=null)
             {

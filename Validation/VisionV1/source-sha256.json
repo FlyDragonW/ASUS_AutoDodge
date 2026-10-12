@@ -1,0 +1,9 @@
+{
+  "Assets/TaiwanRider/Runtime/RiderVisionSensor.cs": "e6d9e40e149c4ad8216cda7f96bc19437fcc838b29fe3bdb9d9968e8060d509a",
+  "Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs": "95808ab1b0560ae8737dbb508afefcced4dd8683f550364f5fb836a1ebbc90d8",
+  "Assets/TaiwanRider/Runtime/RiderDemo.cs": "ff1c809dc5f7df456059d60a7f9c81ac0a616b9e061dc72f53b00e24e4bc7ece",
+  "Assets/TaiwanRider/Runtime/TaiwanRider.Runtime.asmdef": "2acf8590ab70855dcc33cf6986f84b95e74be362ae47ee1731a8d4fee30f0e3b",
+  "Assets/TaiwanRider/Editor/VisionIntegrationCheck.cs": "ec703bb543e513aa979a45b01587cbe5d8a633617814c71cf7b82c625addf2ea",
+  "Assets/TaiwanRider/Resources/RideReflexVision/Letterbox.shader": "baa037e9bca4f6fa4ee02b5bf35b15b17cff8b228a53ceeec2bc1b1996e8ab32",
+  "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v1.onnx": "989305d3698e592074fb86c1100f2dbbcaf9283509f516e2fb6bf78c3fe53cd3"
+}

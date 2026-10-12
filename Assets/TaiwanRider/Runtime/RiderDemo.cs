@@ -11,6 +11,7 @@ namespace TaiwanRider
         public RadarSensor Sensor {get;private set;}
         public AutomaticAvoidance Pilot {get;private set;}
         public RadarDisplay Display {get;private set;}
+        public RiderVisionSensor Vision {get;private set;}
         public Camera ViewCamera {get;private set;}
         public Camera ActiveCamera => ThirdPerson?ViewCamera:session.rider.riderCamera;
         public bool ThirdPerson {get;private set;}
@@ -24,10 +25,11 @@ namespace TaiwanRider
             session=runner;var rider=session.rider;
             Sensor=rider.gameObject.AddComponent<RadarSensor>();Sensor.session=session;Sensor.rider=rider;
             Pilot=rider.gameObject.AddComponent<AutomaticAvoidance>();Pilot.session=session;Pilot.radar=Sensor;Pilot.rider=rider;
+            Vision=rider.gameObject.AddComponent<RiderVisionSensor>();Vision.session=session;Vision.radar=Sensor;Pilot.vision=Vision;
             rider.AutomaticInput=Pilot;
             var cameraObject=new GameObject("Demo chase camera");ViewCamera=cameraObject.AddComponent<Camera>();ViewCamera.CopyFrom(rider.riderCamera);
             ViewCamera.nearClipPlane=.12f;ViewCamera.fieldOfView=62;
-            var data=ViewCamera.GetUniversalAdditionalCameraData();data.renderPostProcessing=true;data.antialiasing=AntialiasingMode.SubpixelMorphologicalAntiAliasing;
+            var data=ViewCamera.GetUniversalAdditionalCameraData();data.renderPostProcessing=true;data.antialiasing=rider.riderCamera.GetUniversalAdditionalCameraData().antialiasing;
             Display=new GameObject("Raycast radar visualization").AddComponent<RadarDisplay>();Display.demo=this;
             ThirdPerson=session.ThirdPersonView;Display.Visible=session.RadarVisualization;
             MakeAvatar();SetEnabled(session.DemoMode);ResetForRun();
@@ -62,7 +64,7 @@ namespace TaiwanRider
         }
         public void SetEnabled(bool value)
         {
-            session.DemoMode=value;Pilot.ResetController();Sensor.ResetTracks();
+            session.DemoMode=value;Pilot.ResetController();Sensor.ResetTracks();if(Vision)Vision.ResetForRun();
             RefreshCursor();
         }
         public void SetThirdPerson(bool value){ThirdPerson=session.ThirdPersonView=value;cameraSnap=true;RefreshCameras();RefreshCursor();}
@@ -72,12 +74,18 @@ namespace TaiwanRider
             bool free=!session.IsRunning || session.IsPaused || ThirdPerson;
             Cursor.lockState=free?CursorLockMode.None:CursorLockMode.Locked;Cursor.visible=free;
         }
-        void RefreshCameras(){if(!ViewCamera)return;ViewCamera.enabled=ThirdPerson;session.rider.riderCamera.enabled=!ThirdPerson;}
+        void RefreshCameras()
+        {
+            if(!ViewCamera)return;
+            ViewCamera.enabled=ThirdPerson;session.rider.riderCamera.enabled=!ThirdPerson;
+            ViewCamera.GetUniversalAdditionalCameraData().resetHistory=true;
+            session.rider.riderCamera.GetUniversalAdditionalCameraData().resetHistory=true;
+        }
         public void ResetForRun()
         {
             // Reattach before the crash rigidbody gets destroyed on retry.
             if(avatar){avatar.SetParent(session.rider.visualBody,false);avatar.localPosition=Vector3.zero;avatar.localRotation=Quaternion.identity;}
-            Pilot.ResetController();Sensor.ResetTracks();cameraVelocity=Vector3.zero;cameraSnap=true;
+            Pilot.ResetController();Sensor.ResetTracks();if(Vision)Vision.ResetForRun();cameraVelocity=Vector3.zero;cameraSnap=true;
             RefreshCameras();
         }
         void Update()
@@ -86,6 +94,7 @@ namespace TaiwanRider
             if(keyboard.f2Key.wasPressedThisFrame)SetEnabled(!session.DemoMode);
             if(keyboard.vKey.wasPressedThisFrame)SetThirdPerson(!ThirdPerson);
             if(keyboard.gKey.wasPressedThisFrame)SetRadarVisible(!Display.Visible);
+            if(keyboard.hKey.wasPressedThisFrame && Vision)Vision.SetFusionEnabled(!Vision.FusionEnabled);
         }
         void LateUpdate()
         {
@@ -99,7 +108,7 @@ namespace TaiwanRider
             Vector3 desired=focus+heading*new Vector3(-3.2f,5.4f,-7.8f);
             // Camera collision prevents the follow rig from entering shop walls.
             if(Physics.SphereCast(focus,.23f,(desired-focus).normalized,out var hit,Vector3.Distance(focus,desired),~(1<<8),QueryTriggerInteraction.Ignore))desired=hit.point+hit.normal*.3f;
-            if(cameraSnap){ViewCamera.transform.position=desired;cameraSnap=false;}
+            if(cameraSnap){ViewCamera.transform.position=desired;cameraSnap=false;ViewCamera.GetUniversalAdditionalCameraData().resetHistory=true;}
             else ViewCamera.transform.position=Vector3.SmoothDamp(ViewCamera.transform.position,desired,ref cameraVelocity,.14f,100,Time.deltaTime);
             Vector3 look=focus+heading*Vector3.forward*3f;
             ViewCamera.transform.rotation=Quaternion.LookRotation(look-ViewCamera.transform.position,Vector3.up);
@@ -122,6 +131,7 @@ namespace TaiwanRider
             GUI.Label(new Rect(x+18,142,285,28),$"碰撞預估 {risk}    煞車 {Pilot.Brake*100:F0}%",body);
             GUI.Label(new Rect(x+18,179,285,28),$"V {(ThirdPerson?"第三人稱":"第一人稱")}    G 射線{(Display.Visible?"開":"關")} · 偵測中",body);
             if(Display.Visible)GUI.Label(new Rect(x+18,229,295,28),"青：射線　橙：障礙物　紅：碰撞風險",body);
+            if(Vision)GUI.Label(new Rect(x+18,260,315,50),Vision.FusionEnabled && Vision.Ready?$"H 視覺融合 · {Vision.Detections.Count} 辨識 / {Vision.MatchedContacts} 配對\n{Vision.LastLatencyMs:F0} ms · {Pilot.LastDecisionSource}":"H 視覺關閉／未就緒 · Raycast 避閃",body);
         }
         void OnDestroy()
         {

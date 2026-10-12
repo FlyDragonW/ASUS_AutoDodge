@@ -1,0 +1,76 @@
+{
+    "capturedAtUtc": "2026-10-12T18:06:56.1184130Z",
+    "name": "11-parked-fusion-first",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 567,
+    "uiVisible": false,
+    "raysVisible": false,
+    "firstPerson": true,
+    "visionEnabled": true,
+    "parkedCar": true,
+    "timing": "Fixed 30 fps simulation capture for presentation. Real-time latency benchmark is separately recorded in Validation/VisionV1/report.json.",
+    "overlayProvenance": "Model-view RGB held from the exact inference input; JSON boxes are native Unity model outputs for that same input. No ground-truth boxes.",
+    "firstInterventionAt": 7.9333271980285648,
+    "firstInterventionFrame": 239,
+    "visionAssistedInterventions": 1,
+    "wallSeconds": 23.502851800000003,
+    "result": {
+        "scenario": "CarCutIn",
+        "seed": 126,
+        "endedAtUtc": "2026-10-12T18:07:18.4741904Z",
+        "collision": false,
+        "finished": true,
+        "hazardTriggered": true,
+        "autoAvoidEnabled": true,
+        "avoidanceInterventions": 1,
+        "hitObject": "",
+        "elapsedSeconds": 18.100067138671876,
+        "reactionSeconds": -1.0,
+        "minimumClearanceMetres": 0.9020109176635742,
+        "peakSpeedKph": 39.9995002746582
+    },
+    "transitions": [
+        {
+            "frame": 0,
+            "gameSeconds": 0.0,
+            "speedKph": 0.0,
+            "state": "Cruise",
+            "source": "Raycast",
+            "visualClass": "",
+            "confidence": 0.0,
+            "ttc": -1.0
+        },
+        {
+            "frame": 239,
+            "gameSeconds": 7.966660499572754,
+            "speedKph": 39.72444152832031,
+            "state": "EvadeLeft",
+            "source": "Vision + raycast early intervention",
+            "visualClass": "car",
+            "confidence": 0.827204167842865,
+            "ttc": 2.194816827774048
+        },
+        {
+            "frame": 349,
+            "gameSeconds": 11.63337516784668,
+            "speedKph": 38.401222229003909,
+            "state": "Recover",
+            "source": "Vision + raycast early intervention",
+            "visualClass": "car",
+            "confidence": 0.827204167842865,
+            "ttc": -1.0
+        },
+        {
+            "frame": 430,
+            "gameSeconds": 14.33341121673584,
+            "speedKph": 39.97270202636719,
+            "state": "Cruise",
+            "source": "Vision + raycast early intervention",
+            "visualClass": "car",
+            "confidence": 0.827204167842865,
+            "ttc": -1.0
+        }
+    ]
+}
