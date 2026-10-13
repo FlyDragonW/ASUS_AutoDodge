@@ -2,24 +2,26 @@
 
 **Camera and distance-sensing fusion for scooter hazard avoidance.** Proposed entry for the [ASUS UGen AI League](https://contest.bhuntr.com/en/39jg9vimiynrhlksze/home/), **Everyday AI / Battlefield Lightning**.
 
-Our Unity digital-twin prototype recreates **Section 3 of Tingzhou Road in Gongguan, Taipei**, providing synthetic training images and repeatable avoidance tests. Urban scooter riders face sudden cut-ins, crossing traffic and vehicles stopped in their path. RideReflex explores how local perception and distance sensing can help identify these conflicts and support earlier intervention.
+Our Unity digital-twin prototype recreates **Section 3 of Tingzhou Road in Gongguan, Taipei**, providing synthetic training images and repeatable avoidance tests. Sudden cut-ins, vehicles stopped in the lane and poor visibility can leave scooter riders little time to react. We are developing RideReflex to explore automatic braking and avoidance assistance for these situations, combining camera perception with distance sensing.
 
 We have completed a working pipeline: **generate synthetic training images in Unity → train a car / motorcycle detector → combine its predictions with simulated distance sensing → run the avoidance controller**. Vision currently runs on the host GPU. The next milestone is deployment and measurement on ASUS UGen300.
 
 ## Watch the demo
 
-[Watch the 80-second demo — MP4, 720p](Validation/Demo/RideReflex-vision-demo.mp4) · [Chinese voiceover script](docs/DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](Validation/Demo/RideReflex-vision-demo.srt)
+[Watch the 2-minute demo — MP4, 720p](Validation/Demo/RideReflex-vision-demo.mp4) · [Chinese voiceover script](docs/DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](Validation/Demo/RideReflex-vision-demo.srt)
 
-The video follows **digital twin → trained vision model → Raycast distance sensing → fewer false alarms → dense-fog fallback → UGen300 plans**. It has Chinese / English subtitles, with **no in-game UI or slide screens**. Detection boxes come from actual model outputs. The soundtrack is left open for voiceover.
+The video follows **digital twin → unassisted collisions and our motivation → trained vision model → Raycast distance sensing → fewer false alarms → dense-fog fallback → UGen300 plans**. It has Chinese / English subtitles, with **no in-game UI or slide screens**. Detection boxes come from actual model outputs. The soundtrack is left open for voiceover.
 
 | Time | What to watch |
 |---|---|
 | 0:00–0:08 | Gongguan / Tingzhou Road Section 3 digital twin for training and testing |
-| 0:08–0:21 | Trained car / motorcycle detector and its actual predictions |
-| 0:21–0:39 | Live Raycast beams, distance sensing and rule-based avoidance |
-| 0:39–0:52 | Roadside car: simple vision-only warning versus vision + Raycast |
-| 0:52–1:07 | Dense fog: visual warning misses the obstacle; fallback avoids it with live Raycast beams shown |
-| 1:07–1:20 | Planned UGen300 deployment, measurement and broader data |
+| 0:08–0:19 | Sudden cut-in and a blocked lane in poor visibility, with avoidance disabled |
+| 0:19–0:31 | Why we want to develop automatic avoidance assistance for scooters |
+| 0:31–0:44 | Trained car / motorcycle detector and its actual predictions |
+| 0:44–1:06 | Live Raycast beams, distance sensing and rule-based avoidance |
+| 1:06–1:19 | Roadside car: simple vision-only warning versus vision + Raycast |
+| 1:19–1:39 | Dense fog: visual warning misses the obstacle; fallback avoids it with live Raycast beams shown |
+| 1:39–2:00 | Planned UGen300 deployment, measurement and broader data |
 
 ![Actual car / motorcycle model outputs captured during a Unity run](Validation/Demo/RideReflex-vision-preview.webp)
 

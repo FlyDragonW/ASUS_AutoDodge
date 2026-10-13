@@ -56,13 +56,15 @@ An initial diagnostic run exposed a weak, 0.289-confidence incorrect class assoc
 
 ## Demo capture
 
-The [80-second demo](../Validation/Demo/RideReflex-vision-demo.mp4) introduces the Gongguan / Tingzhou Road Section 3 digital twin, then follows **trained vision model → Raycast distance sensing → false-alarm comparison → dense-fog fallback → UGen300 plans**. At **21–39 seconds**, the Raycast walkthrough displays actual sensor beams. The game HUD remains hidden throughout. No slide screens or voiceover audio are included; [Chinese narration](DEMO_NARRATION_zh-TW.txt) and [bilingual subtitles](../Validation/Demo/RideReflex-vision-demo.srt) are provided.
+The [2-minute demo](../Validation/Demo/RideReflex-vision-demo.mp4) introduces the Gongguan / Tingzhou Road Section 3 digital twin, shows collisions with avoidance disabled, and explains our motivation to develop automatic avoidance assistance for scooters. It then follows **trained vision model → Raycast distance sensing → false-alarm comparison → dense-fog fallback → UGen300 plans**. At **44–66 seconds**, the Raycast walkthrough displays actual sensor beams. The game HUD remains hidden throughout. No slide screens or voiceover audio are included; [Chinese narration](DEMO_NARRATION_zh-TW.txt) and [bilingual subtitles](../Validation/Demo/RideReflex-vision-demo.srt) are provided.
+
+The opening collision clips illustrate the problem with automatic avoidance disabled; they are separate from the later vision-only baseline tests. The first 13 seconds use one continuous take, followed by short dissolves between chapters.
 
 Camera detection boxes are drawn from recorded model outputs on the exact inference input, held until the next completed result. The displayed boxes require confidence ≥ 0.60, with at most six sufficiently large boxes shown.
 
 ### Vision-only warning versus vision + Raycast
 
-The synchronized segment at **39–52 seconds** compares a **simple image-box warning baseline** with the existing fusion controller. Both share the same known-route follower and a 40 km/h cruise target. The visual baseline consumes only RGB detections for warning decisions; it does not read metric distance, Raycast contacts, collider bounds or scenario labels. It is an illustrative hand-written policy, not a trained driving model or a representative benchmark of all monocular systems.
+The synchronized segment at **66–79 seconds** compares a **simple image-box warning baseline** with the existing fusion controller. Both share the same known-route follower and a 40 km/h cruise target. The visual baseline consumes only RGB detections for warning decisions; it does not read metric distance, Raycast contacts, collider bounds or scenario labels. It is an illustrative hand-written policy, not a trained driving model or a representative benchmark of all monocular systems.
 
 [VisionOnlyWarningBaseline.cs](../Assets/TaiwanRider/Runtime/VisionOnlyWarningBaseline.cs) triggers braking after two consecutive observations of the same class with IoU ≥ 0.25, confidence ≥ 0.60, box center in the central 20% of the image, box height ≥ 7% of image height and box bottom below the image midpoint. Evidence and the warning hold expire after 0.35 seconds. These thresholds were chosen while developing this demonstration, not calibrated on an independent test set.
 
@@ -88,7 +90,7 @@ The comparison baseline is added only by this check; ordinary gameplay continues
 
 ### Dense-fog fallback
 
-At **52–67 seconds**, two new first-person recordings approach the same stationary car blocking the lane. Both have live model inference enabled, the same 40 km/h target, Unity `ExponentialSquared` fog density **0.45**, and **8 m far clipping on both the gameplay and perception cameras**. The same 45 decorative parked vehicles are hidden in both runs. The visual baseline and its thresholds are unchanged from the roadside-car comparison. During the fusion shot (**58.6–66.6 s**), live Raycast beams are visible while the game HUD stays hidden. The dedicated perception camera still excludes the ray visualization, so it receives only the foggy RGB scene.
+At **78–99 seconds**, two first-person recordings approach the same stationary car blocking the lane. Both have live model inference enabled, the same 40 km/h target, Unity `ExponentialSquared` fog density **0.45**, and **8 m far clipping on both the gameplay and perception cameras**. The same 45 decorative parked vehicles are hidden in both runs. The visual baseline and its thresholds are unchanged from the roadside-car comparison. During the fusion shot (**86.8–98.8 s**), live Raycast beams are visible while the game HUD stays hidden. The dedicated perception camera still excludes the ray visualization, so it receives only the foggy RGB scene.
 
 | Controller | Observed outcome |
 |---|---|

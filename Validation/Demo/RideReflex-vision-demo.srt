@@ -4,91 +4,126 @@
 We recreated Section 3 of Tingzhou Road in Gongguan as a digital twin.
 
 2
-00:00:04,500 --> 00:00:07,800
+00:00:04,500 --> 00:00:08,000
 用來產生訓練影像，也能反覆測試自動避閃。
 It generates training images and lets us repeat avoidance tests.
 
 3
-00:00:07,800 --> 00:00:12,600
-我們用這些影像，訓練了第一版視覺模型。
-We used these images to train our first vision model.
+00:00:08,000 --> 00:00:12,800
+像這樣突然切入的車，就可能讓騎士來不及反應。
+A sudden cut-in like this may leave a rider too little time to react.
 
 4
-00:00:12,600 --> 00:00:16,600
+00:00:12,800 --> 00:00:19,400
+如果視線不佳，又有車違停在路中間，風險就更難判斷。
+Poor visibility and a car stopped in the lane make the risk harder to judge.
+
+5
+00:00:19,400 --> 00:00:25,200
+所以，我們想開發一套給機車使用的自動避閃系統。
+That is why we want to develop an automatic avoidance system for scooters.
+
+6
+00:00:25,200 --> 00:00:31,000
+希望在騎士來不及反應時，協助煞車或避讓，降低碰撞風險。
+Our goal is to assist with braking or steering when a rider has too little time to react.
+
+7
+00:00:31,000 --> 00:00:35,800
+目前，我們已經訓練了第一版視覺模型。
+We have already trained our first vision model.
+
+8
+00:00:35,800 --> 00:00:39,800
 畫面上的框，就是模型辨識出的汽車和機車。
 These boxes show the cars and motorcycles detected by the model.
 
-5
-00:00:16,600 --> 00:00:21,400
+9
+00:00:39,800 --> 00:00:44,600
 但光知道有車，還不夠判斷會不會撞上。
 Recognizing a vehicle alone does not tell us whether it is in our path.
 
-6
-00:00:21,400 --> 00:00:26,200
+10
+00:00:44,600 --> 00:00:49,400
 所以我們加入 Raycast，模擬雷達的距離感測。
 We add raycasts to simulate radar-like distance sensing.
 
-7
-00:00:26,200 --> 00:00:31,000
+11
+00:00:49,400 --> 00:00:54,200
 量出障礙物的距離，並估計它的移動方向。
 They measure obstacle distance and estimate its motion.
 
-8
-00:00:31,000 --> 00:00:35,300
+12
+00:00:54,200 --> 00:00:58,500
 辨識結果會和射線偵測到的物體配對。
 Visual detections are matched to objects detected by the rays.
 
-9
-00:00:35,300 --> 00:00:39,600
+13
+00:00:58,500 --> 00:01:03,000
 再交給規則控制器，決定煞車或繞開。
 A rule-based controller then decides whether to brake or steer around.
 
-10
-00:00:39,600 --> 00:00:43,400
+14
+00:01:03,000 --> 00:01:05,800
+這樣做，也能減少不必要的反應。
+This can also reduce unnecessary responses.
+
+15
+00:01:05,800 --> 00:01:09,600
 像這台停在路邊的車，其實沒有擋住路徑。
 This roadside car is visible, but it is not blocking our path.
 
-11
-00:00:43,400 --> 00:00:47,400
+16
+00:01:09,600 --> 00:01:13,600
 只看影像框的左邊，卻把它當成威脅而煞車。
 The image-box rule on the left treats it as a hazard and brakes.
 
-12
-00:00:47,400 --> 00:00:52,200
+17
+00:01:13,600 --> 00:01:18,400
 右邊結合 Raycast 確認能通過，就能少一次虛警。
 On the right, raycast geometry confirms clearance and avoids this false alarm.
 
-13
-00:00:52,200 --> 00:00:55,500
-濃霧則是另一個挑戰。
-Dense fog presents another challenge.
+18
+00:01:18,400 --> 00:01:21,700
+再來看剛才的濃霧情境。
+Now let us return to the dense-fog scenario.
 
-14
-00:00:55,500 --> 00:00:58,800
-等相機看清楚前方違停的車，可能已經來不及。
-A car stopped in the lane may become visible too late to react.
+19
+00:01:21,700 --> 00:01:27,000
+這次測試裡，純視覺沒有及時發出警戒，最後發生碰撞。
+In this test, the vision-only warning rule fails to alert in time, and a collision follows.
 
-15
-00:00:58,800 --> 00:01:02,600
+20
+00:01:27,000 --> 00:01:31,800
 這時即使視覺沒有可靠的辨識結果，
 Even without reliable visual detections,
 
-16
-00:01:02,600 --> 00:01:06,400
+21
+00:01:31,800 --> 00:01:38,600
 Raycast 仍能提供距離資訊，讓系統避開障礙。
 raycasts still provide distance information for avoidance in this simulation.
 
-17
-00:01:06,400 --> 00:01:10,200
-下一步，我們會把模型部署到 UGen300，
-Next, we plan to deploy the model on UGen300,
+22
+00:01:38,600 --> 00:01:42,400
+目前，視覺模型還是跑在電腦 GPU 上。
+The vision model currently runs on the computer GPU.
 
-18
-00:01:10,200 --> 00:01:14,000
-量測反應延遲、耗電，以及量化後的辨識表現。
+23
+00:01:42,400 --> 00:01:46,400
+拿到 UGen300 後，我們會把模型部署到裝置，
+With UGen300, we plan to deploy the model on the device,
+
+24
+00:01:46,400 --> 00:01:50,200
+量測延遲、耗電，以及量化後的辨識表現。
 and measure latency, power use, and detection quality after quantization.
 
-19
-00:01:14,000 --> 00:01:19,800
-再加入更多道路和真實影像，測試不同路況下能不能穩定運作。
-We will add more roads and real camera data to test reliability across conditions.
+25
+00:01:50,200 --> 00:01:55,000
+再加入更多道路、光線變化和真實影像，
+We will add more roads, lighting conditions, and real camera data,
+
+26
+00:01:55,000 --> 00:02:00,000
+讓這套系統一步步適應更一般的路況。
+and work toward adapting the system to a wider range of road conditions.
