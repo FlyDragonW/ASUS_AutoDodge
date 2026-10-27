@@ -1,0 +1,96 @@
+{
+  "testKind": "Independent mathematics and source inspection; not a Unity compile or scene test",
+  "points": [
+    [
+      5.5,
+      -0.39883426075931533
+    ],
+    [
+      5.6788,
+      -0.4118
+    ],
+    [
+      25.6628,
+      -2.6791
+    ],
+    [
+      66.714,
+      -7.3516
+    ],
+    [
+      77.0859,
+      -8.6196
+    ]
+  ],
+  "vertices": 10,
+  "triangles": 8,
+  "upFacingTriangleAreas": [
+    0.3957426088262886,
+    1.2176828099392172,
+    90.09031167202063,
+    90.91955913200486,
+    185.83531089869032,
+    186.01102227254052,
+    46.93684329033853,
+    47.10524740531749
+  ],
+  "widthChecks": [
+    {
+      "point": [
+        5.5,
+        -0.39883426075931533
+      ],
+      "miterAlignment": 1.0000000000000002,
+      "normalWidthToNextSegment": 9.0
+    },
+    {
+      "point": [
+        5.6788,
+        -0.4118
+      ],
+      "miterAlignment": 0.9997941237400455,
+      "normalWidthToNextSegment": 9.0
+    },
+    {
+      "point": [
+        25.6628,
+        -2.6791
+      ],
+      "miterAlignment": 0.9999999837232035,
+      "normalWidthToNextSegment": 9.0
+    },
+    {
+      "point": [
+        66.714,
+        -7.3516
+      ],
+      "miterAlignment": 0.9999913551049567,
+      "normalWidthToNextSegment": 8.999999999999998
+    },
+    {
+      "point": [
+        77.0859,
+        -8.6196
+      ],
+      "miterAlignment": 1.0,
+      "normalWidthToNextSegment": 9.0
+    }
+  ],
+  "hazardStartPosition": [
+    13.05,
+    0
+  ],
+  "hazardDistanceFromOSMPolylineMetres": 1.2401489247127169,
+  "checks": {
+    "allTrianglesFaceUp": true,
+    "widthIsNineMetresNormalToSegments": true,
+    "noSharpMiter": true,
+    "hazardStartInsideVisualLane": true,
+    "endsAtCachedOSMNode": true,
+    "newScriptContainsNoColliderMutation": true
+  },
+  "sourceHashes": {
+    "UnityImplementation\\Assets\\TaiwanRider\\Data\\RouteSurvey.json": "5aeffce463c38b2c7bd48aed936c39050f00a05ad54bf81f0bb62d36a46144da",
+    "UnitySiteMatch\\Assets\\TaiwanRider\\Editor\\SiteLaneSetup.cs": "e57607eca6d09f3885014a5e3dbbb41b031137f5817fa44cb1f49108294e7641"
+  }
+}

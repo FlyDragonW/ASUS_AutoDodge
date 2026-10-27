@@ -1,0 +1,4832 @@
+{
+  "schemaVersion": 1,
+  "originLatitude": 25.0135214,
+  "originLongitude": 121.5344569,
+  "source": "https://api.openstreetmap.org/api/0.6/map?bbox=121.5325,25.0118,121.5365,25.0153",
+  "sourceLicense": "OpenStreetMap contributors, ODbL 1.0",
+  "snapshot": "2026-10-11 Asia/Taipei; individual OSM edit dates retained",
+  "purpose": "visualcontextoutsidecurrentauthoredstreet",
+  "targetVisualReferenceYear": 2025,
+  "historicStateVerified": false,
+  "extendsPlayableArea": false,
+  "coordinateConvention": "Unity metres; +Y up; +Z northwest; +X northeast; polygons CCW in (x,z), implicit closing edge last-to-first",
+  "authoringExtentZ": [
+    -210,
+    210
+  ],
+  "buildingSelection": "Complete valid source footprints overlapping z [-210,210] and within 80 m Euclidean distance of Tingzhou centreline clipped to z [-210,210]; exclude original StreetSurvey 56 IDs. No footprint clipping or positional changes.",
+  "roadSelection": "Complete source centreline ways intersecting 80 m buffered clipped Tingzhou centreline; permitted driving-road classes only; exclude original StreetSurvey 3 road IDs. Complete road ways can extend beyond the visual-context selection corridor.",
+  "sourceCoverage": "Bounded map API query bbox 121.5325,25.0118,121.5365,25.0153; API includes full referenced ways. Features outside the requested bbox are not comprehensively inventoried. Empty areas are not evidence of empty real-world land.",
+  "unknownLevelValue": 0,
+  "unknownHeightMetresValue": 0,
+  "levelsAreNotMetres": true,
+  "heightPolicy": "Use only OSM tagged levels; official address floor maxima are separate lower bounds. Missing values are 0. No height or level guess is embedded.",
+  "excludedStreetSurveyIds": [
+    "1287937526",
+    "1287937527",
+    "1287937528",
+    "1287937529",
+    "1287937530",
+    "1287937532",
+    "1287937533",
+    "1287937534",
+    "1287937535",
+    "1287937536",
+    "1287937537",
+    "1287938915",
+    "1287938916",
+    "1287938917",
+    "1539635596",
+    "228711106",
+    "232744652",
+    "232744653",
+    "317180219",
+    "366231798",
+    "366231799",
+    "378476603",
+    "378476609",
+    "378476611",
+    "378476615",
+    "378476618",
+    "378476620",
+    "378476629",
+    "378476635",
+    "380351302",
+    "380351313",
+    "380351315",
+    "380351316",
+    "380351317",
+    "380351318",
+    "380351319",
+    "380351321",
+    "430626213",
+    "438606732",
+    "438606733",
+    "438606734",
+    "438606735",
+    "438606736",
+    "580823984",
+    "580823988",
+    "580823989",
+    "598376010",
+    "610866985",
+    "610866986",
+    "679004545",
+    "694991826",
+    "694991827",
+    "707821174",
+    "751353368",
+    "767534280",
+    "773820273"
+  ],
+  "mainCenterline": [
+    {
+      "x": -2.4477,
+      "y": 0,
+      "z": 210.0
+    },
+    {
+      "x": -2.4462,
+      "y": 0,
+      "z": 188.0778
+    },
+    {
+      "x": -1.5194,
+      "y": 0,
+      "z": 156.448
+    },
+    {
+      "x": -1.3282,
+      "y": 0,
+      "z": 151.2254
+    },
+    {
+      "x": -0.8068,
+      "y": 0,
+      "z": 135.658
+    },
+    {
+      "x": -0.3389,
+      "y": 0,
+      "z": 115.1892
+    },
+    {
+      "x": -0.0402,
+      "y": 0,
+      "z": 72.0797
+    },
+    {
+      "x": 0.0505,
+      "y": 0,
+      "z": 49.6486
+    },
+    {
+      "x": 0.0013,
+      "y": 0,
+      "z": 31.2764
+    },
+    {
+      "x": 0.4984,
+      "y": 0,
+      "z": 5.3249
+    },
+    {
+      "x": 0.0,
+      "y": 0,
+      "z": 0.0
+    },
+    {
+      "x": -0.6324,
+      "y": 0,
+      "z": -7.3762
+    },
+    {
+      "x": -3.1329,
+      "y": 0,
+      "z": -31.3643
+    },
+    {
+      "x": -4.6093,
+      "y": 0,
+      "z": -39.8222
+    },
+    {
+      "x": -8.8283,
+      "y": 0,
+      "z": -64.0551
+    },
+    {
+      "x": -9.7717,
+      "y": 0,
+      "z": -69.4664
+    },
+    {
+      "x": -10.9583,
+      "y": 0,
+      "z": -74.7888
+    },
+    {
+      "x": -12.5649,
+      "y": 0,
+      "z": -80.903
+    },
+    {
+      "x": -15.7913,
+      "y": 0,
+      "z": -93.168
+    },
+    {
+      "x": -21.7344,
+      "y": 0,
+      "z": -111.3406
+    },
+    {
+      "x": -26.8993,
+      "y": 0,
+      "z": -124.7661
+    },
+    {
+      "x": -28.8677,
+      "y": 0,
+      "z": -129.8634
+    },
+    {
+      "x": -30.9901,
+      "y": 0,
+      "z": -134.5924
+    },
+    {
+      "x": -36.3658,
+      "y": 0,
+      "z": -146.7627
+    },
+    {
+      "x": -43.3646,
+      "y": 0,
+      "z": -163.5187
+    },
+    {
+      "x": -49.0917,
+      "y": 0,
+      "z": -179.5997
+    },
+    {
+      "x": -60.4032,
+      "y": 0,
+      "z": -210.0
+    }
+  ],
+  "buildings": [
+    {
+      "id": "368475481",
+      "name": "大都市名人大廈",
+      "buildingType": "apartments",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 10.7756,
+          "y": 0,
+          "z": -231.9451
+        },
+        {
+          "x": 15.5355,
+          "y": 0,
+          "z": -220.4654
+        },
+        {
+          "x": 20.1315,
+          "y": 0,
+          "z": -209.066
+        },
+        {
+          "x": 1.3605,
+          "y": 0,
+          "z": -201.2607
+        },
+        {
+          "x": -7.8839,
+          "y": 0,
+          "z": -223.4798
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -7.8839,
+        "maxX": 20.1315,
+        "minZ": -231.9451,
+        "maxZ": -201.2607
+      },
+      "centroid": {
+        "x": 6.1459,
+        "y": 0,
+        "z": -216.4757
+      },
+      "areaSquareMetres": 498.4212,
+      "nearestTingzhouDistanceMetres": 53.9231,
+      "tags": {
+        "addr:city": "臺北市",
+        "addr:country": "TW",
+        "addr:district": "中正區",
+        "addr:full": "100臺北市中正區羅斯福路四段160;162;162之1;164;166;168號",
+        "addr:housenumber": "160;162;162之1;164;166;168",
+        "addr:postcode": "100",
+        "addr:street": "羅斯福路四段",
+        "building": "apartments",
+        "name": "大都市名人大廈"
+      },
+      "osmTimestamp": "2026-03-19T11:23:36Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/368475481",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "368475480",
+      "name": "台大寰宇堂",
+      "buildingType": "apartments",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 23.4804,
+          "y": 0,
+          "z": -200.0578
+        },
+        {
+          "x": 27.4263,
+          "y": 0,
+          "z": -191.1516
+        },
+        {
+          "x": 9.8472,
+          "y": 0,
+          "z": -183.3704
+        },
+        {
+          "x": 2.0702,
+          "y": 0,
+          "z": -200.9349
+        },
+        {
+          "x": 19.643,
+          "y": 0,
+          "z": -208.7082
+        }
+      ],
+      "levels": 15,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=15",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 2.0702,
+        "maxX": 27.4263,
+        "minZ": -208.7082,
+        "maxZ": -183.3704
+      },
+      "centroid": {
+        "x": 14.7471,
+        "y": 0,
+        "z": -196.0407
+      },
+      "areaSquareMetres": 369.173,
+      "nearestTingzhouDistanceMetres": 55.3903,
+      "tags": {
+        "addr:city": "臺北市",
+        "addr:country": "TW",
+        "addr:district": "中正區",
+        "addr:full": "100臺北市中正區羅斯福路四段158號",
+        "addr:housenumber": "158",
+        "addr:postcode": "100",
+        "addr:street": "羅斯福路四段",
+        "building": "apartments",
+        "building:levels": "15",
+        "building:levels:underground": "4",
+        "constructer": "夆典科技開發",
+        "name": "台大寰宇堂"
+      },
+      "osmTimestamp": "2026-03-19T11:23:36Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/368475480",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351300",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 27.3468,
+          "y": 0,
+          "z": -190.503
+        },
+        {
+          "x": 29.2507,
+          "y": 0,
+          "z": -186.2481
+        },
+        {
+          "x": 7.5115,
+          "y": 0,
+          "z": -176.5334
+        },
+        {
+          "x": 5.6076,
+          "y": 0,
+          "z": -180.7883
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 5.6076,
+        "maxX": 29.2507,
+        "minZ": -190.503,
+        "maxZ": -176.5334
+      },
+      "centroid": {
+        "x": 17.4291,
+        "y": 0,
+        "z": -183.5182
+      },
+      "areaSquareMetres": 110.9939,
+      "nearestTingzhouDistanceMetres": 51.8447,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351300",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351312",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 29.2507,
+          "y": 0,
+          "z": -186.2481
+        },
+        {
+          "x": 31.5568,
+          "y": 0,
+          "z": -181.073
+        },
+        {
+          "x": 9.8176,
+          "y": 0,
+          "z": -171.3583
+        },
+        {
+          "x": 7.5115,
+          "y": 0,
+          "z": -176.5334
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 7.5115,
+        "maxX": 31.5568,
+        "minZ": -186.2481,
+        "maxZ": -171.3583
+      },
+      "centroid": {
+        "x": 19.5342,
+        "y": 0,
+        "z": -178.8032
+      },
+      "areaSquareMetres": 134.9056,
+      "nearestTingzhouDistanceMetres": 51.9616,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351312",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "633885311",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -25.5946,
+          "y": 0,
+          "z": -190.1652
+        },
+        {
+          "x": -23.8396,
+          "y": 0,
+          "z": -185.6545
+        },
+        {
+          "x": -24.6344,
+          "y": 0,
+          "z": -185.2715
+        },
+        {
+          "x": -23.5755,
+          "y": 0,
+          "z": -183.1614
+        },
+        {
+          "x": -22.7721,
+          "y": 0,
+          "z": -183.5375
+        },
+        {
+          "x": -19.4084,
+          "y": 0,
+          "z": -174.3878
+        },
+        {
+          "x": -20.1792,
+          "y": 0,
+          "z": -174.141
+        },
+        {
+          "x": -19.3235,
+          "y": 0,
+          "z": -171.8319
+        },
+        {
+          "x": -18.7887,
+          "y": 0,
+          "z": -172.0876
+        },
+        {
+          "x": -17.3278,
+          "y": 0,
+          "z": -168.099
+        },
+        {
+          "x": -17.4771,
+          "y": 0,
+          "z": -168.0379
+        },
+        {
+          "x": -19.1177,
+          "y": 0,
+          "z": -167.4036
+        },
+        {
+          "x": -19.0243,
+          "y": 0,
+          "z": -167.147
+        },
+        {
+          "x": -33.5392,
+          "y": 0,
+          "z": -161.4829
+        },
+        {
+          "x": -41.4281,
+          "y": 0,
+          "z": -181.8713
+        },
+        {
+          "x": -27.969,
+          "y": 0,
+          "z": -189.2412
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -41.4281,
+        "maxX": -17.3278,
+        "minZ": -190.1652,
+        "maxZ": -161.4829
+      },
+      "centroid": {
+        "x": -29.368,
+        "y": 0,
+        "z": -175.5014
+      },
+      "areaSquareMetres": 404.7382,
+      "nearestTingzhouDistanceMetres": 7.9815,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2018-11-19T14:45:15Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/633885311",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351303",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 31.5568,
+          "y": 0,
+          "z": -181.073
+        },
+        {
+          "x": 33.3923,
+          "y": 0,
+          "z": -176.9639
+        },
+        {
+          "x": 11.6531,
+          "y": 0,
+          "z": -167.2492
+        },
+        {
+          "x": 9.8176,
+          "y": 0,
+          "z": -171.3583
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 9.8176,
+        "maxX": 33.3923,
+        "minZ": -181.073,
+        "maxZ": -167.2492
+      },
+      "centroid": {
+        "x": 21.605,
+        "y": 0,
+        "z": -174.1611
+      },
+      "areaSquareMetres": 107.1599,
+      "nearestTingzhouDistanceMetres": 52.095,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351303",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351307",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 11.6531,
+          "y": 0,
+          "z": -167.2492
+        },
+        {
+          "x": 33.3923,
+          "y": 0,
+          "z": -176.9639
+        },
+        {
+          "x": 35.2192,
+          "y": 0,
+          "z": -172.8617
+        },
+        {
+          "x": 13.4799,
+          "y": 0,
+          "z": -163.147
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 11.6531,
+        "maxX": 35.2192,
+        "minZ": -176.9639,
+        "maxZ": -163.147
+      },
+      "centroid": {
+        "x": 23.4361,
+        "y": 0,
+        "z": -170.0555
+      },
+      "areaSquareMetres": 106.9261,
+      "nearestTingzhouDistanceMetres": 52.2022,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351307",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "1558477727",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -69.6867,
+          "y": 0,
+          "z": -160.7489
+        },
+        {
+          "x": -68.7384,
+          "y": 0,
+          "z": -170.3883
+        },
+        {
+          "x": -60.5593,
+          "y": 0,
+          "z": -169.9642
+        },
+        {
+          "x": -61.6917,
+          "y": 0,
+          "z": -175.5668
+        },
+        {
+          "x": -56.96,
+          "y": 0,
+          "z": -177.5709
+        },
+        {
+          "x": -50.706,
+          "y": 0,
+          "z": -163.3325
+        },
+        {
+          "x": -55.4975,
+          "y": 0,
+          "z": -161.8041
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -69.6867,
+        "maxX": -50.706,
+        "minZ": -177.5709,
+        "maxZ": -160.7489
+      },
+      "centroid": {
+        "x": -60.3502,
+        "y": 0,
+        "z": -167.2805
+      },
+      "areaSquareMetres": 187.4029,
+      "nearestTingzhouDistanceMetres": 6.9784,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2026-09-13T07:49:17Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/1558477727",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351305",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 13.4799,
+          "y": 0,
+          "z": -163.147
+        },
+        {
+          "x": 35.2192,
+          "y": 0,
+          "z": -172.8617
+        },
+        {
+          "x": 37.1317,
+          "y": 0,
+          "z": -168.5998
+        },
+        {
+          "x": 15.3924,
+          "y": 0,
+          "z": -158.8851
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 13.4799,
+        "maxX": 37.1317,
+        "minZ": -172.8617,
+        "maxZ": -158.8851
+      },
+      "centroid": {
+        "x": 25.3058,
+        "y": 0,
+        "z": -165.8734
+      },
+      "areaSquareMetres": 111.2301,
+      "nearestTingzhouDistanceMetres": 52.2158,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351305",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351314",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 15.3924,
+          "y": 0,
+          "z": -158.8851
+        },
+        {
+          "x": 37.1317,
+          "y": 0,
+          "z": -168.5998
+        },
+        {
+          "x": 39.3097,
+          "y": 0,
+          "z": -163.7093
+        },
+        {
+          "x": 17.5705,
+          "y": 0,
+          "z": -153.9946
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 15.3924,
+        "maxX": 39.3097,
+        "minZ": -168.5998,
+        "maxZ": -153.9946
+      },
+      "centroid": {
+        "x": 27.3511,
+        "y": 0,
+        "z": -161.2972
+      },
+      "areaSquareMetres": 127.4749,
+      "nearestTingzhouDistanceMetres": 52.2432,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351314",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646402000",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -33.5392,
+          "y": 0,
+          "z": -161.4829
+        },
+        {
+          "x": -19.0243,
+          "y": 0,
+          "z": -167.147
+        },
+        {
+          "x": -19.1177,
+          "y": 0,
+          "z": -167.4036
+        },
+        {
+          "x": -17.4771,
+          "y": 0,
+          "z": -168.0379
+        },
+        {
+          "x": -13.7637,
+          "y": 0,
+          "z": -158.5417
+        },
+        {
+          "x": -29.9319,
+          "y": 0,
+          "z": -152.2276
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -33.5392,
+        "maxX": -13.7637,
+        "minZ": -168.0379,
+        "maxZ": -152.2276
+      },
+      "centroid": {
+        "x": -23.6392,
+        "y": 0,
+        "z": -160.0304
+      },
+      "areaSquareMetres": 172.8005,
+      "nearestTingzhouDistanceMetres": 8.0431,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2018-11-19T14:45:12Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646402000",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "1287938918",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 1.984,
+          "y": 0,
+          "z": -150.4248
+        },
+        {
+          "x": -2.1766,
+          "y": 0,
+          "z": -161.6548
+        },
+        {
+          "x": 5.45,
+          "y": 0,
+          "z": -165.9384
+        },
+        {
+          "x": 11.634,
+          "y": 0,
+          "z": -153.7775
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -2.1766,
+        "maxX": 11.634,
+        "minZ": -165.9384,
+        "maxZ": -150.4248
+      },
+      "centroid": {
+        "x": 4.3841,
+        "y": 0,
+        "z": -157.8383
+      },
+      "areaSquareMetres": 120.7774,
+      "nearestTingzhouDistanceMetres": 36.5597,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2024-05-30T05:57:12Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/1287938918",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351311",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 17.5705,
+          "y": 0,
+          "z": -153.9946
+        },
+        {
+          "x": 39.3097,
+          "y": 0,
+          "z": -163.7093
+        },
+        {
+          "x": 41.3087,
+          "y": 0,
+          "z": -159.2352
+        },
+        {
+          "x": 19.5694,
+          "y": 0,
+          "z": -149.5205
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 17.5705,
+        "maxX": 41.3087,
+        "minZ": -163.7093,
+        "maxZ": -149.5205
+      },
+      "centroid": {
+        "x": 29.4396,
+        "y": 0,
+        "z": -156.6149
+      },
+      "areaSquareMetres": 116.6828,
+      "nearestTingzhouDistanceMetres": 52.2425,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351311",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "310105897",
+      "name": "東南華廈",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -57.9169,
+          "y": 0,
+          "z": -139.2154
+        },
+        {
+          "x": -64.716,
+          "y": 0,
+          "z": -155.953
+        },
+        {
+          "x": -56.0979,
+          "y": 0,
+          "z": -159.1785
+        },
+        {
+          "x": -52.7305,
+          "y": 0,
+          "z": -159.7557
+        },
+        {
+          "x": -52.6524,
+          "y": 0,
+          "z": -159.3559
+        },
+        {
+          "x": -51.1944,
+          "y": 0,
+          "z": -159.8523
+        },
+        {
+          "x": -48.1794,
+          "y": 0,
+          "z": -157.8632
+        },
+        {
+          "x": -47.3645,
+          "y": 0,
+          "z": -155.7166
+        },
+        {
+          "x": -46.0354,
+          "y": 0,
+          "z": -152.1321
+        },
+        {
+          "x": -43.2126,
+          "y": 0,
+          "z": -144.8305
+        }
+      ],
+      "levels": 7,
+      "minimumLevels": 7,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=7",
+      "floorEvidence": [
+        {
+          "id": "10785086164",
+          "floor": 7,
+          "position": {
+            "x": -48.8478,
+            "y": 0,
+            "z": -147.3116
+          },
+          "address": "100臺北市中正區水源里5鄰汀州路三段196號七樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086255",
+          "floor": 2,
+          "position": {
+            "x": -48.8478,
+            "y": 0,
+            "z": -147.3116
+          },
+          "address": "100臺北市中正區水源里5鄰汀州路三段196號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086576",
+          "floor": 6,
+          "position": {
+            "x": -48.8478,
+            "y": 0,
+            "z": -147.3116
+          },
+          "address": "100臺北市中正區水源里5鄰汀州路三段196號六樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088705",
+          "floor": 4,
+          "position": {
+            "x": -48.8478,
+            "y": 0,
+            "z": -147.3116
+          },
+          "address": "100臺北市中正區水源里5鄰汀州路三段196號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089272",
+          "floor": 5,
+          "position": {
+            "x": -48.8478,
+            "y": 0,
+            "z": -147.3116
+          },
+          "address": "100臺北市中正區水源里5鄰汀州路三段196號五樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089432",
+          "floor": 3,
+          "position": {
+            "x": -48.8478,
+            "y": 0,
+            "z": -147.3116
+          },
+          "address": "100臺北市中正區水源里5鄰汀州路三段196號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        }
+      ],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -64.716,
+        "maxX": -43.2126,
+        "minZ": -159.8523,
+        "maxZ": -139.2154
+      },
+      "centroid": {
+        "x": -53.9774,
+        "y": 0,
+        "z": -150.1578
+      },
+      "areaSquareMetres": 278.7213,
+      "nearestTingzhouDistanceMetres": 6.6226,
+      "tags": {
+        "addr:city": "臺北市",
+        "addr:country": "TW",
+        "addr:district": "中正區",
+        "addr:full": "100臺北市中正區汀州路三段196;198號",
+        "addr:housenumber": "196;198",
+        "addr:postcode": "100",
+        "addr:street": "汀州路三段",
+        "building": "yes",
+        "building:levels": "7",
+        "name": "東南華廈"
+      },
+      "osmTimestamp": "2026-03-19T11:23:36Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/310105897",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351323",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 41.8557,
+          "y": 0,
+          "z": -146.2532
+        },
+        {
+          "x": 23.405,
+          "y": 0,
+          "z": -141.5065
+        },
+        {
+          "x": 22.1128,
+          "y": 0,
+          "z": -146.5382
+        },
+        {
+          "x": 25.5534,
+          "y": 0,
+          "z": -147.4191
+        },
+        {
+          "x": 25.1602,
+          "y": 0,
+          "z": -148.9538
+        },
+        {
+          "x": 40.164,
+          "y": 0,
+          "z": -152.8117
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 3,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [
+        {
+          "id": "10785032781",
+          "floor": 3,
+          "position": {
+            "x": 37.3314,
+            "y": 0,
+            "z": -147.7354
+          },
+          "address": "100臺北市中正區水源里4鄰羅斯福路四段134號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086142",
+          "floor": 2,
+          "position": {
+            "x": 37.3314,
+            "y": 0,
+            "z": -147.7354
+          },
+          "address": "100臺北市中正區水源里4鄰羅斯福路四段134號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        }
+      ],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 22.1128,
+        "maxX": 41.8557,
+        "minZ": -152.8117,
+        "maxZ": -141.5065
+      },
+      "centroid": {
+        "x": 32.1567,
+        "y": 0,
+        "z": -147.1331
+      },
+      "areaSquareMetres": 123.4169,
+      "nearestTingzhouDistanceMetres": 52.9606,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:03Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351323",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351322",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 41.8557,
+          "y": 0,
+          "z": -146.2532
+        },
+        {
+          "x": 43.281,
+          "y": 0,
+          "z": -140.7125
+        },
+        {
+          "x": 29.491,
+          "y": 0,
+          "z": -137.1721
+        },
+        {
+          "x": 24.8303,
+          "y": 0,
+          "z": -135.9658
+        },
+        {
+          "x": 23.405,
+          "y": 0,
+          "z": -141.5065
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 2,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [
+        {
+          "id": "10785089248",
+          "floor": 2,
+          "position": {
+            "x": 38.3716,
+            "y": 0,
+            "z": -142.9586
+          },
+          "address": "100臺北市中正區水源里4鄰羅斯福路四段132號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        }
+      ],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 23.405,
+        "maxX": 43.281,
+        "minZ": -146.2532,
+        "maxZ": -135.9658
+      },
+      "centroid": {
+        "x": 33.3435,
+        "y": 0,
+        "z": -141.1114
+      },
+      "areaSquareMetres": 108.9282,
+      "nearestTingzhouDistanceMetres": 52.3014,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:03Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351322",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "580823982",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -113.8214,
+          "y": 0,
+          "z": -133.2845
+        },
+        {
+          "x": -115.0727,
+          "y": 0,
+          "z": -144.5409
+        },
+        {
+          "x": -99.6549,
+          "y": 0,
+          "z": -146.2514
+        },
+        {
+          "x": -98.4036,
+          "y": 0,
+          "z": -134.995
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -115.0727,
+        "maxX": -98.4036,
+        "minZ": -146.2514,
+        "maxZ": -133.2845
+      },
+      "centroid": {
+        "x": -106.7381,
+        "y": 0,
+        "z": -139.7679
+      },
+      "areaSquareMetres": 175.6893,
+      "nearestTingzhouDistanceMetres": 58.8209,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2018-04-17T10:52:01Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/580823982",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380351308",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 44.6657,
+          "y": 0,
+          "z": -135.3343
+        },
+        {
+          "x": 30.8757,
+          "y": 0,
+          "z": -131.7938
+        },
+        {
+          "x": 29.491,
+          "y": 0,
+          "z": -137.1721
+        },
+        {
+          "x": 43.281,
+          "y": 0,
+          "z": -140.7125
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 4,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [
+        {
+          "id": "10785086552",
+          "floor": 4,
+          "position": {
+            "x": 40.2643,
+            "y": 0,
+            "z": -134.3077
+          },
+          "address": "100臺北市中正區水源里4鄰羅斯福路四段128號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088926",
+          "floor": 3,
+          "position": {
+            "x": 40.2643,
+            "y": 0,
+            "z": -134.3077
+          },
+          "address": "100臺北市中正區水源里4鄰羅斯福路四段128號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089659",
+          "floor": 2,
+          "position": {
+            "x": 40.2643,
+            "y": 0,
+            "z": -134.3077
+          },
+          "address": "100臺北市中正區水源里4鄰羅斯福路四段128號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        }
+      ],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 29.491,
+        "maxX": 44.6657,
+        "minZ": -140.7125,
+        "maxZ": -131.7938
+      },
+      "centroid": {
+        "x": 37.0783,
+        "y": 0,
+        "z": -136.2532
+      },
+      "areaSquareMetres": 79.0685,
+      "nearestTingzhouDistanceMetres": 56.4457,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2015-11-15T07:47:02Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380351308",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "1287937542",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -106.7871,
+          "y": 0,
+          "z": -68.0322
+        },
+        {
+          "x": -109.4787,
+          "y": 0,
+          "z": -90.3993
+        },
+        {
+          "x": -98.161,
+          "y": 0,
+          "z": -91.812
+        },
+        {
+          "x": -97.0236,
+          "y": 0,
+          "z": -68.5985
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -109.4787,
+        "maxX": -97.0236,
+        "minZ": -91.812,
+        "maxZ": -68.0322
+      },
+      "centroid": {
+        "x": -102.8602,
+        "y": 0,
+        "z": -80.0036
+      },
+      "areaSquareMetres": 242.1178,
+      "nearestTingzhouDistanceMetres": 78.342,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2024-05-30T05:46:33Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/1287937542",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "1287937531",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -21.3156,
+          "y": 0,
+          "z": 143.3845
+        },
+        {
+          "x": -20.273,
+          "y": 0,
+          "z": 126.8509
+        },
+        {
+          "x": -10.269,
+          "y": 0,
+          "z": 126.8022
+        },
+        {
+          "x": -10.2677,
+          "y": 0,
+          "z": 143.4775
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 4,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [
+        {
+          "id": "10785086525",
+          "floor": 4,
+          "position": {
+            "x": -13.0377,
+            "y": 0,
+            "z": 137.4233
+          },
+          "address": "100臺北市中正區水源里7鄰汀州路三段112號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088809",
+          "floor": 3,
+          "position": {
+            "x": -12.3456,
+            "y": 0,
+            "z": 130.0002
+          },
+          "address": "100臺北市中正區水源里7鄰汀州路三段116號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088901",
+          "floor": 3,
+          "position": {
+            "x": -13.0377,
+            "y": 0,
+            "z": 137.4233
+          },
+          "address": "100臺北市中正區水源里7鄰汀州路三段112號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089220",
+          "floor": 2,
+          "position": {
+            "x": -12.3456,
+            "y": 0,
+            "z": 130.0002
+          },
+          "address": "100臺北市中正區水源里7鄰汀州路三段116號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089630",
+          "floor": 2,
+          "position": {
+            "x": -13.0377,
+            "y": 0,
+            "z": 137.4233
+          },
+          "address": "100臺北市中正區水源里7鄰汀州路三段112號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089698",
+          "floor": 4,
+          "position": {
+            "x": -12.3456,
+            "y": 0,
+            "z": 130.0002
+          },
+          "address": "100臺北市中正區水源里7鄰汀州路三段116號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        }
+      ],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -21.3156,
+        "maxX": -10.2677,
+        "minZ": 126.8022,
+        "maxZ": 143.4775
+      },
+      "centroid": {
+        "x": -15.5283,
+        "y": 0,
+        "z": 135.2666
+      },
+      "areaSquareMetres": 174.7891,
+      "nearestTingzhouDistanceMetres": 9.1938,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2024-05-30T05:46:33Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/1287937531",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "378476612",
+      "name": "臺大華杏大樓",
+      "buildingType": "apartments",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 85.593,
+          "y": 0,
+          "z": 147.2019
+        },
+        {
+          "x": 73.3998,
+          "y": 0,
+          "z": 147.9091
+        },
+        {
+          "x": 72.0247,
+          "y": 0,
+          "z": 134.2338
+        },
+        {
+          "x": 83.3774,
+          "y": 0,
+          "z": 132.7067
+        }
+      ],
+      "levels": 12,
+      "minimumLevels": 12,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=12",
+      "floorEvidence": [
+        {
+          "id": "10785032780",
+          "floor": 10,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號十樓之1",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086141",
+          "floor": 5,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號五樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086162",
+          "floor": 4,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086229",
+          "floor": 7,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號七樓之1",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086300",
+          "floor": 3,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086323",
+          "floor": 2,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086391",
+          "floor": 6,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號六樓之1",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086461",
+          "floor": 10,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號十樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086483",
+          "floor": 8,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號八樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086551",
+          "floor": 11,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號十一樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086620",
+          "floor": 8,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號八樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785086643",
+          "floor": 6,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號六樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088769",
+          "floor": 12,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號十二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088837",
+          "floor": 4,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088860",
+          "floor": 3,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088904",
+          "floor": 9,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號九樓之1",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088925",
+          "floor": 10,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號十樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088996",
+          "floor": 2,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089086",
+          "floor": 9,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號九樓之1",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089155",
+          "floor": 9,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號九樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089178",
+          "floor": 7,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號七樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089247",
+          "floor": 6,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號六樓之2",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089317",
+          "floor": 7,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號七樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089339",
+          "floor": 5,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號五樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089497",
+          "floor": 11,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號十一樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089567",
+          "floor": 11,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號十一樓之1",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089635",
+          "floor": 12,
+          "position": {
+            "x": 78.5991,
+            "y": 0,
+            "z": 133.9349
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段58號十二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089658",
+          "floor": 9,
+          "position": {
+            "x": 79.6966,
+            "y": 0,
+            "z": 141.6211
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段56號九樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        }
+      ],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 72.0247,
+        "maxX": 85.593,
+        "minZ": 132.7067,
+        "maxZ": 147.9091
+      },
+      "centroid": {
+        "x": 78.6699,
+        "y": 0,
+        "z": 140.5795
+      },
+      "areaSquareMetres": 167.8306,
+      "nearestTingzhouDistanceMetres": 72.7799,
+      "tags": {
+        "building": "apartments",
+        "building:levels": "12",
+        "name": "臺大華杏大樓"
+      },
+      "osmTimestamp": "2020-08-27T11:45:18Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/378476612",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189197",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 65.8324,
+          "y": 0,
+          "z": 148.6776
+        },
+        {
+          "x": 64.6224,
+          "y": 0,
+          "z": 134.5135
+        },
+        {
+          "x": 70.7158,
+          "y": 0,
+          "z": 133.9953
+        },
+        {
+          "x": 71.9195,
+          "y": 0,
+          "z": 148.1672
+        }
+      ],
+      "levels": 5,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=5",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 64.6224,
+        "maxX": 71.9195,
+        "minZ": 133.9953,
+        "maxZ": 148.6776
+      },
+      "centroid": {
+        "x": 68.2727,
+        "y": 0,
+        "z": 141.337
+      },
+      "areaSquareMetres": 86.9073,
+      "nearestTingzhouDistanceMetres": 65.386,
+      "tags": {
+        "building": "yes",
+        "building:levels": "5"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189197",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189195",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 54.902,
+          "y": 0,
+          "z": 149.379
+        },
+        {
+          "x": 53.7139,
+          "y": 0,
+          "z": 135.7378
+        },
+        {
+          "x": 59.9743,
+          "y": 0,
+          "z": 135.3671
+        },
+        {
+          "x": 59.9845,
+          "y": 0,
+          "z": 134.9996
+        },
+        {
+          "x": 64.5165,
+          "y": 0,
+          "z": 134.6095
+        },
+        {
+          "x": 65.7747,
+          "y": 0,
+          "z": 148.6959
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 4,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [
+        {
+          "id": "10785086278",
+          "floor": 3,
+          "position": {
+            "x": 57.8324,
+            "y": 0,
+            "z": 146.7006
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段52巷8號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088818",
+          "floor": 4,
+          "position": {
+            "x": 64.6967,
+            "y": 0,
+            "z": 146.2725
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段52巷6號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785088974",
+          "floor": 2,
+          "position": {
+            "x": 64.6967,
+            "y": 0,
+            "z": 146.2725
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段52巷6號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089134",
+          "floor": 4,
+          "position": {
+            "x": 57.8324,
+            "y": 0,
+            "z": 146.7006
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段52巷8號四樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089295",
+          "floor": 2,
+          "position": {
+            "x": 57.8324,
+            "y": 0,
+            "z": 146.7006
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段52巷8號二樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        },
+        {
+          "id": "10785089547",
+          "floor": 3,
+          "position": {
+            "x": 64.6967,
+            "y": 0,
+            "z": 146.2725
+          },
+          "address": "100臺北市中正區水源里1鄰羅斯福路四段52巷6號三樓",
+          "dataset": "155472",
+          "source": "臺北市政府 address data as imported into OSM",
+          "association": "unique strict point-in-polygon; lower bound only"
+        }
+      ],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 53.7139,
+        "maxX": 65.7747,
+        "minZ": 134.6095,
+        "maxZ": 149.379
+      },
+      "centroid": {
+        "x": 59.7694,
+        "y": 0,
+        "z": 142.1369
+      },
+      "areaSquareMetres": 150.66,
+      "nearestTingzhouDistanceMetres": 54.5083,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189195",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189209",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 49.2659,
+          "y": 0,
+          "z": 149.7733
+        },
+        {
+          "x": 48.101,
+          "y": 0,
+          "z": 135.9435
+        },
+        {
+          "x": 53.6655,
+          "y": 0,
+          "z": 135.4785
+        },
+        {
+          "x": 54.8367,
+          "y": 0,
+          "z": 149.3004
+        }
+      ],
+      "levels": 1,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=1",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 48.101,
+        "maxX": 54.8367,
+        "minZ": 135.4785,
+        "maxZ": 149.7733
+      },
+      "centroid": {
+        "x": 51.4672,
+        "y": 0,
+        "z": 142.6254
+      },
+      "areaSquareMetres": 77.5253,
+      "nearestTingzhouDistanceMetres": 48.9016,
+      "tags": {
+        "building": "yes",
+        "building:levels": "1"
+      },
+      "osmTimestamp": "2018-11-19T04:56:51Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189209",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "751353367",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -14.2813,
+          "y": 0,
+          "z": 166.4656
+        },
+        {
+          "x": -22.6782,
+          "y": 0,
+          "z": 151.0187
+        },
+        {
+          "x": -16.787,
+          "y": 0,
+          "z": 145.8549
+        },
+        {
+          "x": -9.5382,
+          "y": 0,
+          "z": 146.1382
+        },
+        {
+          "x": -9.883,
+          "y": 0,
+          "z": 166.1881
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -22.6782,
+        "maxX": -9.5382,
+        "minZ": 145.8549,
+        "maxZ": 166.4656
+      },
+      "centroid": {
+        "x": -14.5749,
+        "y": 0,
+        "z": 155.0172
+      },
+      "areaSquareMetres": 185.5717,
+      "nearestTingzhouDistanceMetres": 8.0747,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2019-12-01T17:57:00Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/751353367",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189206",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 11.8726,
+          "y": 0,
+          "z": 168.393
+        },
+        {
+          "x": 11.9049,
+          "y": 0,
+          "z": 166.0998
+        },
+        {
+          "x": 7.815,
+          "y": 0,
+          "z": 166.0301
+        },
+        {
+          "x": 7.8496,
+          "y": 0,
+          "z": 163.7518
+        },
+        {
+          "x": 6.878,
+          "y": 0,
+          "z": 163.7332
+        },
+        {
+          "x": 6.9401,
+          "y": 0,
+          "z": 159.9483
+        },
+        {
+          "x": 8.0906,
+          "y": 0,
+          "z": 158.8932
+        },
+        {
+          "x": 21.5384,
+          "y": 0,
+          "z": 159.5208
+        },
+        {
+          "x": 21.4451,
+          "y": 0,
+          "z": 164.3559
+        },
+        {
+          "x": 20.2762,
+          "y": 0,
+          "z": 164.3338
+        },
+        {
+          "x": 20.2379,
+          "y": 0,
+          "z": 166.4925
+        },
+        {
+          "x": 16.9973,
+          "y": 0,
+          "z": 166.4334
+        },
+        {
+          "x": 16.9704,
+          "y": 0,
+          "z": 168.4716
+        },
+        {
+          "x": 15.1196,
+          "y": 0,
+          "z": 168.4442
+        },
+        {
+          "x": 14.9928,
+          "y": 0,
+          "z": 169.0805
+        },
+        {
+          "x": 14.6374,
+          "y": 0,
+          "z": 169.6103
+        },
+        {
+          "x": 14.0952,
+          "y": 0,
+          "z": 169.9638
+        },
+        {
+          "x": 13.4707,
+          "y": 0,
+          "z": 170.0824
+        },
+        {
+          "x": 12.8364,
+          "y": 0,
+          "z": 169.9469
+        },
+        {
+          "x": 12.3083,
+          "y": 0,
+          "z": 169.5732
+        },
+        {
+          "x": 11.9732,
+          "y": 0,
+          "z": 169.0311
+        }
+      ],
+      "levels": 6,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=6",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 6.878,
+        "maxX": 21.5384,
+        "minZ": 158.8932,
+        "maxZ": 170.0824
+      },
+      "centroid": {
+        "x": 14.1914,
+        "y": 0,
+        "z": 163.3219
+      },
+      "areaSquareMetres": 113.0178,
+      "nearestTingzhouDistanceMetres": 8.5584,
+      "tags": {
+        "building": "yes",
+        "building:levels": "6"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189206",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "378476633",
+      "name": "",
+      "buildingType": "apartments",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 89.8068,
+          "y": 0,
+          "z": 182.3522
+        },
+        {
+          "x": 76.5168,
+          "y": 0,
+          "z": 183.3028
+        },
+        {
+          "x": 75.7538,
+          "y": 0,
+          "z": 177.2595
+        },
+        {
+          "x": 74.1178,
+          "y": 0,
+          "z": 177.5865
+        },
+        {
+          "x": 73.4535,
+          "y": 0,
+          "z": 172.3611
+        },
+        {
+          "x": 75.0032,
+          "y": 0,
+          "z": 172.1589
+        },
+        {
+          "x": 74.8396,
+          "y": 0,
+          "z": 170.304
+        },
+        {
+          "x": 78.2547,
+          "y": 0,
+          "z": 169.9336
+        },
+        {
+          "x": 77.5549,
+          "y": 0,
+          "z": 164.291
+        },
+        {
+          "x": 75.8435,
+          "y": 0,
+          "z": 164.4277
+        },
+        {
+          "x": 76.063,
+          "y": 0,
+          "z": 167.1181
+        },
+        {
+          "x": 75.1284,
+          "y": 0,
+          "z": 167.9585
+        },
+        {
+          "x": 70.0552,
+          "y": 0,
+          "z": 168.2752
+        },
+        {
+          "x": 69.0354,
+          "y": 0,
+          "z": 167.5182
+        },
+        {
+          "x": 68.8178,
+          "y": 0,
+          "z": 167.7704
+        },
+        {
+          "x": 68.2259,
+          "y": 0,
+          "z": 167.7599
+        },
+        {
+          "x": 68.4323,
+          "y": 0,
+          "z": 171.9036
+        },
+        {
+          "x": 55.9258,
+          "y": 0,
+          "z": 172.5916
+        },
+        {
+          "x": 55.0887,
+          "y": 0,
+          "z": 162.1872
+        },
+        {
+          "x": 56.8751,
+          "y": 0,
+          "z": 162.0462
+        },
+        {
+          "x": 56.3906,
+          "y": 0,
+          "z": 155.6572
+        },
+        {
+          "x": 85.8512,
+          "y": 0,
+          "z": 153.4991
+        }
+      ],
+      "levels": 12,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=12",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 55.0887,
+        "maxX": 89.8068,
+        "minZ": 153.4991,
+        "maxZ": 183.3028
+      },
+      "centroid": {
+        "x": 74.0525,
+        "y": 0,
+        "z": 166.3519
+      },
+      "areaSquareMetres": 660.6651,
+      "nearestTingzhouDistanceMetres": 56.7519,
+      "tags": {
+        "building": "apartments",
+        "building:levels": "12"
+      },
+      "osmTimestamp": "2020-10-16T11:35:29Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/378476633",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189207",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 26.9941,
+          "y": 0,
+          "z": 173.5435
+        },
+        {
+          "x": 26.3578,
+          "y": 0,
+          "z": 162.5883
+        },
+        {
+          "x": 26.1542,
+          "y": 0,
+          "z": 162.5927
+        },
+        {
+          "x": 26.0754,
+          "y": 0,
+          "z": 161.3243
+        },
+        {
+          "x": 35.794,
+          "y": 0,
+          "z": 160.7606
+        },
+        {
+          "x": 35.7008,
+          "y": 0,
+          "z": 159.2085
+        },
+        {
+          "x": 40.2901,
+          "y": 0,
+          "z": 158.9423
+        },
+        {
+          "x": 40.3374,
+          "y": 0,
+          "z": 159.7707
+        },
+        {
+          "x": 49.9573,
+          "y": 0,
+          "z": 159.2052
+        },
+        {
+          "x": 50.7056,
+          "y": 0,
+          "z": 172.1681
+        }
+      ],
+      "levels": 5,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=5",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 26.0754,
+        "maxX": 50.7056,
+        "minZ": 158.9423,
+        "maxZ": 173.5435
+      },
+      "centroid": {
+        "x": 38.6281,
+        "y": 0,
+        "z": 166.4163
+      },
+      "areaSquareMetres": 305.456,
+      "nearestTingzhouDistanceMetres": 27.7258,
+      "tags": {
+        "building": "yes",
+        "building:levels": "5"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189207",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189205",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 5.2057,
+          "y": 0,
+          "z": 173.9163
+        },
+        {
+          "x": 5.3212,
+          "y": 0,
+          "z": 169.4619
+        },
+        {
+          "x": 11.302,
+          "y": 0,
+          "z": 169.1898
+        },
+        {
+          "x": 13.1512,
+          "y": 0,
+          "z": 173.5303
+        }
+      ],
+      "levels": 2,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=2",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 5.2057,
+        "maxX": 13.1512,
+        "minZ": 169.1898,
+        "maxZ": 173.9163
+      },
+      "centroid": {
+        "x": 8.7627,
+        "y": 0,
+        "z": 171.6283
+      },
+      "areaSquareMetres": 30.9053,
+      "nearestTingzhouDistanceMetres": 7.2188,
+      "tags": {
+        "building": "yes",
+        "building:levels": "2"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189205",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "378476625",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 70.654,
+          "y": 0,
+          "z": 177.8398
+        },
+        {
+          "x": 71.4223,
+          "y": 0,
+          "z": 190.6892
+        },
+        {
+          "x": 42.9488,
+          "y": 0,
+          "z": 192.2435
+        },
+        {
+          "x": 42.7214,
+          "y": 0,
+          "z": 189.1193
+        },
+        {
+          "x": 42.1735,
+          "y": 0,
+          "z": 189.196
+        },
+        {
+          "x": 41.4063,
+          "y": 0,
+          "z": 188.4094
+        },
+        {
+          "x": 41.332,
+          "y": 0,
+          "z": 187.313
+        },
+        {
+          "x": 40.4361,
+          "y": 0,
+          "z": 187.3425
+        },
+        {
+          "x": 40.3199,
+          "y": 0,
+          "z": 185.8367
+        },
+        {
+          "x": 39.5234,
+          "y": 0,
+          "z": 185.9203
+        },
+        {
+          "x": 38.796,
+          "y": 0,
+          "z": 184.5698
+        },
+        {
+          "x": 38.3697,
+          "y": 0,
+          "z": 179.5103
+        },
+        {
+          "x": 38.1771,
+          "y": 0,
+          "z": 179.5365
+        },
+        {
+          "x": 38.1235,
+          "y": 0,
+          "z": 177.8998
+        },
+        {
+          "x": 60.0737,
+          "y": 0,
+          "z": 176.7763
+        },
+        {
+          "x": 60.2418,
+          "y": 0,
+          "z": 178.324
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 38.1235,
+        "maxX": 71.4223,
+        "minZ": 176.7763,
+        "maxZ": 192.2435
+      },
+      "centroid": {
+        "x": 55.0803,
+        "y": 0,
+        "z": 184.3467
+      },
+      "areaSquareMetres": 433.3457,
+      "nearestTingzhouDistanceMetres": 40.2542,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2018-11-19T04:57:00Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/378476625",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189210",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 4.7022,
+          "y": 0,
+          "z": 196.7533
+        },
+        {
+          "x": 5.2087,
+          "y": 0,
+          "z": 173.9835
+        },
+        {
+          "x": 7.7733,
+          "y": 0,
+          "z": 173.8347
+        },
+        {
+          "x": 12.1593,
+          "y": 0,
+          "z": 180.1546
+        },
+        {
+          "x": 13.4228,
+          "y": 0,
+          "z": 179.385
+        },
+        {
+          "x": 18.5307,
+          "y": 0,
+          "z": 187.7895
+        },
+        {
+          "x": 17.4141,
+          "y": 0,
+          "z": 188.4832
+        },
+        {
+          "x": 9.9216,
+          "y": 0,
+          "z": 193.1859
+        }
+      ],
+      "levels": 1,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=1",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 4.7022,
+        "maxX": 18.5307,
+        "minZ": 173.8347,
+        "maxZ": 196.7533
+      },
+      "centroid": {
+        "x": 9.728,
+        "y": 0,
+        "z": 185.2726
+      },
+      "areaSquareMetres": 176.4459,
+      "nearestTingzhouDistanceMetres": 7.149,
+      "tags": {
+        "building": "yes",
+        "building:levels": "1"
+      },
+      "osmTimestamp": "2018-11-19T04:56:51Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189210",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189208",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 28.1457,
+          "y": 0,
+          "z": 198.3361
+        },
+        {
+          "x": 22.6247,
+          "y": 0,
+          "z": 190.1428
+        },
+        {
+          "x": 22.8499,
+          "y": 0,
+          "z": 189.9874
+        },
+        {
+          "x": 18.1968,
+          "y": 0,
+          "z": 183.0766
+        },
+        {
+          "x": 17.5578,
+          "y": 0,
+          "z": 180.9422
+        },
+        {
+          "x": 25.0393,
+          "y": 0,
+          "z": 176.2177
+        },
+        {
+          "x": 29.591,
+          "y": 0,
+          "z": 176.1933
+        },
+        {
+          "x": 39.4942,
+          "y": 0,
+          "z": 191.0661
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 17.5578,
+        "maxX": 39.4942,
+        "minZ": 176.1933,
+        "maxZ": 198.3361
+      },
+      "centroid": {
+        "x": 28.2802,
+        "y": 0,
+        "z": 186.4511
+      },
+      "areaSquareMetres": 266.8127,
+      "nearestTingzhouDistanceMetres": 19.7864,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2018-11-19T04:56:51Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189208",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "378690936",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 72.1097,
+          "y": 0,
+          "z": 184.3896
+        },
+        {
+          "x": 89.8916,
+          "y": 0,
+          "z": 182.9388
+        },
+        {
+          "x": 90.3718,
+          "y": 0,
+          "z": 188.6766
+        },
+        {
+          "x": 72.5749,
+          "y": 0,
+          "z": 190.1282
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 72.1097,
+        "maxX": 90.3718,
+        "minZ": 182.9388,
+        "maxZ": 190.1282
+      },
+      "centroid": {
+        "x": 81.2371,
+        "y": 0,
+        "z": 186.5337
+      },
+      "areaSquareMetres": 102.7651,
+      "nearestTingzhouDistanceMetres": 74.4159,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2016-08-11T05:07:16Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/378690936",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189198",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -30.3001,
+          "y": 0,
+          "z": 195.5339
+        },
+        {
+          "x": -32.9314,
+          "y": 0,
+          "z": 195.4993
+        },
+        {
+          "x": -32.7545,
+          "y": 0,
+          "z": 181.6367
+        },
+        {
+          "x": -9.6367,
+          "y": 0,
+          "z": 181.9206
+        },
+        {
+          "x": -9.8113,
+          "y": 0,
+          "z": 195.7981
+        },
+        {
+          "x": -10.3282,
+          "y": 0,
+          "z": 195.7831
+        }
+      ],
+      "levels": 2,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=2",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -32.9314,
+        "maxX": -9.6367,
+        "minZ": 181.6367,
+        "maxZ": 195.7981
+      },
+      "centroid": {
+        "x": -21.2827,
+        "y": 0,
+        "z": 188.7121
+      },
+      "areaSquareMetres": 320.6337,
+      "nearestTingzhouDistanceMetres": 7.2674,
+      "tags": {
+        "building": "yes",
+        "building:levels": "2"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189198",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "413693605",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 91.8321,
+          "y": 0,
+          "z": 197.7045
+        },
+        {
+          "x": 77.4809,
+          "y": 0,
+          "z": 198.8364
+        },
+        {
+          "x": 76.9244,
+          "y": 0,
+          "z": 198.9062
+        },
+        {
+          "x": 76.5392,
+          "y": 0,
+          "z": 194.2037
+        },
+        {
+          "x": 91.1668,
+          "y": 0,
+          "z": 192.906
+        }
+      ],
+      "levels": 1,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=1",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 76.5392,
+        "maxX": 91.8321,
+        "minZ": 192.906,
+        "maxZ": 198.9062
+      },
+      "centroid": {
+        "x": 84.1526,
+        "y": 0,
+        "z": 195.928
+      },
+      "areaSquareMetres": 70.6242,
+      "nearestTingzhouDistanceMetres": 78.9858,
+      "tags": {
+        "building": "yes",
+        "building:levels": "1"
+      },
+      "osmTimestamp": "2018-11-19T04:57:01Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/413693605",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189192",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 14.5851,
+          "y": 0,
+          "z": 204.0048
+        },
+        {
+          "x": 9.1876,
+          "y": 0,
+          "z": 195.5871
+        },
+        {
+          "x": 9.9216,
+          "y": 0,
+          "z": 193.1859
+        },
+        {
+          "x": 17.4141,
+          "y": 0,
+          "z": 188.4832
+        },
+        {
+          "x": 18.0877,
+          "y": 0,
+          "z": 189.4924
+        },
+        {
+          "x": 18.6448,
+          "y": 0,
+          "z": 189.1381
+        },
+        {
+          "x": 21.1312,
+          "y": 0,
+          "z": 193.0074
+        },
+        {
+          "x": 21.599,
+          "y": 0,
+          "z": 192.7107
+        },
+        {
+          "x": 25.8861,
+          "y": 0,
+          "z": 199.508
+        },
+        {
+          "x": 18.463,
+          "y": 0,
+          "z": 204.2665
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 9.1876,
+        "maxX": 25.8861,
+        "minZ": 188.4832,
+        "maxZ": 204.2665
+      },
+      "centroid": {
+        "x": 17.1553,
+        "y": 0,
+        "z": 196.8865
+      },
+      "areaSquareMetres": 157.3251,
+      "nearestTingzhouDistanceMetres": 11.6343,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189192",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "580823986",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -30.3212,
+          "y": 0,
+          "z": 208.8484
+        },
+        {
+          "x": -30.3001,
+          "y": 0,
+          "z": 195.5339
+        },
+        {
+          "x": -10.3282,
+          "y": 0,
+          "z": 195.7831
+        },
+        {
+          "x": -10.649,
+          "y": 0,
+          "z": 208.9728
+        }
+      ],
+      "levels": 5,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=5",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -30.3212,
+        "maxX": -10.3282,
+        "minZ": 195.5339,
+        "maxZ": 208.9728
+      },
+      "centroid": {
+        "x": -20.4146,
+        "y": 0,
+        "z": 202.2676
+      },
+      "areaSquareMetres": 262.7157,
+      "nearestTingzhouDistanceMetres": 7.8815,
+      "tags": {
+        "building": "yes",
+        "building:levels": "5"
+      },
+      "osmTimestamp": "2018-11-19T04:57:01Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/580823986",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "378690933",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 92.8713,
+          "y": 0,
+          "z": 205.6936
+        },
+        {
+          "x": 74.6161,
+          "y": 0,
+          "z": 207.022
+        },
+        {
+          "x": 77.119,
+          "y": 0,
+          "z": 199.8533
+        },
+        {
+          "x": 77.4809,
+          "y": 0,
+          "z": 198.8364
+        },
+        {
+          "x": 91.8321,
+          "y": 0,
+          "z": 197.7045
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 74.6161,
+        "maxX": 92.8713,
+        "minZ": 197.7045,
+        "maxZ": 207.022
+      },
+      "centroid": {
+        "x": 84.197,
+        "y": 0,
+        "z": 202.4746
+      },
+      "areaSquareMetres": 130.7514,
+      "nearestTingzhouDistanceMetres": 77.0636,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2018-11-19T04:57:00Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/378690933",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189204",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 14.7202,
+          "y": 0,
+          "z": 213.3641
+        },
+        {
+          "x": 11.6833,
+          "y": 0,
+          "z": 208.5459
+        },
+        {
+          "x": 27.7905,
+          "y": 0,
+          "z": 198.3867
+        },
+        {
+          "x": 30.8337,
+          "y": 0,
+          "z": 203.197
+        }
+      ],
+      "levels": 1,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=1",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 11.6833,
+        "maxX": 30.8337,
+        "minZ": 198.3867,
+        "maxZ": 213.3641
+      },
+      "centroid": {
+        "x": 21.2563,
+        "y": 0,
+        "z": 205.8741
+      },
+      "areaSquareMetres": 108.4557,
+      "nearestTingzhouDistanceMetres": 14.1309,
+      "tags": {
+        "building": "yes",
+        "building:levels": "1"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189204",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189211",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 41.1156,
+          "y": 0,
+          "z": 214.5661
+        },
+        {
+          "x": 40.7847,
+          "y": 0,
+          "z": 210.7366
+        },
+        {
+          "x": 40.1421,
+          "y": 0,
+          "z": 210.7888
+        },
+        {
+          "x": 40.0069,
+          "y": 0,
+          "z": 209.3066
+        },
+        {
+          "x": 37.6277,
+          "y": 0,
+          "z": 209.527
+        },
+        {
+          "x": 37.6106,
+          "y": 0,
+          "z": 209.3707
+        },
+        {
+          "x": 36.6041,
+          "y": 0,
+          "z": 209.4665
+        },
+        {
+          "x": 36.5439,
+          "y": 0,
+          "z": 208.7961
+        },
+        {
+          "x": 36.3662,
+          "y": 0,
+          "z": 208.8214
+        },
+        {
+          "x": 35.718,
+          "y": 0,
+          "z": 201.8729
+        },
+        {
+          "x": 45.7895,
+          "y": 0,
+          "z": 201.2438
+        },
+        {
+          "x": 45.769,
+          "y": 0,
+          "z": 200.8257
+        },
+        {
+          "x": 63.1439,
+          "y": 0,
+          "z": 199.2413
+        },
+        {
+          "x": 63.1824,
+          "y": 0,
+          "z": 199.7257
+        },
+        {
+          "x": 73.5277,
+          "y": 0,
+          "z": 198.7213
+        },
+        {
+          "x": 73.6732,
+          "y": 0,
+          "z": 200.173
+        },
+        {
+          "x": 74.2682,
+          "y": 0,
+          "z": 206.1587
+        },
+        {
+          "x": 72.0222,
+          "y": 0,
+          "z": 206.4087
+        },
+        {
+          "x": 72.6221,
+          "y": 0,
+          "z": 212.2818
+        },
+        {
+          "x": 47.0649,
+          "y": 0,
+          "z": 214.6703
+        },
+        {
+          "x": 47.0353,
+          "y": 0,
+          "z": 214.0505
+        },
+        {
+          "x": 46.2238,
+          "y": 0,
+          "z": 214.135
+        },
+        {
+          "x": 46.2248,
+          "y": 0,
+          "z": 214.0451
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 35.718,
+        "maxX": 74.2682,
+        "minZ": 198.7213,
+        "maxZ": 214.6703
+      },
+      "centroid": {
+        "x": 55.6281,
+        "y": 0,
+        "z": 206.6334
+      },
+      "areaSquareMetres": 477.9363,
+      "nearestTingzhouDistanceMetres": 38.1651,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2018-11-19T04:56:51Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189211",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "380358929",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 74.6184,
+          "y": 0,
+          "z": 213.7609
+        },
+        {
+          "x": 74.0344,
+          "y": 0,
+          "z": 208.6132
+        },
+        {
+          "x": 74.6161,
+          "y": 0,
+          "z": 207.022
+        },
+        {
+          "x": 92.8713,
+          "y": 0,
+          "z": 205.6936
+        },
+        {
+          "x": 93.0084,
+          "y": 0,
+          "z": 206.996
+        },
+        {
+          "x": 92.7258,
+          "y": 0,
+          "z": 207.0273
+        },
+        {
+          "x": 93.3747,
+          "y": 0,
+          "z": 212.0589
+        }
+      ],
+      "levels": 4,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=4",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 74.0344,
+        "maxX": 93.3747,
+        "minZ": 205.6936,
+        "maxZ": 213.7609
+      },
+      "centroid": {
+        "x": 83.5972,
+        "y": 0,
+        "z": 209.6621
+      },
+      "areaSquareMetres": 122.9839,
+      "nearestTingzhouDistanceMetres": 76.482,
+      "tags": {
+        "building": "yes",
+        "building:levels": "4"
+      },
+      "osmTimestamp": "2018-11-19T04:57:01Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/380358929",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "379096638",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 21.1775,
+          "y": 0,
+          "z": 209.68
+        },
+        {
+          "x": 32.6513,
+          "y": 0,
+          "z": 202.822
+        },
+        {
+          "x": 36.5425,
+          "y": 0,
+          "z": 209.5076
+        },
+        {
+          "x": 23.1664,
+          "y": 0,
+          "z": 217.1647
+        },
+        {
+          "x": 20.4118,
+          "y": 0,
+          "z": 212.4574
+        }
+      ],
+      "levels": 0,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "unknown; minimumLevels is only a lower bound",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 20.4118,
+        "maxX": 36.5425,
+        "minZ": 202.822,
+        "maxZ": 217.1647
+      },
+      "centroid": {
+        "x": 28.1203,
+        "y": 0,
+        "z": 210.0163
+      },
+      "areaSquareMetres": 114.9977,
+      "nearestTingzhouDistanceMetres": 22.9912,
+      "tags": {
+        "building": "yes"
+      },
+      "osmTimestamp": "2018-11-19T04:57:01Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/379096638",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189200",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": -40.2329,
+          "y": 0,
+          "z": 213.9984
+        },
+        {
+          "x": -40.5333,
+          "y": 0,
+          "z": 208.7294
+        },
+        {
+          "x": -32.385,
+          "y": 0,
+          "z": 208.766
+        },
+        {
+          "x": -32.3872,
+          "y": 0,
+          "z": 209.0881
+        },
+        {
+          "x": -30.3202,
+          "y": 0,
+          "z": 209.0954
+        },
+        {
+          "x": -30.3212,
+          "y": 0,
+          "z": 208.8484
+        },
+        {
+          "x": -10.649,
+          "y": 0,
+          "z": 208.9728
+        },
+        {
+          "x": -10.7867,
+          "y": 0,
+          "z": 213.8628
+        },
+        {
+          "x": -37.0729,
+          "y": 0,
+          "z": 214.1221
+        }
+      ],
+      "levels": 2,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=2",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": -40.5333,
+        "maxX": -10.649,
+        "minZ": 208.7294,
+        "maxZ": 214.1221
+      },
+      "centroid": {
+        "x": -25.7733,
+        "y": 0,
+        "z": 211.4326
+      },
+      "areaSquareMetres": 151.8907,
+      "nearestTingzhouDistanceMetres": 8.2014,
+      "tags": {
+        "building": "yes",
+        "building:levels": "2"
+      },
+      "osmTimestamp": "2018-11-19T04:56:50Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189200",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "835141208",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 12.1575,
+          "y": 0,
+          "z": 216.1185
+        },
+        {
+          "x": 4.2723,
+          "y": 0,
+          "z": 215.5426
+        },
+        {
+          "x": 4.5514,
+          "y": 0,
+          "z": 204.2498
+        },
+        {
+          "x": 5.8016,
+          "y": 0,
+          "z": 204.2597
+        }
+      ],
+      "levels": 1,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=1",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 4.2723,
+        "maxX": 12.1575,
+        "minZ": 204.2498,
+        "maxZ": 216.1185
+      },
+      "centroid": {
+        "x": 7.0661,
+        "y": 0,
+        "z": 211.4363
+      },
+      "areaSquareMetres": 51.9848,
+      "nearestTingzhouDistanceMetres": 6.8548,
+      "tags": {
+        "building": "yes",
+        "building:levels": "1"
+      },
+      "osmTimestamp": "2020-08-07T21:50:18Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/835141208",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "379096637",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 37.0098,
+          "y": 0,
+          "z": 209.8324
+        },
+        {
+          "x": 39.7988,
+          "y": 0,
+          "z": 214.7099
+        },
+        {
+          "x": 40.6742,
+          "y": 0,
+          "z": 216.2315
+        },
+        {
+          "x": 35.6132,
+          "y": 0,
+          "z": 219.1234
+        },
+        {
+          "x": 26.2425,
+          "y": 0,
+          "z": 224.489
+        },
+        {
+          "x": 22.5781,
+          "y": 0,
+          "z": 218.0899
+        }
+      ],
+      "levels": 5,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=5",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 22.5781,
+        "maxX": 40.6742,
+        "minZ": 209.8324,
+        "maxZ": 224.489
+      },
+      "centroid": {
+        "x": 31.6248,
+        "y": 0,
+        "z": 217.1604
+      },
+      "areaSquareMetres": 122.5676,
+      "nearestTingzhouDistanceMetres": 26.3008,
+      "tags": {
+        "building": "yes",
+        "building:levels": "5"
+      },
+      "osmTimestamp": "2018-11-19T04:57:01Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/379096637",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "646189155",
+      "name": "",
+      "buildingType": "yes",
+      "isRoofOnly": false,
+      "points": [
+        {
+          "x": 65.6719,
+          "y": 0,
+          "z": 233.5384
+        },
+        {
+          "x": 64.6406,
+          "y": 0,
+          "z": 221.5654
+        },
+        {
+          "x": 65.5445,
+          "y": 0,
+          "z": 221.4905
+        },
+        {
+          "x": 65.1704,
+          "y": 0,
+          "z": 217.1468
+        },
+        {
+          "x": 64.1489,
+          "y": 0,
+          "z": 217.2435
+        },
+        {
+          "x": 64.0756,
+          "y": 0,
+          "z": 216.3941
+        },
+        {
+          "x": 49.3296,
+          "y": 0,
+          "z": 217.6613
+        },
+        {
+          "x": 49.2637,
+          "y": 0,
+          "z": 217.0511
+        },
+        {
+          "x": 44.4105,
+          "y": 0,
+          "z": 217.4674
+        },
+        {
+          "x": 44.7859,
+          "y": 0,
+          "z": 221.9159
+        },
+        {
+          "x": 40.2603,
+          "y": 0,
+          "z": 222.2982
+        },
+        {
+          "x": 40.4909,
+          "y": 0,
+          "z": 225.0104
+        },
+        {
+          "x": 40.4482,
+          "y": 0,
+          "z": 225.0278
+        },
+        {
+          "x": 39.2019,
+          "y": 0,
+          "z": 225.4745
+        },
+        {
+          "x": 35.6525,
+          "y": 0,
+          "z": 219.181
+        },
+        {
+          "x": 35.6132,
+          "y": 0,
+          "z": 219.1234
+        },
+        {
+          "x": 40.6742,
+          "y": 0,
+          "z": 216.2315
+        },
+        {
+          "x": 39.7988,
+          "y": 0,
+          "z": 214.7099
+        },
+        {
+          "x": 41.1156,
+          "y": 0,
+          "z": 214.5661
+        },
+        {
+          "x": 46.2248,
+          "y": 0,
+          "z": 214.0451
+        },
+        {
+          "x": 46.2238,
+          "y": 0,
+          "z": 214.135
+        },
+        {
+          "x": 47.0353,
+          "y": 0,
+          "z": 214.0505
+        },
+        {
+          "x": 47.0649,
+          "y": 0,
+          "z": 214.6703
+        },
+        {
+          "x": 72.6221,
+          "y": 0,
+          "z": 212.2818
+        },
+        {
+          "x": 72.0222,
+          "y": 0,
+          "z": 206.4087
+        },
+        {
+          "x": 74.2682,
+          "y": 0,
+          "z": 206.1587
+        },
+        {
+          "x": 73.6732,
+          "y": 0,
+          "z": 200.173
+        },
+        {
+          "x": 77.119,
+          "y": 0,
+          "z": 199.8533
+        },
+        {
+          "x": 74.6161,
+          "y": 0,
+          "z": 207.022
+        },
+        {
+          "x": 74.0344,
+          "y": 0,
+          "z": 208.6132
+        },
+        {
+          "x": 74.6184,
+          "y": 0,
+          "z": 213.7609
+        },
+        {
+          "x": 74.0658,
+          "y": 0,
+          "z": 213.8079
+        },
+        {
+          "x": 74.5052,
+          "y": 0,
+          "z": 218.2302
+        },
+        {
+          "x": 70.3475,
+          "y": 0,
+          "z": 218.5462
+        },
+        {
+          "x": 70.7189,
+          "y": 0,
+          "z": 222.6804
+        },
+        {
+          "x": 69.6637,
+          "y": 0,
+          "z": 222.6593
+        },
+        {
+          "x": 67.937,
+          "y": 0,
+          "z": 225.7246
+        },
+        {
+          "x": 68.2044,
+          "y": 0,
+          "z": 228.1426
+        },
+        {
+          "x": 68.7066,
+          "y": 0,
+          "z": 232.7709
+        },
+        {
+          "x": 68.7601,
+          "y": 0,
+          "z": 233.2545
+        }
+      ],
+      "levels": 1,
+      "minimumLevels": 0,
+      "minimumLevelsIsOnlyLowerBound": true,
+      "heightMetres": 0,
+      "hasMeasuredHeight": false,
+      "hasHeightTag": false,
+      "heightSource": "unknown; no metre height inferred from floor count",
+      "levelSource": "OSM building:levels=1",
+      "floorEvidence": [],
+      "levelConflict": false,
+      "roadFrontEdges": [],
+      "role": "visualcontextoutsidecurrentauthoredstreet",
+      "bounds": {
+        "minX": 35.6132,
+        "maxX": 77.119,
+        "minZ": 199.8533,
+        "maxZ": 233.5384
+      },
+      "centroid": {
+        "x": 59.5139,
+        "y": 0,
+        "z": 217.5058
+      },
+      "areaSquareMetres": 260.0636,
+      "nearestTingzhouDistanceMetres": 39.139,
+      "tags": {
+        "building": "yes",
+        "building:levels": "1"
+      },
+      "osmTimestamp": "2018-11-19T04:56:47Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/646189155",
+      "geometrySource": "Unchanged complete OSM way footprint in the existing official map API response; current snapshot, no 2025 historic-state verification.",
+      "historical2025StateVerified": false
+    }
+  ],
+  "roads": [
+    {
+      "id": "31051163",
+      "name": "羅斯福路四段24巷",
+      "highway": "residential",
+      "points": [
+        {
+          "x": 110.0046,
+          "y": 0,
+          "z": 238.4547
+        },
+        {
+          "x": 99.3602,
+          "y": 0,
+          "z": 239.3866
+        },
+        {
+          "x": 33.8432,
+          "y": 0,
+          "z": 244.969
+        },
+        {
+          "x": 2.4851,
+          "y": 0,
+          "z": 247.6191
+        },
+        {
+          "x": -2.4746,
+          "y": 0,
+          "z": 248.7529
+        }
+      ],
+      "hasWidthTag": false,
+      "widthTag": "",
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "name": "羅斯福路四段24巷",
+        "name:en": "Lane 24, Section 4, Roosevelt Road",
+        "name:nan": "Roosevelt-lō͘-4-tōaⁿ 24-hāng",
+        "name:nan-Hant": "羅斯福路四段24巷",
+        "name:nan-Latn-pehoeji": "Roosevelt-lō͘-4-tōaⁿ 24-hāng",
+        "name:nan-Latn-tailo": "Roosevelt-lōo-4-tuānn 24-hāng",
+        "name:zh": "羅斯福路四段24巷",
+        "note": "2014-08-02起假日試辦行人徒步區三個月",
+        "oneway": "no",
+        "surface": "asphalt",
+        "turn:backward": "right",
+        "turn:forward": "left;right"
+      },
+      "osmTimestamp": "2024-12-23T16:15:57Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/31051163",
+      "widthIsEstimatedUnlessTagVerified": true,
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "59683825",
+      "name": "思源街",
+      "highway": "tertiary",
+      "points": [
+        {
+          "x": -31.1837,
+          "y": 0,
+          "z": 279.6954
+        },
+        {
+          "x": -23.3222,
+          "y": 0,
+          "z": 264.511
+        },
+        {
+          "x": -18.0251,
+          "y": 0,
+          "z": 256.057
+        },
+        {
+          "x": -13.7711,
+          "y": 0,
+          "z": 251.7893
+        },
+        {
+          "x": -11.2283,
+          "y": 0,
+          "z": 250.3015
+        },
+        {
+          "x": -2.4746,
+          "y": 0,
+          "z": 248.7529
+        }
+      ],
+      "hasWidthTag": false,
+      "widthTag": "",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "思源街",
+        "name:en": "Siyuan Street",
+        "name:nan": "Su-goân-koe",
+        "name:nan-Hant": "思源街",
+        "name:nan-Latn-pehoeji": "Su-goân-koe",
+        "name:nan-Latn-tailo": "Su-guân-kue",
+        "name:zh": "思源街",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "osmTimestamp": "2026-06-04T09:11:41Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/59683825",
+      "widthIsEstimatedUnlessTagVerified": true,
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "289018380",
+      "name": "羅斯福路四段",
+      "highway": "primary",
+      "points": [
+        {
+          "x": 110.0046,
+          "y": 0,
+          "z": 238.4547
+        },
+        {
+          "x": 98.276,
+          "y": 0,
+          "z": 149.027
+        },
+        {
+          "x": 93.7143,
+          "y": 0,
+          "z": 114.6456
+        },
+        {
+          "x": 87.4885,
+          "y": 0,
+          "z": 67.7813
+        },
+        {
+          "x": 85.6543,
+          "y": 0,
+          "z": 53.5935
+        },
+        {
+          "x": 84.8723,
+          "y": 0,
+          "z": 47.5738
+        },
+        {
+          "x": 81.9567,
+          "y": 0,
+          "z": 25.1298
+        },
+        {
+          "x": 79.9419,
+          "y": 0,
+          "z": 11.237
+        },
+        {
+          "x": 77.0859,
+          "y": 0,
+          "z": -8.6196
+        },
+        {
+          "x": 75.7679,
+          "y": 0,
+          "z": -18.9063
+        },
+        {
+          "x": 74.1816,
+          "y": 0,
+          "z": -30.3679
+        },
+        {
+          "x": 71.2355,
+          "y": 0,
+          "z": -48.2501
+        },
+        {
+          "x": 66.5013,
+          "y": 0,
+          "z": -78.1063
+        },
+        {
+          "x": 62.2828,
+          "y": 0,
+          "z": -104.9299
+        },
+        {
+          "x": 56.2114,
+          "y": 0,
+          "z": -132.7543
+        },
+        {
+          "x": 49.7975,
+          "y": 0,
+          "z": -158.5745
+        },
+        {
+          "x": 49.2053,
+          "y": 0,
+          "z": -161.2283
+        }
+      ],
+      "hasWidthTag": false,
+      "widthTag": "",
+      "tags": {
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxheight:signed": "no",
+        "maxspeed": "50",
+        "name": "羅斯福路四段",
+        "name:en": "Section 4, Roosevelt Road",
+        "name:nan": "Roosevelt-lō͘-4-tōaⁿ",
+        "name:nan-Latn-pehoeji": "Roosevelt-lō͘-4-tōaⁿ",
+        "name:nan-Latn-tailo": "Roosevelt-lōo-4-tuānn",
+        "name:zh": "羅斯福路四段",
+        "oneway": "yes",
+        "ref": "9",
+        "ref:en": "Provincial Highway 9",
+        "ref:nan": "9",
+        "ref:nan-Hant": "9",
+        "ref:nan-Latn-pehoeji": "9",
+        "ref:nan-Latn-tailo": "9",
+        "ref:zh": "台9線",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "osmTimestamp": "2026-04-11T08:03:51Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/289018380",
+      "widthIsEstimatedUnlessTagVerified": true,
+      "historical2025StateVerified": false
+    },
+    {
+      "id": "1431158889",
+      "name": "汀州路三段",
+      "highway": "tertiary",
+      "points": [
+        {
+          "x": -2.982,
+          "y": 0,
+          "z": 277.8574
+        },
+        {
+          "x": -2.4746,
+          "y": 0,
+          "z": 248.7529
+        }
+      ],
+      "hasWidthTag": false,
+      "widthTag": "",
+      "tags": {
+        "highway": "tertiary",
+        "lit": "yes",
+        "maxspeed": "40",
+        "name": "汀州路三段",
+        "name:en": "Section 3, Tingzhou Road",
+        "name:nan": "Teng-chiu-koe 3-tōaⁿ",
+        "name:nan-Hant": "汀州路三段",
+        "name:nan-Latn-pehoeji": "Teng-chiu-koe 3-tōaⁿ",
+        "name:nan-Latn-tailo": "Ting-tsiu-kue 3-tuānn",
+        "name:zh": "汀州路三段",
+        "surface": "asphalt"
+      },
+      "osmTimestamp": "2025-09-19T12:01:13Z",
+      "sourceUrl": "https://www.openstreetmap.org/way/1431158889",
+      "widthIsEstimatedUnlessTagVerified": true,
+      "historical2025StateVerified": false
+    }
+  ]
+}

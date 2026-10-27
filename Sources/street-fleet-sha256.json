@@ -1,0 +1,931 @@
+{
+  "generatedAtUtc": "2026-10-10T19:03:45.0232580Z",
+  "scope": "Original street and traffic fleet refinements; existing source attribution retained",
+  "assets": [
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLabelDepth.shader",
+      "sha256": "c994da6931eb310f3f81f69773b456a9e9c5fa4b290f2348740769ec74fe5a9a",
+      "bytes": 1638
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Aluminium.mat",
+      "sha256": "fc86432a3f942afa4d51143f22d596453f34e23a278aae2ed884aca86a968daf",
+      "bytes": 3879
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Appliance.mat",
+      "sha256": "8a5e1eb77a1135a8abfba784cbfd82fb9705f3699b56e305a661e0106ada5c50",
+      "bytes": 3854
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/ArcadeConcrete.mat",
+      "sha256": "5d0db0b47181da8100164255a947d3d2894cd76276dae31c2e1c7dd6965e6d30",
+      "bytes": 4006
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/AwningGrey.mat",
+      "sha256": "228cf2a35a1df9f860c81670c270532335ee004db8bf20f43725c771d3f62a33",
+      "bytes": 3857
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/AwningOlive.mat",
+      "sha256": "c8fb91bdb79cb55a1e8bdba8563201eb0522bb4ca5dc19d28ed0a92623e6cab0",
+      "bytes": 3859
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/AwningWine.mat",
+      "sha256": "9f625f32874a86fa6511248f97952ab8f8c5ec2beba5e2081a04ec8d6bf508d5",
+      "bytes": 3856
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/BackdropAsphalt.mat",
+      "sha256": "7b358876af585938529cf12a7de3c2ffb3573bcc8636ab8ef53a24aa2933419c",
+      "bytes": 4042
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/ColumnBase.mat",
+      "sha256": "a9ba7431359fe9c50d6c03f6edbe9e844fb4be5c6ebf42ec5a8afbb47ec5fec6",
+      "bytes": 4003
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/CurbWear.mat",
+      "sha256": "bc75a8a68f50a05d897bf271c9d478e1d8d718fe9c8b4e342522f5b7b051c62e",
+      "bytes": 3855
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/CurtainBand.mat",
+      "sha256": "2c466f7f80a93013721910cc0c9c1be444d620937450c5dc485d9ed70159842f",
+      "bytes": 3853
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/CurtainGlass.mat",
+      "sha256": "b26dcd16b0b4524d6da934a7971533b93bb3a1e8dffce7506b95a69fe7d29246",
+      "bytes": 3858
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/DrainSteel.mat",
+      "sha256": "b33c2529a47784dbd982f5edf0924c6a1924940c55bf7f98fadd078fc590e605",
+      "bytes": 3859
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/FadedGreen.mat",
+      "sha256": "983075cb808ea8ac028298ae41a99f2224cd3a4ba027247f66ec939f972c8d8c",
+      "bytes": 4003
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/GreyTile.mat",
+      "sha256": "70c01d37cbe7e4a9b5b713d4a1a53fe9d23a7776f1d38a94e68df562129261aa",
+      "bytes": 3998
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Grout.mat",
+      "sha256": "0bb974e19da2364e9757b9f04189c3318954218743a52e69bb95c5da3e0983e9",
+      "bytes": 3875
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Gutter.mat",
+      "sha256": "736f4a1a7a87331e03537725a4c23385bf2fb589494488c69716922c5977ad90",
+      "bytes": 3853
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_Aluminium.asset",
+      "sha256": "3e930bac1a674a7b559004347d5747e3e5d3cabcedd977dbd995df60e292bc4a",
+      "bytes": 4635420
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_Appliance.asset",
+      "sha256": "b4246979bd0751f6fad38ee6e837e47d096dc2d40182f50e96a481aa6d313a69",
+      "bytes": 146065
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_ArcadeConcrete.asset",
+      "sha256": "b4ac5193eb6543e3fb3fe42a1ce04aa3d8e6bc86f64d2d7ef39823bee9ec13f5",
+      "bytes": 26843
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_AwningGrey.asset",
+      "sha256": "5c9dc2471bb623dad4c4b69b44b51cf7beb893fd3ec1fcc05d2c14c5bdac568a",
+      "bytes": 34623
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_AwningOlive.asset",
+      "sha256": "31d2f98ccc5362c2c6a3fc3abe6e8fafc34196e50670ad51263af334e5a68bb7",
+      "bytes": 39802
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_AwningWine.asset",
+      "sha256": "c598a70c6640238433ac60cb9d45cb68949dab71091bf47f271903ddf56711f4",
+      "bytes": 19062
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_BackdropAsphalt.asset",
+      "sha256": "3ae981ae21271f8c410a39ead5ec1519fcc3c5d50a8b4cf346a7836712a10fc2",
+      "bytes": 6036
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_ColumnBase.asset",
+      "sha256": "8032e0e6d9ba5e6284f7225b1286f8c2d54b78b364d1605599063c48fb7fe1c9",
+      "bytes": 55343
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_CurtainBand.asset",
+      "sha256": "53334c5c067a0acf49a515c2c8c154ad5819cc02926c6fdfcc5634846bc58780",
+      "bytes": 324914
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_CurtainGlass.asset",
+      "sha256": "ff7cbd34ac20af17dc44842687b681893ce07e0c20c40e07ea0a31c3d738ac23",
+      "bytes": 291229
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_DrainSteel.asset",
+      "sha256": "c8de8c04ab10fa5315bf8c1c2c224caa0b084d6bccff9379b1396ce9b7511aee",
+      "bytes": 273085
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_FadedGreen.asset",
+      "sha256": "1a271edd42a750c434199b597671e5495f1b785b09e624b79e8ab15ec6705981",
+      "bytes": 26817
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_GreyTile.asset",
+      "sha256": "c6154e934a2bd2bb81c60abbbead3a6ae856d2ffd3142d83b4184e3768308709",
+      "bytes": 31965
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_Grout.asset",
+      "sha256": "c39133ef2d7fb9e2442ceacacfd096382c65249f73e20c9276eb5c5ff9bb25d9",
+      "bytes": 550426
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_Gutter.asset",
+      "sha256": "4732f047121bbfb8090adec09055953a4a94c312d01da1fc0bd9d7cdf47207ac",
+      "bytes": 234205
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_IvoryTile.asset",
+      "sha256": "01d5da0e5bca490be25f1d0328b349b9d04fc5562f5c0d720e048784df841c9f",
+      "bytes": 29410
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_LampDiffuser.asset",
+      "sha256": "ccb3359fc63b6a6fba937397b9c68e22746a900793a83afbd795eda070b88e22",
+      "bytes": 26841
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_MeterBox.asset",
+      "sha256": "6306f8ed82f548dd33cbc34c79a1abfda2b0921690e93a9d3754d8143a36bba7",
+      "bytes": 26845
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_PavingRepair.asset",
+      "sha256": "449d1027422c4bb47c40105f841d59b6fab0d1528fe61e33c40acaba86d8213c",
+      "bytes": 26815
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_RainPipe.asset",
+      "sha256": "9cd01b36da3b9a23486f0fc49679305e1bd93411512b87fc8b671f6cd1c5657f",
+      "bytes": 279985
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_Recess.asset",
+      "sha256": "3136b88b8520eff2418e45b90d7dcff74e4e44a37d195841ede4cc246a9dfbbc",
+      "bytes": 861462
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_RoofCoping.asset",
+      "sha256": "da615617a3bbb80da14a920c53da7e8383aaec1608d20a9d8393731f42515d46",
+      "bytes": 63131
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_ShopGlass.asset",
+      "sha256": "3376fe41c2e2edf29cb3b70f4c541fd86e77ec2af3fb2c2bd3220902815bd6a5",
+      "bytes": 37190
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_ShopWall.asset",
+      "sha256": "4c6a9ee3ec517c9d2025eddce0e44b0bddfd1a9ac6b521546468f7c815e4b300",
+      "bytes": 32009
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_Shutter.asset",
+      "sha256": "4d92c61b5b0fb5dae7a447afc002ee24594b109983985d8243c4d1b86fa9940c",
+      "bytes": 94225
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_ShutterLip.asset",
+      "sha256": "91f6c92f1caba88a95683d58421a7ee2d4e73b53b391bd2f37459e0027381944",
+      "bytes": 1423916
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_SignCream.asset",
+      "sha256": "c9026af6fe413b3acb601ade854e7aa51af920ccb5957c2ad4e3292ded6fb654",
+      "bytes": 19061
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_SignGreen.asset",
+      "sha256": "ecda05f510c4c8835a7c7a8e0123054db844a3965dd7f984bb9c404d54014423",
+      "bytes": 11277
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_StoneTrim.asset",
+      "sha256": "81c10675db5f229845d3d8e0644e40b73752f0edbfd2d9ac4101c327a3aaf94f",
+      "bytes": 1107691
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_WarmPlaster.asset",
+      "sha256": "4f582e4ed85d198f19b7d7e3334e850e1c8939f19500a1b88b11a96b743fe9c3",
+      "bytes": 34592
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_WaterStain.asset",
+      "sha256": "333b37f61b79e7a1d27f0f1b7a55d5fb5044202567a030423445cd63fc330dd2",
+      "bytes": 60531
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_WeatheredSteel.asset",
+      "sha256": "03cf002c2398fe1ae9c15e5545e66898a55eae1b4a81b56afa999a8c8a3ab838",
+      "bytes": 2879775
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Intersection_WindowGlass.asset",
+      "sha256": "57cb3ffad4ee32b0acd722bdb6c32b9e99d2d61eaec2fea57b9952c00ed2fba5",
+      "bytes": 433782
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/IvoryTile.mat",
+      "sha256": "a8e7c8e010460a5c71ed37f1d070cf23e4838d3465699cb9765a15bc02324850",
+      "bytes": 4002
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/LampDiffuser.mat",
+      "sha256": "dc3f2887c6d629296849dc0723f8dd3caabcf2f3bc57b0eb02a51b6b7cb8b43b",
+      "bytes": 3883
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/MeterBox.mat",
+      "sha256": "6448de94696ff6224ff9d5ea9387f2f961c9035b9a1c7731daa1476d03a0604d",
+      "bytes": 3854
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/PavingRepair.mat",
+      "sha256": "7f3cf63496da61caf7e8aa359c299d98ab2412ee88c3313b8253485d60c3d22b",
+      "bytes": 4006
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/RainPipe.mat",
+      "sha256": "192a74b7dd4d64a7586766816b2ed0348f862acf9fbde045f826484a78fde874",
+      "bytes": 3853
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Recess.mat",
+      "sha256": "52a2bccb6d62eff3c304c300bc1636235b5a7369464dbf93300facfd0985ce7b",
+      "bytes": 3853
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/RoofCoping.mat",
+      "sha256": "cbaa7cfeef97b28393f7f904b421ce0e7bcefc1caa474428b3a9402ade771794",
+      "bytes": 4001
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/ShopGlass.mat",
+      "sha256": "c70fbaee8847a87b77bf4923e0cd629a33d07237851ef26830d63a5afed5de94",
+      "bytes": 3858
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/ShopWall.mat",
+      "sha256": "493007824929af9df132be1de9c09ecade8d61a2fb8ad464eb0fe346a13537f1",
+      "bytes": 3999
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/Shutter.mat",
+      "sha256": "af0b114cb9f892cfd5bd31e5c64f46fd7a19fce79bcf4bc3531ef273dfae6e62",
+      "bytes": 3852
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/ShutterLip.mat",
+      "sha256": "5fb94d9364ff4de39be7091e86bacde3435eedfe73c40df7e48333a0f6918ef0",
+      "bytes": 3880
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/SignCream.mat",
+      "sha256": "e8b88f9ac7dbeabb12b6789032d61a927bef329451da58383b3b4c1f36be115a",
+      "bytes": 3854
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/SignGreen.mat",
+      "sha256": "3330313c15e453abd228a3aad4ac8aec001e17edb49de0a8cb55e0d78ee29c0f",
+      "bytes": 3854
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/StoneTrim.mat",
+      "sha256": "49f1970b819601c65db2a4dbf3f7de01a8430fcc53eae784274b323c439d7345",
+      "bytes": 4000
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/WarmPlaster.mat",
+      "sha256": "c39ddf9f45fcf5ed3fbece8140f211124344474a462e9e4fd59a87402262ceed",
+      "bytes": 4001
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/WaterStain.mat",
+      "sha256": "add4c3684eb09b0a54ee2f6b321ed9d8a5da1381ff023f9e722fd05505c8e38d",
+      "bytes": 3876
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/WeatheredSteel.mat",
+      "sha256": "80e3840bc4668c494163a721930a8d94f499014c7078b0441f708cc22adf011a",
+      "bytes": 3887
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/IntersectionDetail/WindowGlass.mat",
+      "sha256": "0b652ad0a6120c2fd781e87c7dae4674e68efd33f19c58186008376d9e11a26d",
+      "bytes": 3856
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/Models/CompactSedan_Detailed_LOD0.fbx",
+      "sha256": "91a4eba759c6829a64b145c560712bcbca0c6f82be4b894b5ec5b7ffb0688e52",
+      "bytes": 1404188
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/Models/CompactSedan_Detailed_LOD1.fbx",
+      "sha256": "0f78e8d41bd0c451083081541377b0a8061c012fb417afadbf2f7667ee7f8d91",
+      "bytes": 428284
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/Models/CompactSedan_Detailed_LOD2.fbx",
+      "sha256": "bdf5a4e32aec0d8a63cc8ff08356338f569c74069071bf874fe667ec78674b6c",
+      "bytes": 235532
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/Models/Scooter125_Fleet_LOD0.fbx",
+      "sha256": "a3bd2ff861dabf4454d2fdb10e79337366636f94c84257e6fadad8d129cf0357",
+      "bytes": 1347420
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/Models/Scooter125_Fleet_LOD1.fbx",
+      "sha256": "7c5c26804ee20c731cedff1cd6a8c859d9dccaf5f1cfb5755f5e8cca7cdcd18a",
+      "bytes": 524924
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/Models/Scooter125_Fleet_LOD2.fbx",
+      "sha256": "31957cedf9bf7abae9b6fee35226b410abadb8aa544bc9e964e7bc2a0f546304",
+      "bytes": 195596
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/ArcadeTile_albedo.png",
+      "sha256": "c0360e855c73f10812b70fabd8f07c8e1eed894a9ef05976af59eac87c388f68",
+      "bytes": 207618
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/ArcadeTile_mask.png",
+      "sha256": "9878c088226b824a7e19f4d097e80052bc9a2253a29c968d581875a68869917a",
+      "bytes": 176872
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/ArcadeTile_normal.png",
+      "sha256": "f2035b2f6ac0020ff04279c7c8167d71d1c33becfa45a477c5117fa2121185ea",
+      "bytes": 6701
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/ArcadeTile.mat",
+      "sha256": "d9e6128b18e69d9899654e3cd98656ff9ef0c322fdcbf5347375d25d3093ece2",
+      "bytes": 4106
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/BlackSteel.mat",
+      "sha256": "c2a2cb9c194b1307a4c025bd54fc01911da3eca00fd432688f0439b420683754",
+      "bytes": 3868
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/BlueSign.mat",
+      "sha256": "d92a8aceee5c06a710adfd99c77ca7931f6551cfced3d9086c695b2df2053655",
+      "bytes": 3867
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Bottle.mat",
+      "sha256": "2dfd5cf41efe95f8a244a225304dc456109cf0e920abe4d4f1e0941cecd6f44b",
+      "bytes": 3867
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Bread.mat",
+      "sha256": "868fcc1ea726c78cb4ea8ad567a150674b66c2a62ecb38cf7c23cb5d892de61f",
+      "bytes": 3860
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Cap.mat",
+      "sha256": "2388d78e5bcc4e95474026a6ceffc104de20f0a79f3596e72791edc450207ca5",
+      "bytes": 3859
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Ceiling.mat",
+      "sha256": "0f01ddaaeca21e4a469a61ab943e1db91dfd45c8a6ddc6b1eecba503ccec9068",
+      "bytes": 3860
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/CeramicCup.mat",
+      "sha256": "28bf93c7f1bddffc38cb42b7e5232c6b1f4b069c9d3bd8339b28518126a810e8",
+      "bytes": 3866
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/ClearGlass.mat",
+      "sha256": "4abab42758152992a4a7f8717911f6f0aecde97ed3d2d86998c2dd0fb8f146d7",
+      "bytes": 3965
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/CrateBlue.mat",
+      "sha256": "345f0cd0f1f32b50b322521992642f865a113e79bbea7c2b17b2257f7b9bef51",
+      "bytes": 3866
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/CrateRed.mat",
+      "sha256": "2d149b5a2d0fcebd609675cb5813f24c5d79bd571550fd7836587ff4f4e9a7c0",
+      "bytes": 3865
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Cream.mat",
+      "sha256": "0ed3606428316d6c581d9481bf7075c78e7e328fddf830bc0530cf984f5c0281",
+      "bytes": 3857
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Damp.mat",
+      "sha256": "7aaeb4706023fa674075b9a4b9d066e31afe2c2e775451d6802d9bd6372e30a4",
+      "bytes": 4012
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/DarkInterior.mat",
+      "sha256": "012aed8754c419891228f63651ca9bce3a9bd96bec3b9a6b10f6b0c13b788365",
+      "bytes": 3870
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/DrainPatina.png",
+      "sha256": "89aecb41024e2907adab04ad72f03fa04f5876dd8634ef67ba18a928eb609117",
+      "bytes": 15848
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/GreenSign.mat",
+      "sha256": "73fb2b21b179c15da071586d04f78238e1e64b1fdf7cc082d42df3fecbc0a6cd",
+      "bytes": 3866
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Leaves.mat",
+      "sha256": "e795ed487c2dedc7edb4887d2199efc0a29243513a3b404ec7e11682e6ef0836",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/LeavesLight.mat",
+      "sha256": "2436b765c012979bf17c46dd009321e91a84c5638d7bf32731bac9bc1b8cbef7",
+      "bytes": 3867
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Lettering.mat",
+      "sha256": "04c7c6a463c5b4b7c0876d7e77feff9fd0bfb4447e6fb727dbae5a422905b774",
+      "bytes": 942
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicRose_albedo.png",
+      "sha256": "a95a2181ab2db94b04ee642a169b076e3e12ac93fb86c1c08a1ba71107058461",
+      "bytes": 252113
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicRose_mask.png",
+      "sha256": "6b42b432184a3622a7e736cc60f87fa265e3346c63836e63e240debee7291782",
+      "bytes": 179242
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicRose_normal.png",
+      "sha256": "09e9824a9a9e46a25b4b0523e29df6ac2c999c49ba442515a5ce1218fb9d92e3",
+      "bytes": 8019
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicRose.mat",
+      "sha256": "2219b219a1da9763c1f633c4e9b41ed551952e6edca31e132f7f558400ed0fea",
+      "bytes": 4106
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSage_albedo.png",
+      "sha256": "1194791e7bb368bd49f5a35f35c0eee0ade5ac4195bb050d907f6a1f14fccaeb",
+      "bytes": 238309
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSage_mask.png",
+      "sha256": "6b42b432184a3622a7e736cc60f87fa265e3346c63836e63e240debee7291782",
+      "bytes": 179242
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSage_normal.png",
+      "sha256": "09e9824a9a9e46a25b4b0523e29df6ac2c999c49ba442515a5ce1218fb9d92e3",
+      "bytes": 8019
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSage.mat",
+      "sha256": "8cb008fcce64fc41f68d6f2f107f69956131aec864371e9209e6c639d780d4db",
+      "bytes": 4104
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSand_albedo.png",
+      "sha256": "66a817a2e9c936cd149d61c183826908ef33366f1c2799cea07e02172a0ee128",
+      "bytes": 257274
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSand_mask.png",
+      "sha256": "6b42b432184a3622a7e736cc60f87fa265e3346c63836e63e240debee7291782",
+      "bytes": 179242
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSand_normal.png",
+      "sha256": "09e9824a9a9e46a25b4b0523e29df6ac2c999c49ba442515a5ce1218fb9d92e3",
+      "bytes": 8019
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/MosaicSand.mat",
+      "sha256": "f279e1e8ced0ce674419f251ef3b623429f81c8963be1c4216e1fa620a7dbfef",
+      "bytes": 4105
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/OchreInterior.mat",
+      "sha256": "0607d0f76f03e42d4bceac09957277218f7536e23f218c74eade6c73daac872d",
+      "bytes": 3868
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Plaster.mat",
+      "sha256": "c3c8e7633fee07e84263a95a2ed79a59d490e25b3655d0b8e4c086819d589446",
+      "bytes": 3860
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Plywood.mat",
+      "sha256": "ced3ca624a3139b7e4a0ad22e6b49e57f306220565389afa0faf75158e3a5c34",
+      "bytes": 3857
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/RedSign.mat",
+      "sha256": "77ca49518de2fc2048ec15ec72edb57b3a7a38e7b514b167be9e788db43b85e1",
+      "bytes": 3851
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/RicePaper.mat",
+      "sha256": "906643377ec6ccab4fe5f580cfa2badb29db0e45d6d5330b7d77de241736fa99",
+      "bytes": 3867
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Rubber.mat",
+      "sha256": "a0c64b38076f2b4c5592e5038017a6f62c629edd5a28fb6e9eaa8af44ab36761",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Shutter.mat",
+      "sha256": "70cd0b94bbf5e09fd0c23fef0baf6b4e79010683dcfb642279c7e582d7d7d400",
+      "bytes": 3867
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Soil.mat",
+      "sha256": "3775bb0925abd14a7c0071deac8c9f10d8c969ad16a834b9dac5132ccd7542a4",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Steel.mat",
+      "sha256": "7b40bb62f096851fe11c9a20596065a0ff935ab26d757fdcea8a2c53aa15affd",
+      "bytes": 3861
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLetteringAtlas.png",
+      "sha256": "bd53440b756f69fb9f855f066a5a6cd8e1b7565c0143e6d81a1ee2403cea4595",
+      "bytes": 157643
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_BlackSteel.asset",
+      "sha256": "87811b5bf78a555eb23b1694a4d8998d57b3c1c510d7685de43288097060e5b2",
+      "bytes": 197906
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_BlueSign.asset",
+      "sha256": "493d6fa19730d535b561b0aba0b7c64103288b2514819ddfc0b64c5b5cd9118b",
+      "bytes": 11278
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Bottle.asset",
+      "sha256": "17e2ebb72cc571041437fe885d5568d24c9c5ac445a399fd8b27ae2ce081186e",
+      "bytes": 1620916
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Bread.asset",
+      "sha256": "f84940999624d1c5d790c018218b989fa3945b3c669832374310158f6b0accaa",
+      "bytes": 392310
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Cap.asset",
+      "sha256": "e3cb2cf8749e0480a60bd0ede86042bf8dc7de3707db0621d5cbf5db3965dcb9",
+      "bytes": 1931955
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Ceiling.asset",
+      "sha256": "1028f975e2e1125b738f326e0541a4157e14675f7e6dd726820529e82e745f67",
+      "bytes": 26836
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_CeramicCup.asset",
+      "sha256": "c7a8ce96e3767063f8e3e0932b8a38156540476084f8056d825a7f50ba344805",
+      "bytes": 812218
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_ClearGlass.asset",
+      "sha256": "9c9c4d736674c523818b6fbf081bd905b87fe8cdef2640468b4ee908391ae6b8",
+      "bytes": 42387
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_CrateBlue.asset",
+      "sha256": "3a8c8962b8c0f8222d70575bdf02fbe24d9257a35a3c1e41e2c28273b7d459b5",
+      "bytes": 179767
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_CrateRed.asset",
+      "sha256": "98bacf8e7b5a7c6bdfb220203c7e8186a10926a4e05cf6142ae4f565c07330d5",
+      "bytes": 179754
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Cream.asset",
+      "sha256": "0685bb0351a92c4b9e4f38d01a4c8c0fa0ad94c0f928cccfbb385e55d25b38d0",
+      "bytes": 39778
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Damp.asset",
+      "sha256": "db05bfdbc7684952249ea907e474d402070d97298d64afb8dfbc2a37e0d5c315",
+      "bytes": 9965
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_DarkInterior.asset",
+      "sha256": "0086e2fddb64395efd0b48b05f9ea9883273f44c2281da3890d04e7b199aafbb",
+      "bytes": 50163
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_GreenSign.asset",
+      "sha256": "f0a1be38812313c6ed3266c07d3131844fa7cc49c7f5770a238ffec61971a0ac",
+      "bytes": 70898
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Leaves.asset",
+      "sha256": "7af83bcddc487349e5634d1693b3ba3ac96a8096de000fada64132b5e320a41b",
+      "bytes": 707675
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_LeavesLight.asset",
+      "sha256": "d765ce552f00354579c656633e7e26386243692efb55c56afaf059c62cb02f76",
+      "bytes": 327516
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Lettering.asset",
+      "sha256": "3966bd4d1879416677d3974bd6dbdddf56a6b520353f1642fd30bb52cc524b20",
+      "bytes": 160346
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_OchreInterior.asset",
+      "sha256": "2b5cef1502b63c481007acdf1a2a0607ab2a2d5f95a4f1c2588012488ded2d61",
+      "bytes": 11277
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Plaster.asset",
+      "sha256": "b13966d89b0d20b106cd4419edf9657903535f1e6afcc13eb72eeb44c70b7827",
+      "bytes": 50150
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Plywood.asset",
+      "sha256": "fff869d310014238e1cede3650bf1589786b34e507062dfce16331b60fa724e5",
+      "bytes": 78675
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_RedSign.asset",
+      "sha256": "09605eb12c1b0fbc2c165c8e25ec5d832afc4d015311f9cf3da4445cfae97980",
+      "bytes": 13865
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_RicePaper.asset",
+      "sha256": "1cc9d39454e0743abdf8ff46999d53bb76633b9195b25471b8f07a167117c359",
+      "bytes": 26836
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Shutter.asset",
+      "sha256": "46cc7fd395f3a55fb53386d130c3eeec42e8e55af78d7c088f6154ea5f6337da",
+      "bytes": 260122
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Soil.asset",
+      "sha256": "4ec738bbbd21d9ec0cba18167c0a2a169369289b23d5d9cfc96142ce50bbbbce",
+      "bytes": 94234
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Steel.asset",
+      "sha256": "d73c7b87c6fc9941fe1232f85eaec6ec233a5e4018152c38c465a9d3a7f40ac8",
+      "bytes": 306770
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Terracotta.asset",
+      "sha256": "b48e810d155154ded4eb85ce912e9b87e23344420ee191c5c8fd846e9fef0d57",
+      "bytes": 94222
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_Timber.asset",
+      "sha256": "ea9fa66d52895e4a80dcbbf146fc7eb4e8fbeadc07bc303dd2c7fa45418d63de",
+      "bytes": 182356
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/StreetLife_WarmLight.asset",
+      "sha256": "e202224bf43e83cc602dd9665dbf98aa44f9d845d4acae00ec4f5f8b390d4757",
+      "bytes": 26840
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Terracotta.mat",
+      "sha256": "1954cf4c60ebf6d4911a655b7f5e49bc89cc7388aa1172fe09aecac7f60bb355",
+      "bytes": 3866
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Timber.mat",
+      "sha256": "dc92a5dde9c29aa41ae86b01d5c16f241978971ddf8795ecabf4ea3e9f6a5df8",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Transition_Concrete.mat",
+      "sha256": "8d2366baa1d82cd5085ac3e4df27e67a702bffa8dfd904cedcc45be5dded5758",
+      "bytes": 3947
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Transition_FacadeTile.mat",
+      "sha256": "1e5c9139788fcb79bcae68ef0d1b1af37c213db82bed2c98a59718c824a27552",
+      "bytes": 3949
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Transition_OldCream.mat",
+      "sha256": "58aa83277dbe3985b6e521444e03210c0d74aace72b644374376182dfce27965",
+      "bytes": 3947
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Transition_OldGreen.mat",
+      "sha256": "394590909570fcbb0be967f0056b204a6bb479f7102a37eaa87ef413d8fa90c0",
+      "bytes": 3949
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/Transition_OldRose.mat",
+      "sha256": "92c2b5fdaf5c5387c13b0bf528508885ef2755efa7af351d92d9cfbf8df88149",
+      "bytes": 3949
+    },
+    {
+      "path": "Assets/TaiwanRider/Art/StreetLife/WarmLight.mat",
+      "sha256": "81119f0950698897c8419b8bfe930a5a4c902143796cc21fd1b3c247f3674716",
+      "bytes": 3903
+    },
+    {
+      "path": "Assets/TaiwanRider/Editor/IntersectionDetailSetup.cs",
+      "sha256": "e4ef274f60aca6e0b791edc6391465aad24d4ac5207dd9c98234d0e8b2f7e571",
+      "bytes": 28480
+    },
+    {
+      "path": "Assets/TaiwanRider/Editor/RealismCapture.cs",
+      "sha256": "73648ae23864c8403964f8629f849d794464a7cc2910ae05a8119668bb51a916",
+      "bytes": 11729
+    },
+    {
+      "path": "Assets/TaiwanRider/Editor/StreetLifeSetup.cs",
+      "sha256": "00f3494961fe0c9a5c5e5dbb454410b2e205ecfc4b09e5ff638dab2703d24c21",
+      "bytes": 34461
+    },
+    {
+      "path": "Assets/TaiwanRider/Editor/TrafficFleetSetup.cs",
+      "sha256": "fe2262177a55062a4bda0da8ef5ca9e873f468a61f9621021c39ecec0f9d28b2",
+      "bytes": 12281
+    },
+    {
+      "path": "Assets/TaiwanRider/Editor/TrafficFleetValidation.cs",
+      "sha256": "8240608faceeafb1ea6cd8e0ccf9cc0247345c65c92b280090a86a6ba4429a0c",
+      "bytes": 6467
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/Hero_Pearl_0.mat",
+      "sha256": "3e992827b6c9c3b6f78970d74ada70e718e2122b7b0ef2b56f87b164613b4065",
+      "bytes": 3863
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/Hero_Pearl_1.mat",
+      "sha256": "52839e4c483a7590f634287b584f63e9bea170ba8205428b35ceab397a16aea0",
+      "bytes": 3859
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/Hero_Pearl_2.mat",
+      "sha256": "8f04e480041ef2e074b49bf8bc989d18f24ab381c6b7c39c55c4ffbd283e99b8",
+      "bytes": 3854
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/Hero_Pearl_3.mat",
+      "sha256": "9a5653f6681673cd8cc6fdaf525c4487d55d3b5790222f5e449eefd1cc80a22d",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/Hero_Pearl_4.mat",
+      "sha256": "e990932be9da11192d228221b7e1e4c17ed412896976964f5a353fcdeed79b06",
+      "bytes": 3861
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/Hero_Pearl_5.mat",
+      "sha256": "55cd10b4fc409e2de98ba81b8e22b8eb8f4b4c7f6a3262282a5d284b077a491b",
+      "bytes": 3858
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/ParkingPaint.asset",
+      "sha256": "19fa85e05223cbfd8898f951189056dc2c06abb756597fff17a5f70a7b304415",
+      "bytes": 67017
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanAlloy.mat",
+      "sha256": "cd6837ef39fe06868cc47d3633a57e42c3fd5b2573f149d458164b36d70b7487",
+      "bytes": 3850
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanAmberLens.mat",
+      "sha256": "905a5ff76a25baabd9277881ad6a7565678b277d94925b7e85b30a19c15f61e1",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBody_0.mat",
+      "sha256": "51da714d6d6f1e470a6d22cbe5148d0c6a0f4664b74f94e8d430b0a246d7f63e",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBody_1.mat",
+      "sha256": "1f0101f6c3655c7001a2be8b6be2843d311b3a4c0b4504c0f7e0d7d8eda1df03",
+      "bytes": 3858
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBody_2.mat",
+      "sha256": "c837662b2023d9e675313fad47591414267df40f435e1d083058ede320f660cc",
+      "bytes": 3853
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBody_3.mat",
+      "sha256": "4c1c1b94f82a7e262f2a3a6739f007c8bc91b54651b90225d16e3fa77074726d",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBody_4.mat",
+      "sha256": "ee2ca92ac89c44c6ffb440b943a6f79f839e1960272083ef5f765db1d4aa2681",
+      "bytes": 3861
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBody_5.mat",
+      "sha256": "5b19fa7d5510f2314eb247a894d60244b6522ff61863019b2b1e19d69b456fa0",
+      "bytes": 3856
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBody.mat",
+      "sha256": "c7b149862b51776c7f405763d0d5ec817da0ede39d19acba3184cf365b480b39",
+      "bytes": 3858
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanBrakeSteel.mat",
+      "sha256": "63dcd9fc0e138f4d7271186e7b93964754b4c22ead8998d458443b7921566005",
+      "bytes": 3859
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanDarkTrim.mat",
+      "sha256": "ced662472bc0beb2fcb9fe10866ee54dff40500b0d08dc1d327a20b2d2a8044a",
+      "bytes": 3863
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanGlass.mat",
+      "sha256": "fd6ed708918607dbe7941560dd24942dd2fae9ce12a95d654c22444a5e8e9517",
+      "bytes": 3866
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanLED.mat",
+      "sha256": "48acff78771241babef3d884b9f9dbb007ca907851273a8322b67f64bf3fabfd",
+      "bytes": 3856
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanPlate.mat",
+      "sha256": "6a931a10432f16683452cbe761ffadfb98b4ffa9bf53913c08cb9d152dba33b5",
+      "bytes": 3853
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanRedLens.mat",
+      "sha256": "9ac1454625cf0dbd36d89000da9a1ea25f9611fcf52222623585887ec8a11d22",
+      "bytes": 3862
+    },
+    {
+      "path": "Assets/TaiwanRider/Materials/TrafficFleet/SedanRubber.mat",
+      "sha256": "108a69517bce59db288691787ea91a9b25dfb13a32ffa1a0ec0528a8662a7007",
+      "bytes": 3865
+    },
+    {
+      "path": "Assets/TaiwanRider/Runtime/HazardActor.cs",
+      "sha256": "d2e2b2e55af970bf05d6554871a3a2fe2a5e707387759ee4d0af841daeb70d18",
+      "bytes": 3026
+    },
+    {
+      "path": "Assets/TaiwanRider/Runtime/TrafficWheelMotion.cs",
+      "sha256": "443a65dc9bf8872299157f2a506d0c01a15cd2968a3b21acf71a98a9d1aa62cd",
+      "bytes": 1447
+    },
+    {
+      "path": "Assets/TaiwanRider/Scenes/GongguanRide.unity",
+      "sha256": "25e6e5ef60ea4f28eab9d9aef6628d4070021da884a315cf16b9406fa92961f6",
+      "bytes": 7765842
+    }
+  ]
+}

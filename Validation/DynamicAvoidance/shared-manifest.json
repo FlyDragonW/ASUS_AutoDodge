@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Assets/TaiwanRider/Editor/AvoidanceBenchmark.cs",
+    "sha256": "a22cd813bb8999998d4a7d9fe8fef4f7ccb53c26e82b9ecee9fc8299c943ff6b"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/HazardActor.cs",
+    "sha256": "5c9070565a98f744451e139f45a0798ab639b2d130c362e08d17bd247c96f4cd"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/ScenarioRunner.cs",
+    "sha256": "6f306cc946c0bbe0124ee73074bfa3ef5e23c3b797c7dc7e93a862d95c50f7f9"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/ScooterController.cs",
+    "sha256": "e429b39bdfcbe1c88a83c8ebddcb131314898e449b0a0c591d0affa3026a963b"
+  }
+]

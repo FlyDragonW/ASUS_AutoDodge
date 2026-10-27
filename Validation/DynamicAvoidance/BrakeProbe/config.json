@@ -1,0 +1,28 @@
+{
+  "version": "physics-aligned-v1 / fixed v2 detector / legacy versus dynamic controller",
+  "renderFps": 60,
+  "cases": [
+    {
+      "id": "brake-20",
+      "condition": "brake-20",
+      "scenario": "brake_probe",
+      "controller": "full_brake",
+      "weather": "clear",
+      "seed": 55020,
+      "speedKph": 20,
+      "fusion": false,
+      "timeLimit": 8
+    },
+    {
+      "id": "brake-40",
+      "condition": "brake-40",
+      "scenario": "brake_probe",
+      "controller": "full_brake",
+      "weather": "clear",
+      "seed": 55040,
+      "speedKph": 40,
+      "fusion": false,
+      "timeLimit": 8
+    }
+  ]
+}

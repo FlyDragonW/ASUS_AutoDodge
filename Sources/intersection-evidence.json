@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-10-11",
+  "scope": "臺北市公館：汀州路三段／羅斯福路四段90巷路口及158–158之1號店面近旁",
+  "target_epoch": "使用者已確認以可核對的2025年實景照片為準；三店面採E01官方2025-05-14文章所用照片，不混稱為2026現況",
+  "survey_status": "公開來源的照片與地址核對；非測繪、非攝影測量，未取得四向同年月全景及實量尺寸",
+  "streetview_status": "Google商家位置可核對；本次街景按鈕導向相片模式，未取得可驗證拍攝年月的360全景。地圖網址不代表已查看該處最新街景。",
+  "evidence": [
+    {
+      "id": "E01",
+      "kind": "official_address_and_facade_photo",
+      "title": "傑昇通信中正公館店官方介紹",
+      "url": "https://www.jyes.com.tw/news.php?act=view&id=12365",
+      "image_url": "https://www.jyes.com.tw/data/editor/files/FBm20250306-0201CO.jpg",
+      "publication_date": "2025-05-14",
+      "capture_date": "未知",
+      "capture_date_note": "圖檔名含20250306，但沒有EXIF或作者拍攝日期證明，不採作拍攝日。",
+      "address": "臺北市中正區汀州路三段158號",
+      "coordinates": {
+        "lat": 25.0135104,
+        "lon": 121.5343037,
+        "precision": "店家Google商家定位，非測量建物角點"
+      },
+      "confidence": {
+        "identity": "高",
+        "facade_at_photo_time": "高",
+        "present_day_2026": "中",
+        "metric_dimensions": "低"
+      },
+      "observation_method": "瀏覽器親眼查看官方照片原圖",
+      "observed": [
+        "面向店面的左側為橙棕色大茗DAMING橫招牌與灰色捲門",
+        "中央傑昇為藍色橫招牌、白色中文字、黃色細下緣，右側高掛藍色直立突出招牌",
+        "傑昇透明玻璃門面有密集但不完全均勻的白底／黃條宣傳海報；室內亮於樓上",
+        "右側可辨『濃氣屋』米黃色橫招牌及紅燈籠",
+        "樓上為舊灰白牆、深色分格橫窗、局部直欄鐵窗、外掛冷氣與可見管線，與現有統一磁磚重複街屋不同"
+      ],
+      "not_established": [
+        "總樓層",
+        "精確店寬／樓高／騎樓深",
+        "各立面與路口的量測距離",
+        "拍照後商店是否更替"
+      ],
+      "reuse_policy": "僅核對可見事實與比例；不下載或貼用照片像素，程序材質及幾何為原創"
+    },
+    {
+      "id": "E02",
+      "kind": "current_operator_directory",
+      "title": "傑昇台北市門市列表",
+      "url": "https://www.jyes.com.tw/ja/store.php?cid=7",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "臺北市中正區汀州路三段158號",
+      "coordinates": null,
+      "confidence": "高：官方仍列該店與地址；照片年月未知",
+      "facts": [
+        "官方中正公館店名與158號地址一致"
+      ]
+    },
+    {
+      "id": "E03",
+      "kind": "business_map_location",
+      "title": "官方店家連結的Google商家",
+      "url": "https://maps.app.goo.gl/Mo2ZEAXEVpUz4ZBH6",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "臺北市中正區汀州路三段158號；Google顯示所在地點為公館大樓",
+      "coordinates": {
+        "lat": 25.0135104,
+        "lon": 121.5343037
+      },
+      "confidence": "高：店家定位；不作建築輪廓或路口精確中心",
+      "facts": [
+        "商家頁可見158號地址",
+        "由官方網站連結進入；非搜尋同名其他分店"
+      ]
+    },
+    {
+      "id": "E04",
+      "kind": "merchant_list",
+      "title": "元大銀行特店清單：大茗台北公館店",
+      "url": "https://www.yuantabank.com.tw/bankwebIMG/event/Bank_Act2023/twpay_TWQR/store.pdf",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "臺北市中正區汀州路三段158之1號",
+      "coordinates": null,
+      "confidence": "中高：銀行商戶地址與官方照片左鄰大茗互相佐證；清單更新日未知",
+      "facts": [
+        "店名為大茗本位製茶堂_台北公館店",
+        "158之1號，不能與158號主門牌混為同一獨立店面"
+      ]
+    },
+    {
+      "id": "E05",
+      "kind": "historical_store_record",
+      "title": "倆倆號舊公館汀洲店",
+      "url": "https://trade.1111.com.tw/Comp_Info?vNo=526027",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "臺北市中正區汀州路三段158號之1",
+      "coordinates": null,
+      "confidence": "中高：歷史品牌資料；低：當前店家",
+      "facts": [
+        "資料描述2016年7月設公館汀洲店",
+        "舊倆倆號不能與2025官方照片中的大茗同時置於158之1號"
+      ],
+      "corroborating_url": "https://nellydyu.tw/blog/post/44959930",
+      "corroborating_publication_date": "2017-06-16"
+    },
+    {
+      "id": "E06",
+      "kind": "historical_adjacent_shop_and_temporal_conflict",
+      "title": "濃氣屋公館店156號：照片與已歇業註記",
+      "url": "https://fooday.app/en/spots/9G5ekubKNJAvSya93MaV9d",
+      "conflicting_url": "https://foodiebee.pixnet.net/blog/posts/17346689922",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "臺北市中正區汀州路三段156號",
+      "coordinates": null,
+      "confidence": {
+        "photo_adjacency": "高：E01照片直接可見",
+        "address": "中：非官方餐飲資料",
+        "current_occupancy": "低：另有已歇業註記"
+      },
+      "facts": [
+        "E01確有濃氣屋招牌在傑昇右鄰",
+        "另一篇食記標示已歇業，2026占用狀態未核實"
+      ],
+      "modeling_rule": "只可明標為官方2025文章所用照片狀態；不宣稱2026仍營業"
+    },
+    {
+      "id": "E07",
+      "kind": "official_site_topology",
+      "title": "臺大校園規劃公聽會資料",
+      "url": "https://homepage.ntu.edu.tw/~cpo/enactment/Third_public_hearing.pdf",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "羅斯福路四段90巷／汀州路三段160巷一帶",
+      "coordinates": null,
+      "confidence": "高：官方動線關係；無法由此取得路寬",
+      "facts": [
+        "校園規劃文字連續提及舟山門、羅斯福路四段90巷、汀州路三段160巷及104巷的步行／自行車連接"
+      ],
+      "modeling_rule": "90巷與西側160巷／水路思源道的連接應另核對幾何，不能套用78巷照片"
+    },
+    {
+      "id": "E08",
+      "kind": "official_intersection_inventory",
+      "title": "臺北行人安全網路口實施方向清單第66筆",
+      "url": "https://pedestriansafety.gov.taipei/Files/Download?fileDir=Works&fileName=d997f62a-b724-4133-a635-83505a8e1120.pdf",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "汀州路三段／羅斯福四段90巷，中正區",
+      "coordinates": null,
+      "confidence": "高：名稱與清單所寫方向；低：設施外觀與尺寸",
+      "facts": [
+        "PDF第2頁第66筆列出精確目標路口，實施方向欄為南北向"
+      ],
+      "not_established": [
+        "未確認清單所屬措施完整標題；不能僅凭方向欄推定號誌相位、燈柱位置或斑馬線數目"
+      ]
+    },
+    {
+      "id": "E09",
+      "kind": "official_landmark_temporal_change",
+      "title": "臺北文化局：水源之心・花漾水源完工",
+      "url": "https://culture.gov.taipei/News_Content.aspx?n=63F36AA6E434AD08&s=5846E88DB43CAEFC",
+      "publication_date": "2025-08-30",
+      "capture_date": "未知",
+      "address": "水源市場，羅斯福路四段92號，90巷側旁",
+      "coordinates": null,
+      "confidence": "高：官方工程與日期；各拍攝方向圖樣仍需逐面核對",
+      "facts": [
+        "四面市場外牆公共藝術重製，2024下半年啟動、2025年8月完工",
+        "新立面為57色的杜鵑花／水源意象，正面不同視角可見粉紅、白、藍及紫到桃紅漸層"
+      ],
+      "modeling_rule": "2025-08之前藍白波浪／舊彩虹照片不能直接當2026立面。官方描述的正面是羅斯福路側，不可直接複製到汀州路背面。"
+    },
+    {
+      "id": "E10",
+      "kind": "dated_news_photo",
+      "title": "中央社2025-08-30水源市場新外牆照片",
+      "url": "https://www.cna.com.tw/news/aloc/202508300189.aspx",
+      "publication_date": "2025-08-30",
+      "capture_date": "2025-08-30",
+      "capture_date_basis": "照片說明：中央社記者陳昱婷攝，114年8月30日",
+      "address": "水源市場，羅斯福路四段92號",
+      "coordinates": null,
+      "confidence": "高：日期與地標；汀州面細節不足",
+      "facts": [
+        "可用於分辨新舊外牆年代"
+      ],
+      "reuse_policy": "僅作來源核對，不貼用照片像素"
+    },
+    {
+      "id": "E11",
+      "kind": "excluded_nearby_reference",
+      "title": "既有reference_0：78巷近2弄",
+      "url": "https://commons.wikimedia.org/wiki/File:Roosevelt_Road_Sec.4_Lane_78,_Taipei_(near_Alley_2).jpg",
+      "publication_date": "未知",
+      "capture_date": "未知",
+      "address": "羅斯福路四段78巷近2弄，非90巷口",
+      "coordinates": null,
+      "confidence": "高：檔名明確為不同巷道",
+      "facts": [
+        "可作臺北一般材質參考，不能用來認定90巷口店家、牆面、層數或柱位"
+      ],
+      "modeling_rule": "不得將此圖稱為目標路口實景"
+    }
+  ],
+  "construction_priorities": [
+    "先建立E01可见的三店面視覺資產，保持照片左中右關係；尺寸以推估標記，不能據此移動真實道路。",
+    "停用把九家原創店名當真實90巷路口的說法；既有版本可保留為參考風格模型。",
+    "在採用水源市場外牆前，確定還原年月及汀州路面照片。",
+    "四角總樓層、路緣半徑、車道寬、號誌柱和穿越線位置須額外同年代街景或現地量測。"
+  ],
+  "model_asset_plan": {
+    "file": "Assets/TaiwanRider/Editor/SiteFacadeSetup.cs",
+    "depiction": "以E01照片可見部分為基準的三店面組；非2026現況保證",
+    "estimated_total_width_m": 11,
+    "estimated_photo_visible_height_m": 6.85,
+    "dimensions_status": "全部米制尺寸為人工比例推估，origin需外部定位",
+    "coordinate_convention": "origin為三店正面地坪中央，local+Z朝街，local+Y向上；街面看向店面時local-X為照片右側。",
+    "no_invented_hidden_floors": true,
+    "no_photo_pixels_copied": true,
+    "estimated_depth_m": 2.62,
+    "store_floor_height_m": 0.145,
+    "shop_centres_local_x_m": {
+      "Ramen": -3.61,
+      "Daming": 3.62,
+      "Jyes": 0.02
+    },
+    "limitations": [
+      "總樓高未建；6.85m只是照片裁切可見區段的人工比例換算。",
+      "店招文字依可辨識名稱重製，logo與字體造形簡化，未取照片像素。",
+      "玻璃海報依照片密度與色塊作原創示意，不聲稱微小標價或促銷文案逐字一致。",
+      "店寬、窗寬、外掛冷氣尺寸與深度皆為人工比例推估，非現場測量。",
+      "濃氣屋表現2025官方照片所示外觀，不表示2026仍營業。"
+    ]
+  }
+}

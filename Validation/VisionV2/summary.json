@@ -1,0 +1,179 @@
+{
+  "models": {
+    "V1": {
+      "count": 48,
+      "outcomes": {
+        "completed": 30,
+        "safe_stop": 8,
+        "collision": 10
+      },
+      "negative_cases": 16,
+      "negative_cases_with_intervention": 0,
+      "interventions": 32,
+      "vision_assisted_interventions": 8,
+      "extended_risk_steps": 94,
+      "inference_frames": 3032,
+      "matched_frames": 693,
+      "confident_detection_frames": 763,
+      "weighted_mean_latency_ms": 38.476362588852254,
+      "median_case_p95_latency_ms": 50.38125038146973,
+      "median_case_inference_hz": 8.920247554779053,
+      "by_scenario": {
+        "blocked_sides": {
+          "safe_stop": 8
+        },
+        "clear": {
+          "completed": 8
+        },
+        "crossing": {
+          "collision": 4,
+          "completed": 4
+        },
+        "cut_in": {
+          "completed": 2,
+          "collision": 6
+        },
+        "parked": {
+          "completed": 8
+        },
+        "roadside": {
+          "completed": 8
+        }
+      },
+      "by_weather": {
+        "clear": {
+          "completed": 15,
+          "safe_stop": 4,
+          "collision": 5
+        },
+        "fog": {
+          "completed": 15,
+          "safe_stop": 4,
+          "collision": 5
+        }
+      }
+    },
+    "V2": {
+      "count": 48,
+      "outcomes": {
+        "completed": 30,
+        "safe_stop": 8,
+        "collision": 10
+      },
+      "negative_cases": 16,
+      "negative_cases_with_intervention": 0,
+      "interventions": 32,
+      "vision_assisted_interventions": 8,
+      "extended_risk_steps": 91,
+      "inference_frames": 3038,
+      "matched_frames": 752,
+      "confident_detection_frames": 852,
+      "weighted_mean_latency_ms": 40.80014461745864,
+      "median_case_p95_latency_ms": 50.70804977416992,
+      "median_case_inference_hz": 8.942020893096924,
+      "by_scenario": {
+        "blocked_sides": {
+          "safe_stop": 8
+        },
+        "clear": {
+          "completed": 8
+        },
+        "crossing": {
+          "collision": 4,
+          "completed": 4
+        },
+        "cut_in": {
+          "completed": 2,
+          "collision": 6
+        },
+        "parked": {
+          "completed": 8
+        },
+        "roadside": {
+          "completed": 8
+        }
+      },
+      "by_weather": {
+        "clear": {
+          "completed": 15,
+          "safe_stop": 4,
+          "collision": 5
+        },
+        "fog": {
+          "completed": 15,
+          "safe_stop": 4,
+          "collision": 5
+        }
+      }
+    }
+  },
+  "outcome_changes": [],
+  "hold_release": [
+    {
+      "id": "blocked_sides-20-clear-v0-raycast_1_8-hold",
+      "passed": true,
+      "outcome": "safe_stop",
+      "held_seconds": 6.016657829284668,
+      "held_max_speed_kph": 0.0,
+      "release_at": -1.0
+    },
+    {
+      "id": "blocked_sides-20-clear-v0-raycast_1_8-release",
+      "passed": true,
+      "outcome": "completed",
+      "held_seconds": 7.316660404205322,
+      "held_max_speed_kph": 0.0,
+      "release_at": 12.009980201721191
+    },
+    {
+      "id": "blocked_sides-20-clear-v0-vision_fusion-hold",
+      "passed": true,
+      "outcome": "safe_stop",
+      "held_seconds": 6.020824432373047,
+      "held_max_speed_kph": 0.0,
+      "release_at": -1.0
+    },
+    {
+      "id": "blocked_sides-20-clear-v0-vision_fusion-release",
+      "passed": true,
+      "outcome": "completed",
+      "held_seconds": 7.711573123931885,
+      "held_max_speed_kph": 0.0,
+      "release_at": 12.001049041748047
+    },
+    {
+      "id": "blocked_sides-40-clear-v0-raycast_1_8-hold",
+      "passed": true,
+      "outcome": "safe_stop",
+      "held_seconds": 6.000004291534424,
+      "held_max_speed_kph": 0.0,
+      "release_at": -1.0
+    },
+    {
+      "id": "blocked_sides-40-clear-v0-raycast_1_8-release",
+      "passed": true,
+      "outcome": "completed",
+      "held_seconds": 9.316669464111328,
+      "held_max_speed_kph": 0.0,
+      "release_at": 12.012574195861816
+    },
+    {
+      "id": "blocked_sides-40-clear-v0-vision_fusion-hold",
+      "passed": true,
+      "outcome": "safe_stop",
+      "held_seconds": 6.001252174377441,
+      "held_max_speed_kph": 0.0,
+      "release_at": -1.0
+    },
+    {
+      "id": "blocked_sides-40-clear-v0-vision_fusion-release",
+      "passed": true,
+      "outcome": "completed",
+      "held_seconds": 9.718607902526855,
+      "held_max_speed_kph": 0.0,
+      "release_at": 12.010809898376465
+    }
+  ],
+  "hold_release_all_passed": true,
+  "protocol": "48 matched conditions per model, v1 then v2; fixed repaired controller and confidence 0.60. Single real-time run per condition, not statistical or real-road evidence."
+}

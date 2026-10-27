@@ -37,6 +37,8 @@ namespace TaiwanRider
         const int PaddingY = 140, Candidates = 8400;
         public bool Ready { get; private set; }
         public string Error { get; private set; }
+        public const string DefaultModelVersion = "v2";
+        public string ModelResourcePath { get; private set; }
         public int CompletedFrames { get; private set; }
         public int MatchedContacts { get; private set; }
         public float LastLatencyMs { get; private set; }
@@ -67,11 +69,23 @@ namespace TaiwanRider
         {
             try
             {
-                var asset = Resources.Load<ModelAsset>("RideReflexVision/ridereflex-vision-v1");
-                if (!asset) throw new InvalidOperationException("RideReflex vision ONNX is missing from Resources/RideReflexVision.");
+                var version = DefaultModelVersion;
+                var args = Environment.GetCommandLineArgs();
+                for (int i = 0; i < args.Length; i++)
+                    if (args[i] == "-visionModel")
+                    {
+                        if (i + 1 >= args.Length) throw new ArgumentException("-visionModel requires v1, v2, coco-l, or v4l.");
+                        version = args[++i];
+                    }
+                if (version != "v1" && version != "v2" && version != "coco-l" && version != "v4l")
+                    throw new ArgumentException("-visionModel must be v1, v2, coco-l, or v4l.");
+                ModelResourcePath = "RideReflexVision/ridereflex-vision-" + version;
+                var asset = Resources.Load<ModelAsset>(ModelResourcePath);
+                if (!asset) throw new InvalidOperationException("RideReflex vision ONNX is missing: " + ModelResourcePath);
                 if (!SystemInfo.supportsComputeShaders) throw new InvalidOperationException("GPU compute is unavailable; using raycast fallback.");
                 var model = ModelLoader.Load(asset);
                 worker = new Worker(model, BackendType.GPUCompute);
+                Debug.Log("RIDEREFLEX_VISION_MODEL " + ModelResourcePath + " backend=GPUCompute");
                 input = new Tensor<float>(new TensorShape(1, 3, InputSize, InputSize));
                 var go = new GameObject("RideReflex RGB perception camera");
                 captureCamera = go.AddComponent<Camera>();

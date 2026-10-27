@@ -1,6 +1,7 @@
 using UnityEngine;
 namespace TaiwanRider
 {
+    [DefaultExecutionOrder(-300)]
     [RequireComponent(typeof(Rigidbody))]
     public sealed class HazardActor : MonoBehaviour
     {
@@ -16,7 +17,9 @@ namespace TaiwanRider
             get
             {
                 Transform front=null,rear=null;
-                foreach(var part in GetComponentsInChildren<Transform>(true))
+                // Only the installed model defines direction; disabled backups do not.
+                var model=transform.Find(kind==ScenarioKind.CarCutIn?"Sedan":"Scooter125_LOD");
+                foreach(var part in (model?model:transform).GetComponentsInChildren<Transform>(true))
                 {
                     if(part.name==(kind==ScenarioKind.CarCutIn?"Front grille":"FrontWheel"))front=part;
                     if(part.name==(kind==ScenarioKind.CarCutIn?"Rear plate":"RearWheel"))rear=part;

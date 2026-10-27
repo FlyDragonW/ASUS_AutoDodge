@@ -1,0 +1,26 @@
+{
+  "requestedAtUTC": "2026-10-10T19:16:07.172128+00:00",
+  "query": "[out:json][timeout:25];\n(\n nwr[\"building\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"building:part\"](25.0118,121.5325,25.0153,121.5365);\n way[\"highway\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"name\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"addr:housenumber\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"waterway\"](25.0118,121.5325,25.0153,121.5365);\n);\nout meta geom;\n",
+  "bboxSWNE": [
+    25.0118,
+    121.5325,
+    25.0153,
+    121.5365
+  ],
+  "license": "OpenStreetMap contributors, ODbL 1.0",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "attempts": [
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "success": false,
+      "error": "HTTP Error 504: Gateway Timeout"
+    },
+    {
+      "endpoint": "https://overpass.kumi.systems/api/interpreter",
+      "success": false,
+      "error": "HTTP Error 500: Internal Server Error"
+    }
+  ],
+  "success": false,
+  "limitation": "Both bounded public endpoint attempts failed; no further endpoint retries made."
+}

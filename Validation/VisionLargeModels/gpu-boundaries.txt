@@ -1,0 +1,36 @@
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:01:19.873, 28 %, 1048 MiB, 69, 210 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:03:26.522, 16 %, 1048 MiB, 75, 465 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:03:28.149, 28 %, 1048 MiB, 75, 360 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:04:17.402, 14 %, 1050 MiB, 80, 480 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:04:20.009, 28 %, 1050 MiB, 79, 255 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:05:05.302, 14 %, 1050 MiB, 83, 397 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:05:08.357, 28 %, 1050 MiB, 81, 210 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:11:25.554, 14 %, 1084 MiB, 84, 510 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:11:26.308, 18 %, 1084 MiB, 84, 465 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:17:51.483, 30 %, 1066 MiB, 87, 367 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:17:52.327, 59 %, 1074 MiB, 87, 765 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:24:17.209, 55 %, 1144 MiB, 89, 210 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:24:18.099, 9 %, 1144 MiB, 89, 210 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:25:55.423, 14 %, 1093 MiB, 86, 517 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:25:56.042, 14 %, 1093 MiB, 86, 465 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:27:29.798, 16 %, 1083 MiB, 87, 705 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:27:30.476, 49 %, 1086 MiB, 87, 817 MHz
+timestamp, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz]
+2026/10/14 03:29:11.587, 34 %, 1143 MiB, 87, 352 MHz

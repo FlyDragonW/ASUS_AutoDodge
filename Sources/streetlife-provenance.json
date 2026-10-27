@@ -1,0 +1,52 @@
+{
+  "asset": "Gongguan street life • visual study",
+  "generator": "Assets/TaiwanRider/Editor/StreetLifeSetup.cs",
+  "prerequisite": "IntersectionDetailSetup.Apply(), then StreetLifeSetup.Apply(). The accompanying IntersectionDetailSetup revision changes only metric UV orientation and near-facade window size variation.",
+  "scope": "Nine existing intersection facades, their recessed arcade shop fronts, and material transitions on neighbouring source facades within approximately 44 metres of the intersection.",
+  "accuracy": "A nearby-photo-informed visual interpretation, not photogrammetry or a measured reconstruction. Shop identities, products, prices, signs, material palettes, weathering and furnishing positions are original fictional choices. Existing OSM centreline and estimated building envelopes are preserved.",
+  "procedural_assets": {
+    "MosaicSand": "Original 512 px ceramic albedo, normal and metallic/smoothness maps; 150 x 75 mm tiles, approximately 3 mm joints, individual-tile colour variation.",
+    "MosaicSage": "Original 512 px grey-green ceramic map set with the same metric tiling.",
+    "MosaicRose": "Original 512 px muted clay-grey ceramic map set with the same metric tiling.",
+    "ArcadeTile": "Original 512 px 300 mm square paving map set with subdued joints and restrained surface variation.",
+    "DrainPatina": "Original procedural feathered-alpha drip mask, placed sparsely below sills and alongside pipes instead of repeating dirt over entire walls.",
+    "StreetLetteringAtlas": "Immutable glyph atlas baked from the project's OFL-licensed Noto Sans TC font. Only the original shop captions and menu lettering are used; text geometry is combined into one material batch and uses StreetLabelDepth.shader for depth testing and back-face culling.",
+    "reuse": "Neighbouring-facade transitions use the project's existing concrete_wall_003 diffuse texture at low detail strength. Font is the existing Noto Sans TC; its OFL and existing third-party texture notices remain applicable."
+  },
+  "visual_features": [
+    "Traditional Chinese original fascia lettering, category subtitles and five two-sided arcade blade signs",
+    "Visible shop-depth planes, side reveals, warm ceiling fixtures, partially raised shutters and narrow glazed entrances",
+    "Breakfast/noodle counters, tea jars and cups, appliance shelves, a repair workbench and grocery display crates",
+    "Small price boards and wall notices sized for the shop entrance rather than billboard scale",
+    "Sparse potted plants, breakfast stools, slatted drink crates, bottles and supply boxes within the arcade",
+    "Window width and height variation and metric wall UVs so tile courses keep their orientation on both road sides",
+    "Moderate grey-green, sand and muted clay ceramic tones and a gradual transition into the existing block"
+  ],
+  "fictional_names": ["日常食堂", "生活電器", "街角茶舖", "文具・影印", "老街麵館", "機車維修", "日常小舖", "巷口茶行", "生活雜貨"],
+  "reference_photographs": [
+    {
+      "local_file": "Sources/References/reference_0.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Roosevelt_Road_Sec.4_Lane_78,_Taipei_(near_Alley_2).jpg",
+      "author": "Kiyoteru Awaji",
+      "license": "CC BY 4.0",
+      "observation": "Narrow layered shop fronts, steel awning supports, utility conduits, planting, small projecting signs, patches of weathering and a clear walking strip. This is a nearby lane, not the exact reconstructed corner."
+    },
+    {
+      "local_file": "Sources/References/reference_3.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:TCPD_SWAT_ANA-0922_left_side_on_Tingzhou_Road_20240907.jpg",
+      "author": "Solomon203",
+      "license": "CC BY-SA 4.0",
+      "observation": "Ground-floor shop display depth, framed serving windows, restrained wall notices, utility-meter scale and practical surface finishes visible behind the vehicle."
+    }
+  ],
+  "photograph_use": "Visual reference only. No source photograph pixels are included in any generated texture, mesh or build.",
+  "technical_constraints": {
+    "generated_root": "Gongguan street life • visual study",
+    "generated_assets": "Assets/TaiwanRider/Art/StreetLife",
+    "colliders_added": 0,
+    "layer": "Ignore Raycast (2)",
+    "unchanged": ["road width and centreline", "hazard visibility corridor", "traffic paths and triggers", "all existing collision geometry", "player and parked vehicle models", "runtime scripts"],
+    "batching": "Geometry grouped by material, including shelves, plants, counters, glazing and signs. Lettering uses one baked glyph mesh batch and an immutable Noto Sans TC atlas with a dedicated depth-tested alpha-cutout shader; it does not use the GUI font material or require a runtime text-refresh script.",
+    "reversibility": "Apply replaces the named root deterministically. Remove restores former facade and neighbour material assignments and previous fascia text. Generated source assets remain for reuse."
+  }
+}

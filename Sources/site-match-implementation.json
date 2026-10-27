@@ -1,0 +1,42 @@
+{
+  "scope": "汀州路三段／羅斯福路四段90巷路口精修",
+  "user_selected_reference_epoch": "可核對的2025年照片",
+  "photo_reference": {
+    "page": "https://www.jyes.com.tw/news.php?act=view&id=12365",
+    "publication_date": "2025-05-14",
+    "capture_date": null,
+    "facades": ["大茗（158之1號）", "傑昇通信（158號）", "濃氣屋（156號）"],
+    "reconstructed_features": ["店面相對排列", "橫招牌與突出直招", "門窗與鐵捲門", "玻璃海報色塊及密度", "照片可見的窗框、鐵窗、冷氣與牆面"],
+    "photo_pixels_used_as_game_textures": false,
+    "simplifications": ["字型及標誌為簡化重製", "促銷海報微小文字為原創示意", "所有米制尺寸為比例估計"]
+  },
+  "placement": {
+    "business_pin": {"latitude":25.0135104,"longitude":121.5343037},
+    "pin_source": "官方店家頁連結的Google商家位置",
+    "pin_is_not_a_surveyed_facade_corner": true,
+    "estimated_frontage_width_m": 11.0,
+    "estimated_visible_crop_height_m": 6.85,
+    "closure_shell": "獨立標示的估計封閉結構，並非可核對的全棟建築"
+  },
+  "lane_90": {
+    "osm_way":36230045,
+    "snapshot_date":"2026-10-07",
+    "centreline_corrected":true,
+    "width_measured":false,
+    "prototype_width_m":9.0,
+    "original_near_collision_preserved":true,
+    "distant_section_visual_only":true,
+    "background_buildings":"沿曲線配置既有未核對的程序背景建物，不能視為現地建築",
+    "terminal_building_that_blocked_endpoint_removed":true
+  },
+  "entry_point":"TaiwanRider.Editor.SiteMatchSetup.Apply()",
+  "review_capture":"TaiwanRider.Editor.SiteMatchCapture.CaptureAsync(label)",
+  "remaining_accuracy_gaps":[
+    "四角建築足跡、總樓層、屋頂與全立面尚未取得同年代完整資料",
+    "水源市場汀州路側立面與2025改裝前後時點尚未實作",
+    "對側160巷／水路思源道缺少已取得的幾何資料",
+    "車道及人行道寬、柱位、號誌和標線仍是原型估計",
+    "車輛保留上輪原創精修版，尚非現地同車款逐台還原",
+    "未宣稱攝影測量、照片等級或1:1完全還原"
+  ]
+}

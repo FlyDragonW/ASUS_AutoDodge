@@ -1,0 +1,251 @@
+{
+  "passed": true,
+  "utc": "2026-10-14T04:48:45.176987+00:00",
+  "checks": [
+    {
+      "name": "Shared Assets/TaiwanRider/Editor/AvoidanceBenchmark.cs",
+      "passed": true,
+      "detail": "a22cd813bb8999998d4a7d9fe8fef4f7ccb53c26e82b9ecee9fc8299c943ff6b"
+    },
+    {
+      "name": "Shared Assets/TaiwanRider/Runtime/HazardActor.cs",
+      "passed": true,
+      "detail": "5c9070565a98f744451e139f45a0798ab639b2d130c362e08d17bd247c96f4cd"
+    },
+    {
+      "name": "Shared Assets/TaiwanRider/Runtime/ScenarioRunner.cs",
+      "passed": true,
+      "detail": "6f306cc946c0bbe0124ee73074bfa3ef5e23c3b797c7dc7e93a862d95c50f7f9"
+    },
+    {
+      "name": "Shared Assets/TaiwanRider/Runtime/ScooterController.cs",
+      "passed": true,
+      "detail": "e429b39bdfcbe1c88a83c8ebddcb131314898e449b0a0c591d0affa3026a963b"
+    },
+    {
+      "name": "Protected Assets/TaiwanRider/Runtime/RadarSensor.cs",
+      "passed": true,
+      "detail": "ecf0499e5c7c6e5360dec2e2426767d7e874ecc28baec27dc7174e4ba8e8e1b2"
+    },
+    {
+      "name": "Protected Assets/TaiwanRider/Runtime/RiderVisionSensor.cs",
+      "passed": true,
+      "detail": "fcd190f3ce347ef982294ab8163cfd9ed833d181893b17ebe2bb13a3c9613221"
+    },
+    {
+      "name": "Protected Assets/TaiwanRider/Scenes/GongguanRide.unity",
+      "passed": true,
+      "detail": "c3ccf01a22d531900cc49af73eb530b8a8f02595104d2536195f598fa4776b16"
+    },
+    {
+      "name": "Protected Assets/TaiwanRider/Data/Scooter125.asset",
+      "passed": true,
+      "detail": "9ef37f75835b63b7b21106f71ba2fa491b263b93f7601191437f80189c9d42c3"
+    },
+    {
+      "name": "Protected Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v2.onnx",
+      "passed": true,
+      "detail": "d0cd520e2b52d2518735eb3d5a04939a27c0777788bae7d8ad2ea9b37b70d219"
+    },
+    {
+      "name": "Frozen improved controller is installed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineMain complete valid cases",
+      "passed": true,
+      "detail": 48
+    },
+    {
+      "name": "BaselineMain provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineMain runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineMain no false interventions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineMain static parked passes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineMain blocked sides stop",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineRepeat complete valid cases",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "name": "BaselineRepeat provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineRepeat runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHold complete valid cases",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "name": "BaselineHold provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHold runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHold blocked_sides-20-clear-v0-vision_fusion-hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHold blocked_sides-20-clear-v0-vision_fusion-release",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHold blocked_sides-40-clear-v0-vision_fusion-hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHold blocked_sides-40-clear-v0-vision_fusion-release",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHeldout complete valid cases",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "name": "BaselineHeldout provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BaselineHeldout runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateMain complete valid cases",
+      "passed": true,
+      "detail": 48
+    },
+    {
+      "name": "CandidateMain provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateMain runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateMain no false interventions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateMain static parked passes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateMain blocked sides stop",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateRepeat complete valid cases",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "name": "CandidateRepeat provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateRepeat runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHold complete valid cases",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "name": "CandidateHold provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHold runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHold blocked_sides-20-clear-v0-vision_fusion-hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHold blocked_sides-20-clear-v0-vision_fusion-release",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHold blocked_sides-40-clear-v0-vision_fusion-hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHold blocked_sides-40-clear-v0-vision_fusion-release",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHeldout complete valid cases",
+      "passed": true,
+      "detail": 16
+    },
+    {
+      "name": "CandidateHeldout provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CandidateHeldout runtime conditions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Prespecified completed cases",
+      "passed": true,
+      "detail": 168
+    }
+  ]
+}

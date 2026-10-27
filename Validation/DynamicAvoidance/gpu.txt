@@ -1,0 +1,38 @@
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 11:46:56.985, 70, 300 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 11:48:27.105, 76, 540 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 11:49:50.895, 80, 1177 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 11:50:38.379, 81, 1282 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 11:52:19.170, 78, 420 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 11:56:07.946, 76, 1297 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:00:26.393, 75, 1200 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:02:34.503, 75, 210 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:06:12.967, 70, 210 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:08:57.440, 73, 210 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:10:33.958, 78, 210 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:21:15.105, 80, 1387 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:27:33.219, 83, 795 MHz, Not Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:34:50.574, 87, 1095 MHz, Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:37:37.728, 86, 1267 MHz, Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:39:55.289, 87, 1042 MHz, Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:41:30.520, 87, 817 MHz, Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:43:10.005, 87, 817 MHz, Active
+timestamp, temperature.gpu, clocks.current.sm [MHz], clocks_event_reasons.sw_thermal_slowdown
+2026/10/14 12:45:25.808, 87, 817 MHz, Active

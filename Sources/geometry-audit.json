@@ -1,0 +1,603 @@
+{
+  "auditKind": "Local source/provenance audit; read-only; no live Unity inspection or current survey",
+  "cachedOSMDate": "2026-10-07T13:13:09Z",
+  "conclusion": {
+    "namedGeographicJunctionMatchesCachedOSM": true,
+    "fullSceneIsOneToOneSiteReconstruction": false,
+    "summaryZh": "原點確實位於本地OSM的汀州路三段×羅斯福路四段90巷共同節點；僅道路中心線有位置依據。寬度、建物足跡與樓高、店名、開口、標線號誌、巷底與停車配置不是實景量測。",
+    "mainMissingEvidence": "No acquired building footprints, cadastral frontage geometry, height/levels survey, measured road/sidewalk widths or complete dated photographic coverage of this exact corner."
+  },
+  "junction": {
+    "origin": {
+      "latitude": 25.0135214,
+      "longitude": 121.5344569
+    },
+    "commonNodes": [
+      {
+        "node": 422834476,
+        "mainIndex": 12,
+        "laneIndex": 0,
+        "mainCoordinate": {
+          "lat": 25.0135214,
+          "lon": 121.5344569
+        },
+        "laneCoordinate": {
+          "lat": 25.0135214,
+          "lon": 121.5344569
+        },
+        "identical": true,
+        "matchesOrigin": true
+      }
+    ],
+    "mainWay": {
+      "id": 316698035,
+      "name": "汀州路三段",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "maxspeed": "40",
+        "name": "汀州路三段",
+        "name:en": "Section 3, Tingzhou Road",
+        "name:nan": "Teng-chiu-koe 3-tōaⁿ",
+        "name:nan-Hant": "汀州路三段",
+        "name:nan-Latn-pehoeji": "Teng-chiu-koe 3-tōaⁿ",
+        "name:nan-Latn-tailo": "Ting-tsiu-kue 3-tuānn",
+        "name:zh": "汀州路三段",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "vertices": 30
+    },
+    "laneWay": {
+      "id": 36230045,
+      "name": "羅斯福路四段90巷",
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "羅斯福路四段90巷",
+        "name:en": "Lane 90, Section 4, Roosevelt Road",
+        "name:nan": "Roosevelt-lō͘-4-tōaⁿ 90-hāng",
+        "name:nan-Hant": "羅斯福路四段90巷",
+        "name:nan-Latn-pehoeji": "Roosevelt-lō͘-4-tōaⁿ 90-hāng",
+        "name:nan-Latn-tailo": "Roosevelt-lōo-4-tuānn 90-hāng",
+        "name:zh": "羅斯福路四段90巷",
+        "oneway": "yes",
+        "service": "alley",
+        "surface": "asphalt"
+      },
+      "vertices": 5
+    },
+    "namingCaution": "Intersecting road is Lane 90 of Section 4 Roosevelt Road; do not label this as the junction with the Roosevelt Road main carriageway."
+  },
+  "sourceCoverage": {
+    "osmElementCount": 2,
+    "osmTypes": {
+      "way": 2
+    },
+    "buildingElements": 0,
+    "roadWidthTagsPresent": false,
+    "elevationTagsPresent": false,
+    "referenceImages": [
+      {
+        "file": "reference_0.jpg",
+        "title": "File:Roosevelt Road Sec.4 Lane 78, Taipei (near Alley 2).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Roosevelt_Road_Sec.4_Lane_78,_Taipei_(near_Alley_2).jpg",
+        "exactTargetCornerVerified": false,
+        "captureDate": "2023-07-16 17:43:58",
+        "visualInspection": {
+          "readableAddress": "羅斯福路四段78巷2弄2",
+          "targetLane90": false,
+          "limitation": "Different named alley; cannot establish Lane 90 geometry or full building heights."
+        },
+        "cachedMetadataCoordinate": {
+          "lat": 25.013781,
+          "lon": 121.534378
+        },
+        "localPosition": {
+          "x": 17.50769182462387,
+          "y": 0.0,
+          "z": 24.33060477508679
+        },
+        "distanceFromJunctionMetres": 29.9749495703909
+      },
+      {
+        "file": "reference_1.jpg",
+        "title": "File:GongGuan Night Market, Taipei 20191008 04.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:GongGuan_Night_Market,_Taipei_20191008_04.jpg",
+        "exactTargetCornerVerified": false,
+        "captureDate": "2019-10-08 19:28:55",
+        "cachedMetadataCoordinate": {
+          "lat": 25.013348,
+          "lon": 121.535037
+        },
+        "localPosition": {
+          "x": 21.68932109775929,
+          "y": 0.0,
+          "z": -57.67854444960999
+        },
+        "distanceFromJunctionMetres": 61.62175865315223
+      },
+      {
+        "file": "reference_2.jpg",
+        "title": "File:GongGuan Night Market, Taipei 20191008 03.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:GongGuan_Night_Market,_Taipei_20191008_03.jpg",
+        "exactTargetCornerVerified": false,
+        "captureDate": "2019-10-08 19:17:11",
+        "cachedMetadataCoordinate": {
+          "lat": 25.013222,
+          "lon": 121.535061
+        },
+        "localPosition": {
+          "x": 12.286893304366014,
+          "y": 0.0,
+          "z": -68.36482730947435
+        },
+        "distanceFromJunctionMetres": 69.46018543113115
+      },
+      {
+        "file": "reference_3.jpg",
+        "title": "File:TCPD SWAT ANA-0922 left side on Tingzhou Road 20240907.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:TCPD_SWAT_ANA-0922_left_side_on_Tingzhou_Road_20240907.jpg",
+        "exactTargetCornerVerified": false,
+        "captureDate": "2024-09-07 15:46:14",
+        "visualInspection": {
+          "readableAddress": "汀州路三段185",
+          "coordinateVerified": false,
+          "limitation": "Partial ground-floor facade behind a police SUV; address is a research anchor, not a measured footprint or height."
+        },
+        "coordinateAvailable": false
+      }
+    ]
+  },
+  "coordinateAudit": {
+    "source": "Tools/derive_route.py",
+    "plusZGeographicBearingDegrees": 308.8633764307728,
+    "plusXGeographicBearingDegrees": 38.8633764307728,
+    "plusZDescription": "northwest; player travels opposite the stored main-way node order",
+    "plusXDescription": "northeast; same side as the cached Lane 90 branch",
+    "projectionMaxDisagreementWithRouteSurveyMetres": 6.489845225771975e-05,
+    "widthMetres": 12.4,
+    "widthIsEstimated": true,
+    "playableZRange": [
+      -76,
+      76
+    ],
+    "playableZExtent": 152,
+    "cachedCentrelineLengthWithinPlayableRange": 152.93123471472626,
+    "currentRoadStripZRange": [
+      -120,
+      120
+    ],
+    "horizontalOffsetInsteadOfNormalOffset": [
+      {
+        "z": -120,
+        "routeYawDegrees": 21.042143737325095,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 11.57312556115376,
+        "offsetLongitudinalDriftAt6_2m": 2.22613817775141
+      },
+      {
+        "z": -100,
+        "routeYawDegrees": 18.109624030763435,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 11.785747816403385,
+        "offsetLongitudinalDriftAt6_2m": 1.9271837229583784
+      },
+      {
+        "z": -76,
+        "routeYawDegrees": 14.722527180041014,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 11.992882048361327,
+        "offsetLongitudinalDriftAt6_2m": 1.5756570196343982
+      },
+      {
+        "z": -40,
+        "routeYawDegrees": 9.886760465936943,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 12.215847948523212,
+        "offsetLongitudinalDriftAt6_2m": 1.0645490710344474
+      },
+      {
+        "z": -7,
+        "routeYawDegrees": 5.228380907646579,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 12.348408342674874,
+        "offsetLongitudinalDriftAt6_2m": 0.5649803984559056
+      },
+      {
+        "z": 0,
+        "routeYawDegrees": 5.123815188691021,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 12.350449973839357,
+        "offsetLongitudinalDriftAt6_2m": 0.5537114419287852
+      },
+      {
+        "z": 20,
+        "routeYawDegrees": -1.0973642882845538,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 12.397725767851504,
+        "offsetLongitudinalDriftAt6_2m": -0.11873898385833162
+      },
+      {
+        "z": 76,
+        "routeYawDegrees": -0.39698849367240896,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 12.399702353674204,
+        "offsetLongitudinalDriftAt6_2m": -0.04295794538376095
+      },
+      {
+        "z": 120,
+        "routeYawDegrees": -1.30950652407215,
+        "nominalXWidth": 12.4,
+        "actualPerpendicularWidth": 12.396761507820221,
+        "offsetLongitudinalDriftAt6_2m": -0.14168990633327516
+      }
+    ],
+    "cachedLaneLengthMetres": 77.57131113122273,
+    "lanePoints": [
+      {
+        "x": 0.0,
+        "y": 0,
+        "z": 0.0
+      },
+      {
+        "x": 5.6788,
+        "y": 0,
+        "z": -0.4118
+      },
+      {
+        "x": 25.6628,
+        "y": 0,
+        "z": -2.6791
+      },
+      {
+        "x": 66.714,
+        "y": 0,
+        "z": -7.3516
+      },
+      {
+        "x": 77.0859,
+        "y": 0,
+        "z": -8.6196
+      }
+    ],
+    "laneSegmentAnglesFromLocalPlusXDegrees": [
+      -4.147228963774918,
+      -6.47306062383156,
+      -6.4934717822300545,
+      -6.970225508399005
+    ]
+  },
+  "generatedBuildingAudit": {
+    "count": 55,
+    "sideCounts": {
+      "-1": 28,
+      "1": 27
+    },
+    "allFiftyFiveBuildingFootprintsAndHeightsAreGenerated": true,
+    "generator": "Tools/model_assets.py environment(), lines 215-307",
+    "randomSeed": 125,
+    "widthChoicesMetres": [
+      6.4,
+      7.2,
+      8.0,
+      9.4
+    ],
+    "heightFormula": "3.3 + random.choice([3,4,4,5]) * 2.9; these are not observed storey counts",
+    "widthDistribution": {
+      "7.2": 12,
+      "8.0": 13,
+      "9.4": 16,
+      "6.4": 14
+    },
+    "heightDistribution": {
+      "14.9": 29,
+      "12.0": 14,
+      "17.8": 12
+    },
+    "impliedTotalStoreysDistribution": {
+      "5": 29,
+      "4": 14,
+      "6": 12
+    },
+    "longestSameHeightRunBySide": {
+      "-1": {
+        "count": 5,
+        "height": 14.899999999999999,
+        "names": [
+          "Building_-1_0",
+          "Building_-1_1",
+          "Building_-1_2",
+          "Building_-1_3",
+          "Building_-1_4"
+        ]
+      },
+      "1": {
+        "count": 3,
+        "height": 17.8,
+        "names": [
+          "Building_1_44",
+          "Building_1_45",
+          "Building_1_46"
+        ]
+      }
+    },
+    "constantBodyDepthMetres": 8.7,
+    "constantBodyCentreLateralOffsetMetres": 12.0,
+    "constantUpperFacadeOffsetMetres": 7.65,
+    "constantGroundFloorHeightMetres": 3.3,
+    "constantUpperFloorRhythmMetres": 2.9,
+    "constantWindowCentreBaseHeightMetres": 4.9,
+    "constantArcadePillarOffsetMetres": 7.76,
+    "whyRowsLookUniformZh": "雖然不是每棟同高同寬，但只抽3種樓高/4種寬度，且全部8.7m深、同一立面線、同2.9m樓層節奏、同3.3m騎樓；沒有任何地籍或逐棟外觀對位。加隨機變化仍不能達成1:1。",
+    "laterRefinementDoesNotFixEnvelope": "IntersectionDetailSetup.Storefront reuses building-layout height/width and the same 8.7 m depth; StreetLifeSetup adds fictional signs/props and material variation.",
+    "alleyBackdropAdditionalBuildings": 14,
+    "alleyBackdropHeightPatternMetres": [
+      10.2,
+      13.0,
+      15.8
+    ],
+    "alleyBackdropTerminalBlock": {
+      "center": [
+        79,
+        8.1,
+        0
+      ],
+      "dimensions": [
+        6,
+        16.2,
+        31
+      ],
+      "isMeasured": false
+    }
+  },
+  "objectiveConflicts": [
+    {
+      "id": "lane_polyline_ignored",
+      "severity": "high",
+      "source": "RiderSceneBuilder.cs:20,131; IntersectionDetailSetup.cs:271-311",
+      "evidence": "RouteSurvey.json has five Lane 90 points; RiderSceneBuilder Survey reads only points. Both road/visual alley are centred on z=0.",
+      "cachedCentrelineZAtX32_5": -3.4573188340413923,
+      "cachedCentrelineZAtX76": -8.486845037071319,
+      "cachedCentrelineZAtLastNode": -8.61963300700318,
+      "fixAvailableLocally": "Generate alley centreline/road mesh and its authoring frame from cached lanePoints; retain explicit estimated width until measured."
+    },
+    {
+      "id": "invented_alley_buildings_cover_osm_way",
+      "severity": "high",
+      "source": "IntersectionDetailSetup.cs:285-308",
+      "evidence": "The straight generated negative-z alley row intersects the cached curved Lane 90 centreline at these samples.",
+      "intersections": [
+        {
+          "generatedAlleyBuildingIndex": 5,
+          "generatedCenter": {
+            "x": 59.5,
+            "z": -10.75
+          },
+          "footprintX": [
+            55.65,
+            63.35
+          ],
+          "footprintZ": [
+            -14.8,
+            -6.7
+          ],
+          "cachedOSMCentrelineOverlapSampleRange": [
+            {
+              "x": 61.04,
+              "z": -6.705778075184162
+            },
+            {
+              "x": 63.35,
+              "z": -6.968705224695016
+            }
+          ]
+        },
+        {
+          "generatedAlleyBuildingIndex": 6,
+          "generatedCenter": {
+            "x": 67.3,
+            "z": -10.75
+          },
+          "footprintX": [
+            63.449999999999996,
+            71.14999999999999
+          ],
+          "footprintZ": [
+            -14.8,
+            -6.7
+          ],
+          "cachedOSMCentrelineOverlapSampleRange": [
+            {
+              "x": 63.449999999999996,
+              "z": -6.980087352379468
+            },
+            {
+              "x": 71.14999999999999,
+              "z": -7.893916065523192
+            }
+          ]
+        }
+      ],
+      "terminalBlockContainsLastOSMNode": true,
+      "fixAvailableLocally": "Remove or move the invented backdrop out of the known lane polyline corridor. Do not create an unsupported dead-end facade; actual endpoint topology beyond the cache remains unknown."
+    },
+    {
+      "id": "global_x_offsets_are_not_metric_perpendicular_offsets",
+      "severity": "medium",
+      "source": "Runtime/RoadRoute.cs Position(); RiderSceneBuilder.cs RoadStrip()",
+      "evidence": "Position(z,offset) adds offset in global X. Curved-road width measured normal to the tangent is 12.4*cos(yaw), with attached curb/building frames rotated separately.",
+      "fixAvailableLocally": "Use the cached tangent and its perpendicular normal for authored road edges/kerbs; keep the chosen width marked estimated. Coordinate-controller assumptions require integration review."
+    },
+    {
+      "id": "all_building_dimensions_unverified",
+      "severity": "critical_for_1_to_1",
+      "source": "Tools/model_assets.py:229-305; Sources/building-layout.json",
+      "evidence": "No building records exist in local OSM. Every frontage width, height, footprint and roofline is generated.",
+      "fixAvailableLocally": false,
+      "requiredEvidence": "Exact-corner photos/panoramas with correspondence to addresses, footprint/cadastral or orthophoto geometry, and independently justified heights. Do not replace uniform blocks with differently random blocks and call it a match."
+    },
+    {
+      "id": "road_furniture_and_markings_unverified",
+      "severity": "high_for_1_to_1",
+      "source": "RiderSceneBuilder.cs:142-200",
+      "evidence": "Crosswalk, stop line, double yellow, red kerb, signals, lamps, drains and parking spaces are procedural placements. Local OSM has no node tags proving these at this corner.",
+      "fixAvailableLocally": false,
+      "requiredEvidence": "Location-specific visual survey before re-authoring their number, placement and dimensions."
+    },
+    {
+      "id": "traffic_rules_are_not_scene_dimensions",
+      "severity": "context",
+      "source": "Sources/gongguan-osm.json tags; Runtime/HazardActor.cs",
+      "evidence": "Cached main road maxspeed=40 and one lane per direction. Cached Lane 90 oneway=yes follows its nodes from the junction northeastward, while the hazard drives from the alley back toward the main road.",
+      "recommendation": "Keep user-authorized vehicle capability100km/h separate from mapped limit40. Label current opposing alley hazard as an intentional unsafe event if kept; do not silently treat it as compliant traffic."
+    }
+  ],
+  "localOnlyRepairPriority": [
+    {
+      "priority": 1,
+      "action": "Use Lane 90 cached centreline and preserve the exact shared node as (0,0,0).",
+      "canBeObjectiveWithoutNewSurvey": true
+    },
+    {
+      "priority": 2,
+      "action": "Remove the generated alley terminal wall and other geometry intersecting the known centreline; no new guessed buildings.",
+      "canBeObjectiveWithoutNewSurvey": true
+    },
+    {
+      "priority": 3,
+      "action": "Make road/kerb offsets geometrically consistent with the cached tangent; retain unknown width/elevation status.",
+      "canBeObjectiveWithoutNewSurvey": true
+    },
+    {
+      "priority": 4,
+      "action": "Do not rebuild 55 building envelopes as supposedly exact until independent corner evidence is available.",
+      "canBeObjectiveWithoutNewSurvey": false
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "UnityImplementation\\Sources\\gongguan-osm.json",
+      "sha256": "44b8560bb7802ff23465a143430c8cde0af0017eb300b72b62f82e9c273b9c7f"
+    },
+    {
+      "path": "UnityImplementation\\Assets\\TaiwanRider\\Data\\RouteSurvey.json",
+      "sha256": "5aeffce463c38b2c7bd48aed936c39050f00a05ad54bf81f0bb62d36a46144da"
+    },
+    {
+      "path": "UnityImplementation\\Tools\\derive_route.py",
+      "sha256": "8173256957d8e739ee2d183ed8af0a9e669d8a1cc84ee970123a1287e2cb8d49"
+    },
+    {
+      "path": "UnityImplementation\\Tools\\model_assets.py",
+      "sha256": "8f6fcf257607cffa07f194e9dca1ec7ae331cb92cfcb765e281544c069481b85"
+    },
+    {
+      "path": "UnityImplementation\\Sources\\building-layout.json",
+      "sha256": "ac243d2553c24950b8bf3e7fdf05eae2b14f3ba57f51c36a71d1bca1907c09a8"
+    },
+    {
+      "path": "UnityImplementation\\Assets\\TaiwanRider\\Runtime\\RoadRoute.cs",
+      "sha256": "9f5ab61657c12e72cd59be85b622366ecf1365d94c472eceed81632fd1b6dca6"
+    },
+    {
+      "path": "UnityImplementation\\Assets\\TaiwanRider\\Editor\\RiderSceneBuilder.cs",
+      "sha256": "0f08013f98a5cb436241f8c4af5325e2273139063579a32557b184a0e07b0f58"
+    },
+    {
+      "path": "UnityImplementation\\Assets\\TaiwanRider\\Editor\\IntersectionDetailSetup.cs",
+      "sha256": "e4ef274f60aca6e0b791edc6391465aad24d4ac5207dd9c98234d0e8b2f7e571"
+    },
+    {
+      "path": "UnityImplementation\\Sources\\intersection-detail-provenance.json",
+      "sha256": "3b2ee185e1668a9f37a155e3d85b68d4a5d630f8f7ef8c2b59979feba7fa5c88"
+    },
+    {
+      "path": "UnityImplementation\\Sources\\streetlife-provenance.json",
+      "sha256": "c8103bb88518e1aa0ab5449299bd8fba8570bac2ce76b143ec881c679f42b69c"
+    },
+    {
+      "path": "UnityImplementation\\Sources\\References\\credits.json",
+      "sha256": "6dc973304aaa31eaeadd4d5cea99ff79f324ec358f6973566e6e8d436f5cc36b"
+    }
+  ],
+  "targetReferenceEpoch": "2025; selected by user. Current OSM, if acquired, would not by itself prove unchanged 2025 conditions.",
+  "siteOSMExtension": {
+    "status": "unavailable",
+    "provenance": {
+      "requestedAtUTC": "2026-10-10T19:16:07.172128+00:00",
+      "query": "[out:json][timeout:25];\n(\n nwr[\"building\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"building:part\"](25.0118,121.5325,25.0153,121.5365);\n way[\"highway\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"name\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"addr:housenumber\"](25.0118,121.5325,25.0153,121.5365);\n nwr[\"waterway\"](25.0118,121.5325,25.0153,121.5365);\n);\nout meta geom;\n",
+      "bboxSWNE": [
+        25.0118,
+        121.5325,
+        25.0153,
+        121.5365
+      ],
+      "license": "OpenStreetMap contributors, ODbL 1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "attempts": [
+        {
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "success": false,
+          "error": "HTTP Error 504: Gateway Timeout"
+        },
+        {
+          "endpoint": "https://overpass.kumi.systems/api/interpreter",
+          "success": false,
+          "error": "HTTP Error 500: Internal Server Error"
+        }
+      ],
+      "success": false,
+      "limitation": "Both bounded public endpoint attempts failed; no further endpoint retries made."
+    },
+    "buildingFootprintsAvailableFromExtension": false,
+    "rawResponseFile": null,
+    "shuiyuanMarket": {
+      "bbox": null,
+      "heightMetres": null,
+      "buildingLevels": null,
+      "status": "No raw OSM response acquired; no coordinates, footprint or height inferred."
+    },
+    "tingzhouLane160AndWaterwayTrail": {
+      "geometry": null,
+      "status": "Names corroborated by Taipei UDD public financial record, but no raw road geometry acquired.",
+      "primarySource": "https://udd.gov.taipei/assets/422-4468/Documents/97%E5%B9%B4%E5%BA%A6%E5%96%AE%E4%BD%8D%E6%B1%BA%E7%AE%97.pdf",
+      "evidence": "Document mentions the joint Roosevelt Section 4 Lane 90 / Tingzhou Section 3 Lane 160 waterway-trail landscape project. This does not supply coordinates or widths."
+    },
+    "jason158": {
+      "address": "臺北市中正區汀州路三段158號",
+      "officialAddressSource": "https://page.line.me/373fqoko",
+      "osmCandidateNodeId": 4524328182,
+      "candidateIdDiscovery": "https://mapcarta.com/N4524328182",
+      "coordinate": null,
+      "oppositeSideGeometryConfirmed": false,
+      "limitation": "Official page confirms address only. OSM candidate node was found through a secondary OSM-derived listing but its original coordinates were not retrieved; no placement inferred."
+    },
+    "requestLimit": "One main endpoint and one alternative public endpoint attempted; 504 and 500 respectively. Stopped instead of repeated retries. Initial sandbox DNS failures required the same bounded fetch to run with approved network access."
+  },
+  "stagedLaneCorrection": {
+    "editorSource": "UnitySiteMatch/Assets/TaiwanRider/Editor/SiteLaneSetup.cs",
+    "integrationOrder": [
+      "IntersectionDetailSetup.Apply(-1,3.2f,19f,includeAlleyBackdrop:false)",
+      "SiteLaneSetup.Apply()"
+    ],
+    "newRootName": "Lane 90 • OSM centreline visual correction",
+    "preservedOriginal": "Street geometry/Lane 90 collider, transform, layer and hazard runtime",
+    "changes": "Disable only original Lane 90 MeshRenderer; add visual road mesh along lanePoints with tangent-normal offsets; remove invented backdrop by the original generator option.",
+    "widthMetres": 9,
+    "widthIsEstimated": true,
+    "heightMetres": 0.003,
+    "heightIsSurveyed": false,
+    "startX": 5.5,
+    "farEnd": {
+      "x": 77.0859,
+      "y": 0,
+      "z": -8.6196
+    },
+    "newColliders": 0,
+    "remainingLimitation": "Distant surface is visual only; existing straight near collider intentionally retained for gameplay. This is not a surveyed roadway envelope. 160-lane connection and surrounding real buildings remain unresolved."
+  }
+}

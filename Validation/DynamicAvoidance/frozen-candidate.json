@@ -1,0 +1,6 @@
+{
+  "selectedDevelopmentCandidate": "candidate05",
+  "controllerSha256": "56e5e30cb4536edd41fa47eafd4421dc4bd825f0b20eb555b63518850bf0ce0d",
+  "utc": "2026-10-14T04:08:54.093906+00:00",
+  "selection": "Clear-weather pilot; held-out results have not been examined. Only naming, comments, diagnostics and unused fields cleaned after candidate05."
+}

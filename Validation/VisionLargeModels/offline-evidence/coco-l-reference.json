@@ -1,0 +1,74 @@
+{
+  "model_sha256": "2a681672a47eba2ce34b35a853269b3f4e2f9f72af46f4af8c660722d79b4621",
+  "backend": "ONNX Runtime CPU, 2 threads",
+  "acdc": {
+    "images": 406,
+    "map50_95": 0.34599621208305714,
+    "map50": 0.530381702763559,
+    "classes": {
+      "car": {
+        "instances": 1836,
+        "ap50": 0.7300105455836129,
+        "ap50_95": 0.504311864648689,
+        "operating_point": {
+          "confidence": 0.6,
+          "iou": 0.5,
+          "tp": 723,
+          "fp": 10,
+          "fn": 1113,
+          "precision": 0.9863574351978172,
+          "recall": 0.3937908496732026
+        }
+      },
+      "motorcycle": {
+        "instances": 59,
+        "ap50": 0.33075285994350506,
+        "ap50_95": 0.18768055951742532,
+        "operating_point": {
+          "confidence": 0.6,
+          "iou": 0.5,
+          "tp": 9,
+          "fp": 0,
+          "fn": 50,
+          "precision": 1.0,
+          "recall": 0.15254237288135594
+        }
+      }
+    }
+  },
+  "synthetic": {
+    "images": 500,
+    "map50_95": 0.44168380925989126,
+    "map50": 0.6105187205723607,
+    "classes": {
+      "car": {
+        "instances": 541,
+        "ap50": 0.8370445319860481,
+        "ap50_95": 0.6668067878763104,
+        "operating_point": {
+          "confidence": 0.6,
+          "iou": 0.5,
+          "tp": 277,
+          "fp": 1,
+          "fn": 264,
+          "precision": 0.9964028776978417,
+          "recall": 0.512014787430684
+        }
+      },
+      "motorcycle": {
+        "instances": 652,
+        "ap50": 0.38399290915867296,
+        "ap50_95": 0.21656083064347212,
+        "operating_point": {
+          "confidence": 0.6,
+          "iou": 0.5,
+          "tp": 86,
+          "fp": 7,
+          "fn": 566,
+          "precision": 0.9247311827956989,
+          "recall": 0.13190184049079753
+        }
+      }
+    }
+  }
+}

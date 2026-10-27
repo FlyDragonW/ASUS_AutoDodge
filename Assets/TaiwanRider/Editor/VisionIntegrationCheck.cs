@@ -59,7 +59,7 @@ namespace TaiwanRider.Editor
         }
         [Serializable] public class Report
         {
-            public string utc, unityVersion, gpu, model = "ridereflex-vision-v1.onnx", backend = "Unity Inference Engine GPUCompute", error;
+            public string utc, unityVersion, gpu, model, backend = "Unity Inference Engine GPUCompute", error;
             public bool passed, gameUiVisible, rayVisualizationVisible;
             public int targetInferenceHz = 10;
             public string timing = "Real elapsed time; captureFramerate=0, timeScale=1. Includes capture/render/readback overhead. Synthetic scene only.";
@@ -228,7 +228,7 @@ namespace TaiwanRider.Editor
             bool passed = error == null && cases.Count == (smoke ? 1 : 9) && cases.TrueForAll(c => c.passed);
             if (!smoke) passed &= cases.Exists(c => c.visionAssistedInterventions > 0);
             var report = new Report { utc = DateTime.UtcNow.ToString("O"), unityVersion = Application.unityVersion, gpu = SystemInfo.graphicsDeviceName,
-                passed = passed, error = error, gameUiVisible = session && session.ShowUI, rayVisualizationVisible = session && session.Demo && session.Demo.Display.Visible, cases = cases.ToArray() };
+                model = vision ? vision.ModelResourcePath : null, passed = passed, error = error, gameUiVisible = session && session.ShowUI, rayVisualizationVisible = session && session.Demo && session.Demo.Display.Visible, cases = cases.ToArray() };
             File.WriteAllText(Path.Combine(folder, "report.json"), JsonUtility.ToJson(report, true));
             Debug.Log("VISION_CHECK_COMPLETE passed=" + passed + " error=" + error);
             EditorApplication.Exit(passed ? 0 : 1);

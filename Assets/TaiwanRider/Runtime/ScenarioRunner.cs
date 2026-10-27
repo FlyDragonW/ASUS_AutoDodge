@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 namespace TaiwanRider
 {
+    [DefaultExecutionOrder(-400)]
     public sealed class ScenarioRunner : MonoBehaviour
     {
         public ScooterController rider;
@@ -24,6 +25,9 @@ namespace TaiwanRider
         public RiderDemo Demo {get;private set;}
         public bool SuppressResultFiles;
         public float elapsed;
+        public int PhysicsStep { get; private set; }
+        public int EventStartedTick { get; private set; } = -1;
+        public Vector3 EventRiderPosition { get; private set; }
         public float EventStartedAt { get; private set; }=-1;
         public string ResultDirectory => Path.Combine(Application.persistentDataPath,"Runs");
         HazardActor currentActor;
@@ -43,16 +47,21 @@ namespace TaiwanRider
                 if(k.enterKey.wasPressedThisFrame && !IsRunning)StartRun(selectedScenario);
                 if(!IsRunning){if(k.digit1Key.wasPressedThisFrame)selectedScenario=0;if(k.digit2Key.wasPressedThisFrame)selectedScenario=1;if(k.digit3Key.wasPressedThisFrame)selectedScenario=2;}
             }
+        }
+        // Scenario trigger and run clock share the 50 Hz physics timeline.
+        // Order: scenario (-400), actor (-300), radar (-200), pilot (-150), rider (0).
+        void FixedUpdate()
+        {
             if(!IsRunning || IsPaused)return;
-            elapsed+=Time.deltaTime;Result.elapsedSeconds=elapsed;
+            PhysicsStep++;elapsed=(float)(PhysicsStep*(double)Time.fixedDeltaTime);Result.elapsedSeconds=elapsed;
             Result.peakSpeedKph=Mathf.Max(Result.peakSpeedKph,rider.SpeedKph);
             if(Demo && Demo.Pilot.IsControlling){Result.autoAvoidEnabled=true;Result.avoidanceInterventions=Demo.Pilot.InterventionCount;}
             var scenario=scenarios[selectedScenario];
-            if(currentActor && EventStartedAt<0)
+            if(currentActor && currentActor.enabled && EventStartedAt<0)
             {
-                float distance=scenario.conflictZ-rider.transform.position.z;
+                float distance=scenario.conflictZ-rider.Body.position.z;
                 if(distance>0 && rider.SpeedKph>5 && distance/(rider.SpeedKph/3.6f)<scenario.triggerTimeToArrival)
-                {currentActor.active=true;EventStartedAt=elapsed;Result.hazardTriggered=true;baselineSteer=rider.Steer;baselineBrake=rider.Brake;}
+                {currentActor.active=true;EventStartedAt=elapsed;EventStartedTick=PhysicsStep;EventRiderPosition=rider.Body.position;Result.hazardTriggered=true;baselineSteer=rider.Steer;baselineBrake=rider.Brake;}
             }
             if(EventStartedAt>=0 && Result.reactionSeconds<0 && (rider.Brake>Mathf.Max(.18f,baselineBrake+.12f) || Mathf.Abs(rider.Steer-baselineSteer)>.2f))
                 Result.reactionSeconds=elapsed-EventStartedAt;
@@ -77,7 +86,7 @@ namespace TaiwanRider
             currentActor=definition.kind==ScenarioKind.CarCutIn?car:definition.kind==ScenarioKind.ScooterCrossing?scooter:null;
             rider.ResetVehicle(startPosition,route?route.Heading(startPosition.z):Quaternion.identity);
             Result=new RunResult{scenario=definition.kind.ToString(),seed=definition.seed,autoAvoidEnabled=DemoMode && rider.InputOverride==null};
-            elapsed=0;EventStartedAt=-1;IsRunning=true;
+            elapsed=0;PhysicsStep=0;EventStartedAt=-1;EventStartedTick=-1;EventRiderPosition=startPosition;IsRunning=true;
             Physics.SyncTransforms();
             if(Demo)Demo.RefreshCursor();
         }

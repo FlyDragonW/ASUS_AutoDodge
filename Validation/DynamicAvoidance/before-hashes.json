@@ -1,0 +1,42 @@
+[
+  {
+    "path": "Assets/TaiwanRider/Runtime/ScenarioRunner.cs",
+    "sha256": "d8a2d0a3f67c57dc448b8b9442a758f88ca4a3cf8bcadec8539b8be7c6a6ddbb"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/HazardActor.cs",
+    "sha256": "d2e2b2e55af970bf05d6554871a3a2fe2a5e707387759ee4d0af841daeb70d18"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/ScooterController.cs",
+    "sha256": "511e3c3f24dc9bc13390d4d44dd27b576d9ca66e14e7f74b63e9d83c3da6ad67"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs",
+    "sha256": "7dd9cf1d64bf3e1bd5a76b3e6e9973a6b02606c680bebac4ad2a30bedcda9e8d"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/RadarSensor.cs",
+    "sha256": "ecf0499e5c7c6e5360dec2e2426767d7e874ecc28baec27dc7174e4ba8e8e1b2"
+  },
+  {
+    "path": "Assets/TaiwanRider/Runtime/RiderVisionSensor.cs",
+    "sha256": "fcd190f3ce347ef982294ab8163cfd9ed833d181893b17ebe2bb13a3c9613221"
+  },
+  {
+    "path": "Assets/TaiwanRider/Editor/AvoidanceBenchmark.cs",
+    "sha256": "5fe0feb393cdbee8bf368b5df6dc721f2cd9816d1fc993306b75f2504c9b4c1b"
+  },
+  {
+    "path": "Assets/TaiwanRider/Scenes/GongguanRide.unity",
+    "sha256": "c3ccf01a22d531900cc49af73eb530b8a8f02595104d2536195f598fa4776b16"
+  },
+  {
+    "path": "Assets/TaiwanRider/Data/Scooter125.asset",
+    "sha256": "9ef37f75835b63b7b21106f71ba2fa491b263b93f7601191437f80189c9d42c3"
+  },
+  {
+    "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v2.onnx",
+    "sha256": "d0cd520e2b52d2518735eb3d5a04939a27c0777788bae7d8ad2ea9b37b70d219"
+  }
+]

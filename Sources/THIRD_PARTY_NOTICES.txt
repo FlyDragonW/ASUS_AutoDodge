@@ -32,7 +32,8 @@ File:TCPD SWAT ANA-0922 left side on Tingzhou Road 20240907.jpg
 https://commons.wikimedia.org/wiki/File:TCPD_SWAT_ANA-0922_left_side_on_Tingzhou_Road_20240907.jpg
 Author: <a href="//commons.wikimedia.org/wiki/User:Solomon203" title="User:Solomon203">Solomon203</a>
 License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
-Vision model: RideReflex vision v1, fine-tuned from Ultralytics YOLOv8n COCO weights.
+Vision models: RideReflex v1/v2 from Ultralytics YOLOv8n COCO weights; COCO l from original YOLOv8l weights; v4l adapted from YOLOv8l with Unity training images.
+Original YOLOv8l weights: https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l.pt
 Training software: Ultralytics 8.3.161, AGPL-3.0.
 https://github.com/ultralytics/ultralytics/tree/v8.3.161
 See ULTRALYTICS-AGPL-3.0.txt and docs/VISION_MODEL.md.

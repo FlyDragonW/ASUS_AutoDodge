@@ -1,0 +1,1431 @@
+{
+    "utc": "2026-10-13T19:05:02.9602493Z",
+    "unityVersion": "6000.4.10f1",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "model": "RideReflexVision/ridereflex-vision-v4l",
+    "backend": "Unity Inference Engine GPUCompute",
+    "error": "",
+    "passed": true,
+    "gameUiVisible": false,
+    "rayVisualizationVisible": false,
+    "targetInferenceHz": 10,
+    "timing": "Real elapsed time; captureFramerate=0, timeScale=1. Includes capture/render/readback overhead. Synthetic scene only.",
+    "cases": [
+        {
+            "name": "cruise-fusion",
+            "fusion": true,
+            "disableDuringRun": false,
+            "passed": true,
+            "timedOut": false,
+            "result": {
+                "scenario": "Cruise",
+                "seed": 125,
+                "endedAtUtc": "2026-10-13T19:05:02.7926085Z",
+                "collision": false,
+                "finished": true,
+                "hazardTriggered": false,
+                "autoAvoidEnabled": true,
+                "avoidanceInterventions": 0,
+                "hitObject": "",
+                "elapsedSeconds": 17.3125057220459,
+                "reactionSeconds": -1.0,
+                "minimumClearanceMetres": -1.0,
+                "peakSpeedKph": 39.999168395996097
+            },
+            "wallSeconds": 17.302173500000003,
+            "renderedFrames": 1006,
+            "inferenceFrames": 153,
+            "matchedFrames": 134,
+            "hazardMatchedFrames": 0,
+            "hazardCorrectClassFrames": 0,
+            "hazardWrongClassFrames": 0,
+            "visionAssistedInterventions": 0,
+            "extendedRiskSteps": 0,
+            "meanLatencyMs": 61.41814041137695,
+            "p95LatencyMs": 77.09860229492188,
+            "maxLatencyMs": 107.6365966796875,
+            "firstInterventionAt": -1.0,
+            "eventStartedAt": -1.0,
+            "interventions": [],
+            "inference": [
+                {
+                    "seconds": 0.1580210030078888,
+                    "latencyMs": 107.6365966796875,
+                    "detections": 14,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 0.2279520034790039,
+                    "latencyMs": 58.16469955444336,
+                    "detections": 10,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 0.3580861985683441,
+                    "latencyMs": 58.6859016418457,
+                    "detections": 12,
+                    "matches": 6,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 0.4581437110900879,
+                    "latencyMs": 56.74039840698242,
+                    "detections": 15,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 0.5747678279876709,
+                    "latencyMs": 51.283199310302737,
+                    "detections": 13,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 0.6958678960800171,
+                    "latencyMs": 55.50849914550781,
+                    "detections": 11,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 0.8016160130500794,
+                    "latencyMs": 50.8921012878418,
+                    "detections": 14,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 0.920148491859436,
+                    "latencyMs": 53.59379959106445,
+                    "detections": 11,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.022614598274231,
+                    "latencyMs": 48.852699279785159,
+                    "detections": 13,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.1392470598220826,
+                    "latencyMs": 51.19580078125,
+                    "detections": 11,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.2420401573181153,
+                    "latencyMs": 49.61330032348633,
+                    "detections": 15,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.358681321144104,
+                    "latencyMs": 51.96139907836914,
+                    "detections": 12,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.4753363132476807,
+                    "latencyMs": 57.01219940185547,
+                    "detections": 10,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.5981719493865967,
+                    "latencyMs": 50.71099853515625,
+                    "detections": 12,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.7148017883300782,
+                    "latencyMs": 51.363399505615237,
+                    "detections": 17,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.8337610960006714,
+                    "latencyMs": 48.07600021362305,
+                    "detections": 13,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 1.9504530429840088,
+                    "latencyMs": 51.11149978637695,
+                    "detections": 12,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.0694072246551515,
+                    "latencyMs": 47.928199768066409,
+                    "detections": 17,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.186051368713379,
+                    "latencyMs": 51.36880111694336,
+                    "detections": 12,
+                    "matches": 6,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.30574369430542,
+                    "latencyMs": 71.24259948730469,
+                    "detections": 15,
+                    "matches": 6,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.405768394470215,
+                    "latencyMs": 50.78229904174805,
+                    "detections": 13,
+                    "matches": 6,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.5252487659454347,
+                    "latencyMs": 70.18080139160156,
+                    "detections": 15,
+                    "matches": 6,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.6418497562408449,
+                    "latencyMs": 67.52239990234375,
+                    "detections": 12,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.7617805004119875,
+                    "latencyMs": 71.32710266113281,
+                    "detections": 13,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.861783742904663,
+                    "latencyMs": 50.46739959716797,
+                    "detections": 12,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 2.97851300239563,
+                    "latencyMs": 57.794898986816409,
+                    "detections": 8,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.0951128005981447,
+                    "latencyMs": 50.50830078125,
+                    "detections": 13,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.22713041305542,
+                    "latencyMs": 69.72270202636719,
+                    "detections": 11,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.327193021774292,
+                    "latencyMs": 51.169498443603519,
+                    "detections": 10,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.443815231323242,
+                    "latencyMs": 56.82149887084961,
+                    "detections": 11,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.5438034534454347,
+                    "latencyMs": 51.20209884643555,
+                    "detections": 13,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.6800293922424318,
+                    "latencyMs": 71.4529037475586,
+                    "detections": 8,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.78002667427063,
+                    "latencyMs": 51.93880081176758,
+                    "detections": 12,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 3.9161746501922609,
+                    "latencyMs": 71.12349700927735,
+                    "detections": 10,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.016149520874023,
+                    "latencyMs": 51.74209976196289,
+                    "detections": 8,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.135499000549316,
+                    "latencyMs": 71.31900024414063,
+                    "detections": 11,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.2355427742004398,
+                    "latencyMs": 50.992801666259769,
+                    "detections": 14,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.356630325317383,
+                    "latencyMs": 71.54319763183594,
+                    "detections": 11,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.456640243530273,
+                    "latencyMs": 51.70240020751953,
+                    "detections": 9,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.578349590301514,
+                    "latencyMs": 71.8458023071289,
+                    "detections": 12,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.6782660484313969,
+                    "latencyMs": 60.924800872802737,
+                    "detections": 12,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.815364837646484,
+                    "latencyMs": 102.63140106201172,
+                    "detections": 14,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 4.906534671783447,
+                    "latencyMs": 79.11119842529297,
+                    "detections": 12,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.0425896644592289,
+                    "latencyMs": 98.98639678955078,
+                    "detections": 15,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.132913112640381,
+                    "latencyMs": 76.63169860839844,
+                    "detections": 12,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.264858722686768,
+                    "latencyMs": 99.29090118408203,
+                    "detections": 9,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.369668006896973,
+                    "latencyMs": 66.06099700927735,
+                    "detections": 10,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.488926887512207,
+                    "latencyMs": 69.55560302734375,
+                    "detections": 10,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.58889102935791,
+                    "latencyMs": 50.4276008605957,
+                    "detections": 7,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.725167274475098,
+                    "latencyMs": 70.40190124511719,
+                    "detections": 10,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.82520866394043,
+                    "latencyMs": 51.158599853515628,
+                    "detections": 9,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 5.94891881942749,
+                    "latencyMs": 75.97769927978516,
+                    "detections": 11,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.032173156738281,
+                    "latencyMs": 61.858299255371097,
+                    "detections": 7,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.1488237380981449,
+                    "latencyMs": 50.345298767089847,
+                    "detections": 5,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.265519618988037,
+                    "latencyMs": 73.80940246582031,
+                    "detections": 9,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.382302284240723,
+                    "latencyMs": 67.70829772949219,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.48721981048584,
+                    "latencyMs": 73.216796875,
+                    "detections": 6,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.60380744934082,
+                    "latencyMs": 67.34300231933594,
+                    "detections": 7,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.714095115661621,
+                    "latencyMs": 76.71410369873047,
+                    "detections": 6,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.819912433624268,
+                    "latencyMs": 73.4844970703125,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 6.921415328979492,
+                    "latencyMs": 68.88189697265625,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.031491756439209,
+                    "latencyMs": 76.59960174560547,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.138987064361572,
+                    "latencyMs": 75.4114990234375,
+                    "detections": 6,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.242880821228027,
+                    "latencyMs": 71.3313980102539,
+                    "detections": 7,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.352066993713379,
+                    "latencyMs": 77.90129852294922,
+                    "detections": 5,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.435362815856934,
+                    "latencyMs": 50.75979995727539,
+                    "detections": 6,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.5773749351501469,
+                    "latencyMs": 77.09860229492188,
+                    "detections": 3,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.677403926849365,
+                    "latencyMs": 51.218299865722659,
+                    "detections": 4,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.816127777099609,
+                    "latencyMs": 75.02429962158203,
+                    "detections": 3,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 7.932765483856201,
+                    "latencyMs": 67.33910369873047,
+                    "detections": 4,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.032814979553223,
+                    "latencyMs": 60.93539810180664,
+                    "detections": 2,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.166482925415039,
+                    "latencyMs": 68.31269836425781,
+                    "detections": 2,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.274757385253907,
+                    "latencyMs": 81.38970184326172,
+                    "detections": 2,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.377455711364746,
+                    "latencyMs": 70.74210357666016,
+                    "detections": 2,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.477646827697754,
+                    "latencyMs": 68.49579620361328,
+                    "detections": 0,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.585468292236329,
+                    "latencyMs": 73.89550018310547,
+                    "detections": 0,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.671756744384766,
+                    "latencyMs": 53.95669937133789,
+                    "detections": 1,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.771707534790039,
+                    "latencyMs": 50.83369827270508,
+                    "detections": 0,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 8.905034065246582,
+                    "latencyMs": 67.3270034790039,
+                    "detections": 2,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.005030632019043,
+                    "latencyMs": 50.79069900512695,
+                    "detections": 3,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.139087677001954,
+                    "latencyMs": 68.26930236816406,
+                    "detections": 4,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.23993968963623,
+                    "latencyMs": 68.44650268554688,
+                    "detections": 1,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.346729278564454,
+                    "latencyMs": 73.10060119628906,
+                    "detections": 4,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.463836669921875,
+                    "latencyMs": 67.9395980834961,
+                    "detections": 3,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.570584297180176,
+                    "latencyMs": 76.64610290527344,
+                    "detections": 3,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.670592308044434,
+                    "latencyMs": 50.33580017089844,
+                    "detections": 4,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.811086654663086,
+                    "latencyMs": 73.87069702148438,
+                    "detections": 5,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 9.91102409362793,
+                    "latencyMs": 50.74290084838867,
+                    "detections": 6,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.047456741333008,
+                    "latencyMs": 70.081298828125,
+                    "detections": 7,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.147381782531739,
+                    "latencyMs": 51.021400451660159,
+                    "detections": 5,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.266192436218262,
+                    "latencyMs": 69.45390319824219,
+                    "detections": 5,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.366199493408204,
+                    "latencyMs": 50.6864013671875,
+                    "detections": 7,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.466211318969727,
+                    "latencyMs": 50.59450149536133,
+                    "detections": 8,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.582907676696778,
+                    "latencyMs": 51.1879997253418,
+                    "detections": 8,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.682891845703125,
+                    "latencyMs": 51.22010040283203,
+                    "detections": 11,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.782958984375,
+                    "latencyMs": 59.235801696777347,
+                    "detections": 8,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 10.899580001831055,
+                    "latencyMs": 51.60820007324219,
+                    "detections": 14,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.016219139099121,
+                    "latencyMs": 56.95669937133789,
+                    "detections": 10,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.132879257202149,
+                    "latencyMs": 50.71979904174805,
+                    "detections": 11,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.249556541442871,
+                    "latencyMs": 51.15530014038086,
+                    "detections": 11,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.384800910949707,
+                    "latencyMs": 73.3364028930664,
+                    "detections": 11,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.484810829162598,
+                    "latencyMs": 54.744598388671878,
+                    "detections": 12,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.584796905517579,
+                    "latencyMs": 51.35860061645508,
+                    "detections": 12,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.701468467712403,
+                    "latencyMs": 51.132198333740237,
+                    "detections": 11,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.801472663879395,
+                    "latencyMs": 51.117801666259769,
+                    "detections": 11,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 11.91816234588623,
+                    "latencyMs": 56.9838981628418,
+                    "detections": 15,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.03479290008545,
+                    "latencyMs": 50.79629898071289,
+                    "detections": 11,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.134793281555176,
+                    "latencyMs": 56.75120162963867,
+                    "detections": 9,
+                    "matches": 6,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.274911880493164,
+                    "latencyMs": 74.24610137939453,
+                    "detections": 8,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.374872207641602,
+                    "latencyMs": 51.3031005859375,
+                    "detections": 10,
+                    "matches": 6,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.509276390075684,
+                    "latencyMs": 68.28720092773438,
+                    "detections": 9,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.592617988586426,
+                    "latencyMs": 50.90760040283203,
+                    "detections": 9,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.728626251220704,
+                    "latencyMs": 69.43789672851563,
+                    "detections": 8,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.828603744506836,
+                    "latencyMs": 49.90919876098633,
+                    "detections": 8,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 12.947482109069825,
+                    "latencyMs": 69.3053970336914,
+                    "detections": 7,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.04751205444336,
+                    "latencyMs": 51.350399017333987,
+                    "detections": 10,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.183664321899414,
+                    "latencyMs": 72.302001953125,
+                    "detections": 8,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.28363037109375,
+                    "latencyMs": 51.05780029296875,
+                    "detections": 10,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.383678436279297,
+                    "latencyMs": 50.95220184326172,
+                    "detections": 6,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.500324249267579,
+                    "latencyMs": 51.280399322509769,
+                    "detections": 9,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.600290298461914,
+                    "latencyMs": 51.1609001159668,
+                    "detections": 10,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.700321197509766,
+                    "latencyMs": 51.19770050048828,
+                    "detections": 8,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.817010879516602,
+                    "latencyMs": 51.2859001159668,
+                    "detections": 6,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 13.954657554626465,
+                    "latencyMs": 71.75920104980469,
+                    "detections": 11,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.071374893188477,
+                    "latencyMs": 67.14679718017578,
+                    "detections": 10,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.15461540222168,
+                    "latencyMs": 51.254798889160159,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.271319389343262,
+                    "latencyMs": 57.109500885009769,
+                    "detections": 11,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.371343612670899,
+                    "latencyMs": 50.44169998168945,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.489623069763184,
+                    "latencyMs": 69.28119659423828,
+                    "detections": 12,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.5896577835083,
+                    "latencyMs": 50.503700256347659,
+                    "detections": 13,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.724292755126954,
+                    "latencyMs": 68.77449798583985,
+                    "detections": 12,
+                    "matches": 5,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.82426929473877,
+                    "latencyMs": 50.782100677490237,
+                    "detections": 10,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 14.944729804992676,
+                    "latencyMs": 70.21700286865235,
+                    "detections": 15,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.061417579650879,
+                    "latencyMs": 67.53489685058594,
+                    "detections": 10,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.164424896240235,
+                    "latencyMs": 71.16519927978516,
+                    "detections": 9,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.264423370361329,
+                    "latencyMs": 50.74150085449219,
+                    "detections": 8,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.364447593688965,
+                    "latencyMs": 50.75469970703125,
+                    "detections": 9,
+                    "matches": 0,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.481215476989746,
+                    "latencyMs": 51.74639892578125,
+                    "detections": 7,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.616430282592774,
+                    "latencyMs": 69.0647964477539,
+                    "detections": 12,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.71640682220459,
+                    "latencyMs": 51.44110107421875,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.851968765258789,
+                    "latencyMs": 70.29979705810547,
+                    "detections": 7,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 15.952253341674805,
+                    "latencyMs": 51.448299407958987,
+                    "detections": 9,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.087249755859376,
+                    "latencyMs": 69.26679992675781,
+                    "detections": 7,
+                    "matches": 2,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.187294006347658,
+                    "latencyMs": 51.25040054321289,
+                    "detections": 10,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.30678367614746,
+                    "latencyMs": 70.24310302734375,
+                    "detections": 8,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.406814575195314,
+                    "latencyMs": 50.7666015625,
+                    "detections": 7,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.543569564819337,
+                    "latencyMs": 70.41290283203125,
+                    "detections": 7,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.643531799316408,
+                    "latencyMs": 50.96419906616211,
+                    "detections": 6,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.74356460571289,
+                    "latencyMs": 51.34320068359375,
+                    "detections": 6,
+                    "matches": 1,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.860273361206056,
+                    "latencyMs": 52.185001373291019,
+                    "detections": 7,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 16.976926803588868,
+                    "latencyMs": 58.35940170288086,
+                    "detections": 5,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 17.093555450439454,
+                    "latencyMs": 51.23740005493164,
+                    "detections": 4,
+                    "matches": 4,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                },
+                {
+                    "seconds": 17.210176467895509,
+                    "latencyMs": 58.018798828125,
+                    "detections": 4,
+                    "matches": 3,
+                    "hazardMatched": false,
+                    "hazardClass": "",
+                    "hazardConfidence": 0.0
+                }
+            ]
+        }
+    ]
+}

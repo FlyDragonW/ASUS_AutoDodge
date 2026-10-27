@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-13T19:01:19.2944218Z",
+  "configSha256": "12dad162b795bf32526b6bee4479e9859b3f9df50ac80b89bd1ff39c8cf90be4",
+  "order": [
+    "v2",
+    "coco-l",
+    "v4l"
+  ],
+  "files": [
+    {
+      "sha256": "5fe0feb393cdbee8bf368b5df6dc721f2cd9816d1fc993306b75f2504c9b4c1b",
+      "path": "Assets/TaiwanRider/Editor/AvoidanceBenchmark.cs"
+    },
+    {
+      "sha256": "cef59b345c90b9a87234c9875c668497d4f0e10ab467b14bb5185dccda1df12e",
+      "path": "Assets/TaiwanRider/Editor/VisionIntegrationCheck.cs"
+    },
+    {
+      "sha256": "d88d23d64e8e233e5f03ce4cb43b6d2a7d8e06fdd3dd7428dce27a764d08d4a6",
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-coco-l.onnx"
+    },
+    {
+      "sha256": "f224ea4e4314cecb8e4250f1607d9c75a019e878dba64e3b5472eb638576e54d",
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-coco-l.onnx.meta"
+    },
+    {
+      "sha256": "d0cd520e2b52d2518735eb3d5a04939a27c0777788bae7d8ad2ea9b37b70d219",
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v2.onnx"
+    },
+    {
+      "sha256": "c577e094acac900934b9ab361ab49db6cb4bbca0370cd19d4cacad5969feaa39",
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v4l.onnx"
+    },
+    {
+      "sha256": "89ee507f1e57d63168ced46aa9aefe9364b3c64a7c1be862254bb55410b295b8",
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v4l.onnx.meta"
+    },
+    {
+      "sha256": "7dd9cf1d64bf3e1bd5a76b3e6e9973a6b02606c680bebac4ad2a30bedcda9e8d",
+      "path": "Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs"
+    },
+    {
+      "sha256": "d2e2b2e55af970bf05d6554871a3a2fe2a5e707387759ee4d0af841daeb70d18",
+      "path": "Assets/TaiwanRider/Runtime/HazardActor.cs"
+    },
+    {
+      "sha256": "ecf0499e5c7c6e5360dec2e2426767d7e874ecc28baec27dc7174e4ba8e8e1b2",
+      "path": "Assets/TaiwanRider/Runtime/RadarSensor.cs"
+    },
+    {
+      "sha256": "fcd190f3ce347ef982294ab8163cfd9ed833d181893b17ebe2bb13a3c9613221",
+      "path": "Assets/TaiwanRider/Runtime/RiderVisionSensor.cs"
+    },
+    {
+      "sha256": "511e3c3f24dc9bc13390d4d44dd27b576d9ca66e14e7f74b63e9d83c3da6ad67",
+      "path": "Assets/TaiwanRider/Runtime/ScooterController.cs"
+    },
+    {
+      "sha256": "c3ccf01a22d531900cc49af73eb530b8a8f02595104d2536195f598fa4776b16",
+      "path": "Assets/TaiwanRider/Scenes/GongguanRide.unity"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "asset": "Intersection detail • reference-informed v1",
+  "generator": "Assets/TaiwanRider/Editor/IntersectionDetailSetup.cs",
+  "method": "Original procedural geometry based on the existing metric route and estimated building layout; nearby reference photographs inform construction details only.",
+  "accuracy": "Not photogrammetry or a surveyed reconstruction. No claim that the shop names, windows, facade colors, air conditioners, drain placement, alley background buildings, or inferred 32–76 metre alley continuation match the real addresses.",
+  "scope": {
+    "hero_buildings": ["Building_-1_11", "Building_-1_12", "Building_-1_13", "Building_-1_14", "Building_-1_15", "Building_1_39", "Building_1_40", "Building_1_41", "Building_1_42"],
+    "hero_road_z_metres": [-23.6, 22.0],
+    "preserved": ["OSM centreline", "existing colliders", "road width", "scenario triggers", "hazard paths", "player controls"],
+    "generated_colliders": 0,
+    "layer": "Ignore Raycast (2)",
+    "batching": "Geometry combined by material; nine small TextMesh shop labels remain separate.",
+    "undo": "Apply replaces the named detail root and hides the nine source facade objects. Remove restores those source facade objects. Generated assets are retained for deterministic reuse."
+  },
+  "visual_features": [
+    "Metric arcade pillars, stone plinths, grouted paving and recessed shop fronts",
+    "Metal rolling shutters, aluminium door frames, modest fictional shop fascias",
+    "Pitched canopies, exposed support frames, gutters, rainwater pipes and utility meters",
+    "Varied windows with curtains, sparse security grilles and service equipment",
+    "Windows and floor bands on both alley-facing corner return walls",
+    "Curb wear, surface gutters and slotted drain covers",
+    "Non-playable background alley continuation that screens the finite map edge"
+  ],
+  "reference_photographs": [
+    {
+      "local_file": "Sources/References/reference_0.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Roosevelt_Road_Sec.4_Lane_78,_Taipei_(near_Alley_2).jpg",
+      "author": "Kiyoteru Awaji",
+      "license": "CC BY 4.0",
+      "observed": "Surface-mounted pipes and wires, awning steelwork, security grilles, utility meters, concrete wear and drain grates. Nearby lane rather than exact modeled corner."
+    },
+    {
+      "local_file": "Sources/References/reference_3.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:TCPD_SWAT_ANA-0922_left_side_on_Tingzhou_Road_20240907.jpg",
+      "author": "Solomon203",
+      "license": "CC BY-SA 4.0",
+      "observed": "Tingzhou Road ground-floor shop framing, recessed entries, wall meters and material scale behind the vehicle."
+    }
+  ],
+  "photograph_use": "Reference only. No photograph pixels are embedded in meshes, textures or the game build.",
+  "textures": "Reuses the project's existing concrete_wall_003, concrete_tile_facade, concrete_floor_worn_001 and asphalt_02 maps. Existing Sources/asset-manifest.json and THIRD_PARTY_NOTICES.txt retain their provenance.",
+  "fictional_shop_names": ["日常食堂", "生活電器", "街角茶舖", "文具・影印", "老街麵館", "機車維修", "日常小舖", "巷口茶行", "生活雜貨"]
+}

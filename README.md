@@ -8,6 +8,8 @@ We have completed a working pipeline: **generate synthetic training images in Un
 
 ## Watch the demo
 
+This video and the screenshots below were recorded with **v1**. The current default is **v2 with the updated dynamic avoidance controller**; see the [fixed-timing controller comparison](Validation/DynamicAvoidance/RESULTS.md). COCO l and v4l remain selectable.
+
 [Watch the 2-minute demo — MP4, 720p](Validation/Demo/RideReflex-vision-demo.mp4) · [Chinese voiceover script](docs/DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](Validation/Demo/RideReflex-vision-demo.srt)
 
 The video follows **digital twin → unassisted collisions and our motivation → trained vision model → Raycast distance sensing → fewer false alarms → dense-fog fallback → UGen300 plans**. It has Chinese / English subtitles, with **no in-game UI or slide screens**. Detection boxes come from actual model outputs. The soundtrack is left open for voiceover.
@@ -27,38 +29,82 @@ The video follows **digital twin → unassisted collisions and our motivation �
 
 The fog comparison uses the same simulated visibility in both runs. The fusion segment displays live Raycast beams; these visualization rays are excluded from the model camera input. Raycast geometry remains available when the model provides no reliable visual evidence. This demonstrates fallback in Unity; real sensor behavior in fog has not been tested.
 
-### Latest screenshots
+### Demo screenshots (v1)
 
 | Camera perception | First-person avoidance |
 |---|---|
 | ![Actual model output: a car detected at 0.95 confidence, with no game UI](Validation/Demo/RideReflex-vision-detection.png) | ![First-person view while steering around a parked car, with no game UI or sensor rays](Validation/Demo/RideReflex-first-person.png) |
 | A recorded YOLOv8n prediction on the exact camera input. | Vision + Raycast run, passing a car stopped in the lane. |
 
-Both images are frames from the latest Unity capture. The detection box is added from recorded model output; the first-person image is a clean camera frame.
+Both images are frames from the v1 demo capture. The detection box is added from recorded model output; the first-person image is a clean camera frame.
 
 ## What works today
 
 | Component | Implemented |
 |---|---|
-| Training pipeline | 1,600 labeled synthetic images; 1,200 train / 200 validation / 200 test. YOLOv8n fine-tuned for cars and motorcycles. |
+| Training pipeline | v2: 5,000 synthetic images; 4,000 train / 500 validation / 500 test. YOLOv8n fine-tuned for cars and motorcycles. |
 | [Camera perception](Assets/TaiwanRider/Runtime/RiderVisionSensor.cs) | ONNX inference inside Unity Inference Engine, using a dedicated first-person camera and the host GPU. |
 | [Distance sensing](Assets/TaiwanRider/Runtime/RadarSensor.cs) | 68 Raycasts simulate surrounding distance sensing; repeated contacts estimate obstacle motion. |
 | Sensor association | Model boxes and classes are matched to projected Raycast contacts. Confidence and freshness checks decide whether visual evidence may affect control. |
-| [Avoidance](Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs) | A rule-based controller predicts conflicts, brakes for crossing traffic, or steers through an available side before returning to the route. |
+| [Avoidance](Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs) | A rule-based controller repeatedly compares braking and steering trajectories for moving traffic. Static obstacles use side-clearance checks; if both sides are blocked, it holds the stop until the forward corridor clears. |
 | Fallback | Missing, ambiguous, low-confidence or stale visual evidence leaves the Raycast policy available. |
 
 ```text
-First-person RGB → YOLOv8n → class / confidence / image box
+First-person RGB → YOLOv8 (n / l) → class / confidence / image box
 Raycast contacts → distance / motion / bounds
                   ↓ association
        rule-based risk prediction → brake / steering / throttle
 ```
 
-The sensor casts **44 surrounding rays and 24 forward rays**, reaching up to **32 m ahead, 16 m sideways and 10 m behind**. Consecutive hits estimate relative motion; the controller predicts overlap with obstacle bounds, then checks left / right route offsets for clearance. Crossing traffic triggers braking, and the rider returns to the original route after the conflict passes.
+The sensor casts **44 surrounding rays and 24 forward rays**, reaching up to **32 m ahead, 16 m sideways and 10 m behind**. Consecutive hits estimate relative motion; the controller predicts overlap with obstacle bounds, then checks left / right route offsets for clearance. Moving traffic is checked with short-horizon vehicle rollouts, refreshed about every 40 ms while risk persists. The controller prefers a clear braking path, considers maintaining cruise only when a complete predicted path is clear, and brakes when none is clear. The rider returns to the route after the conflict passes.
 
 Visual classification can extend the prediction horizon from **1.8 s** to **2.2 s for cars** or **2.4 s for motorcycles**. These are manually configured control rules. The learned model supplies perception; distance, steering and braking use the simulator's geometry and controller.
 
 ## Evidence so far
+
+### Fixed-timing v2 controller comparison — 2026-10-14
+
+Both controllers were rerun with **the same v2 detector and fixed physics-step hazard triggers**. The updated controller uses measured motion trends and repeated braking / steering trajectory checks.
+
+| Check | Previous controller | Updated controller |
+|---|---|---|
+| Main suite / 48 | 30 completed / 8 stopped / 10 collisions | 36 completed / 8 stopped / 4 collisions |
+| Unnecessary interventions / 16 | 0 | 0 |
+| Dynamic repeat / 16, collisions | 10 | 6 |
+| Held-out simulation conditions / 16, collisions | 2 | 2 |
+
+The detector weights are unchanged; these are controller results. Remaining collisions, repeat variability and steering intensity are reported alongside successes. The simplified vehicle model does not enforce real motorcycle stability limits. [Full comparison, stop-hold checks and reproduction](Validation/DynamicAvoidance/RESULTS.md).
+
+### Earlier three-model comparison — 2026-10-14
+
+v2, COCO l and v4l are selectable with `-visionModel v2`, `-visionModel coco-l` and `-visionModel v4l`. **v2 remains the default.** All three were rerun with the same repaired Raycast controller and 48 matched conditions.
+
+| Model | Completed / stopped / collisions | Unnecessary interventions | Mean capture-to-result latency |
+|---|---|---|---|
+| v2 (n) | 30 / 8 / 10 | 0 / 16 | 40.1 ms |
+| COCO l | 31 / 8 / 9 | 0 / 16 | 179.3 ms |
+| v4l | 30 / 8 / 10 | 0 / 16 | 219.6 ms |
+
+The one changed outcome (COCO l, foggy crossing at 20 km/h) used Raycast for initial braking, with zero vision-extended risk steps in both runs. It is not evidence of improved visual avoidance. GPU thermal throttling was recorded during the large-model runs, so latency differences include thermal state and run order.
+
+Additional stop-hold / release checks passed: 12 / 12. Latencies include rendering, scheduling and readback on an RTX 3060 Laptop; these sequential real-time runs are not a UGen300 hardware measurement or statistical safety result.
+
+On the previously evaluated 406-image ACDC development subset, two-class mAP50 is **22.76% / 53.04% / 52.46%** for v2 / COCO l / v4l. v4l uses additional Unity-only training data, but is 0.58 percentage points below its same-capacity COCO initialization on ACDC. Higher offline AP alone does not establish better avoidance. [Full results, freshness, latency, per-scenario outcomes and commands](Validation/VisionLargeModels/RESULTS.md).
+
+### Earlier v1/v2 comparison — 2026-10-13
+
+Both models were rerun with the **same repaired Raycast controller**, thresholds and 48 scenario conditions per model.
+
+| Check | v1 | v2 |
+|---|---|---|
+| Closed-loop outcomes / 48 | 30 completed / 8 stopped / 10 collisions | 30 completed / 8 stopped / 10 collisions |
+| Unnecessary interventions on clear-road / roadside-car cases | 0 / 16 | 0 / 16 |
+| Detection mAP50, same 500 synthetic test images | 66.14% | 76.43% |
+| Detection mAP50, 406-image ACDC development subset | 6.81% | 22.76% |
+
+The additional 8 stop-hold / release checks all passed. At confidence 0.60 on the synthetic test set, v2 reduces false detections but increases missed detections (FP 441 → 9; FN 422 → 505). Better detection scores have not established better avoidance safety: late dynamic conflicts remain a controller limitation. Single real-time runs per condition are not a real-road collision rate. [Full results, per-scenario breakdown and reproduction](Validation/VisionV2/RESULTS.md).
+
+### Earlier v1 integration and demo examples
 
 | Check | Result | Scope |
 |---|---|---|
@@ -106,6 +152,6 @@ Open [`Assets/TaiwanRider/Scenes/GongguanRide.unity`](Assets/TaiwanRider/Scenes/
 | `V` | Switch first / third person |
 | `G` | Show / hide sensor rays |
 
-The repository contains the Unity source project. See [Vision v1](docs/VISION_MODEL.md#reproduce-the-integration-check) for the automated check, including the parked-car scenario.
+The repository contains the Unity source project. See [vision model documentation](docs/VISION_MODEL.md) and the [three-model benchmark](Validation/VisionLargeModels/RESULTS.md) for the automated check, including the parked-car scenario.
 
 Asset attribution: [source manifest](Sources/asset-manifest.json) · [third-party notices](Sources/THIRD_PARTY_NOTICES.txt).

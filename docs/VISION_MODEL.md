@@ -1,4 +1,48 @@
-# RideReflex vision v1
+# RideReflex vision
+
+## Current default: v2 — 2026-10-13
+
+Unity now loads **ridereflex-vision-v2.onnx** by default. Use `-visionModel v1`, `-visionModel v2`, `-visionModel coco-l` or `-visionModel v4l` on the Unity Editor/player command line to select the checkpoint; reports record the actual `modelResourcePath`. All four assets remain available. The input, preprocessing, two-class output, association thresholds and fusion policy below are unchanged.
+
+v2 uses YOLOv8n initialized from COCO, fine-tuned for 20 epochs on 4,000 Unity images, with 500 validation and 500 test images. The first 10 modules are frozen. The 80-class training head is retained during fine-tuning; the deployed ONNX gathers box coordinates plus car/motorcycle channels into `[1,6,8400]`. This is not a new learned driving policy.
+
+On the same 500 synthetic test images, mAP50 is 66.14% for v1 and 76.43% for v2. On a fixed 406-image ACDC car/motorcycle development subset, it is 6.81% and 22.76%. At confidence 0.60 on the synthetic test set, FP falls from 441 to 9 while FN increases from 422 to 505. These detection results do not establish a reduction in collisions.
+
+Synthetic splits still share the base street and vehicle meshes. ACDC is a development evaluation set, not a blind final benchmark.
+
+v2 ONNX SHA-256: `d0cd520e2b52d2518735eb3d5a04939a27c0777788bae7d8ad2ea9b37b70d219`.
+
+[Earlier v1/v2 closed-loop comparison and reproduction commands](../Validation/VisionV2/RESULTS.md) use the same repaired Raycast controller and 48 matched conditions per model, plus stop-hold/release tests. Existing demo media and the historical measurements below were recorded with v1.
+
+## Fixed physics timing and dynamic controller — 2026-10-14
+
+The default detector remains v2. Scenario triggers and automatic actuator smoothing now share the 50 Hz physics timeline. The benchmark disables Rigidbody interpolation and records trigger ticks and positions.
+
+Moving contacts use bounded measured-acceleration prediction and repeated bicycle-model rollouts of straight braking, left/right braking, and maintaining cruise only when a predicted path is clear. The planner uses the existing chassis dimensions plus a 15 cm planning margin; physical colliders, vehicle braking power, steering limits, Raycast beams and detector thresholds are unchanged. The static blocked-corridor stop-hold policy remains in place.
+
+This is a controller update, not detector retraining. The known route and collider geometry still come from Unity. Aggressive successful maneuvers can exceed realistic motorcycle stability limits because the current vehicle simulation lacks tire-friction and lean constraints. [Paired baseline / updated results, repeated and held-out cases, failures and source hashes](../Validation/DynamicAvoidance/RESULTS.md) supersede the historical controller measurements below. Demo media has not been rerecorded for this controller.
+
+## Larger model candidates integrated — 2026-10-14
+
+COCO l and v4l both run directly in Unity Inference Engine GPUCompute with the same FP32 `[1,3,640,640]` input and `[1,6,8400]` output. No external Python service is required for gameplay. The runtime default remains v2.
+
+- **COCO l:** original Ultralytics YOLOv8l COCO weights; exported 80-class ONNX followed by Gather `[0,1,2,3,6,7]` to retain boxes, car and motorcycle scores. No additional fine-tuning.
+- **v4l:** starts from those same COCO l weights; 3,400 synthetic training images (2,400 new + 1,000 from v2 train), 800 synthetic validation images, 4 epochs. Only 1,542 vehicle classifier parameters are updated, with a fixed COCO teacher; features, box regression, BN moments and other class rows are frozen. Epoch 4 was selected on synthetic validation.
+- Added optimizer images are all from Unity; COCO pretraining itself includes real photos. ACDC is an already-used development evaluation, not a blind test.
+- Both large models are about 175 MB each. ONNX files use the repository’s existing Git LFS rule; all Resources assets are included in normal builds.
+
+| Model | ONNX SHA-256 |
+|---|---|
+| coco-l | `d88d23d64e8e233e5f03ce4cb43b6d2a7d8e06fdd3dd7428dce27a764d08d4a6` |
+| v4l | `c577e094acac900934b9ab361ab49db6cb4bbca0370cd19d4cacad5969feaa39` |
+
+ACDC car/motorcycle mAP50: v2 **22.76%**, COCO l **53.04%**, v4l **52.46%**. On the same 500-image synthetic test set: **76.43%**, **61.05%**, **66.04%**. Game adaptation improves the l model on this synthetic test but reduces its ACDC result by 0.58 percentage points.
+
+[Fresh three-model closed-loop benchmark](../Validation/VisionLargeModels/RESULTS.md): 48 identical conditions per model, plus 4 hold/release checks each. Model loading and same-input Unity GPU / CPU ORT parity passed for all three. The report separates matched versus fresh evidence, latency, actual inference rate, collisions and unnecessary interventions.
+
+Reproduce a single model with `-executeMethod TaiwanRider.Editor.AvoidanceBenchmark.Begin -visionModel coco-l -benchmarkConfig <absolute-config.json> -benchmarkOutput <new-output-directory>` using `-batchmode` with graphics enabled. Replace `coco-l` with `v2` or `v4l`; thresholds and scenarios are identical.
+
+## Historical v1 model
 
 ## Model
 
@@ -24,7 +68,7 @@ Held-out test mAP@50: **84.2%**; mAP@50–95: **65.6%**. These are object detect
 4. Decode scores ≥ 0.25, apply same-class NMS at IoU 0.7, retain at most 100 boxes.
 5. Only detections with confidence ≥ 0.60 may affect control. Project existing raycast contact bounds into the camera at capture time. Match detections one-to-one by overlap (IoU ≥ 0.15 and detected box center inside projected bounds). Reject similarly good competing matches. This is a simple association heuristic, not learned multi-object tracking.
 6. A fresh matched car extends the collision prediction horizon from 1.8 to 2.2 seconds; a motorcycle extends it to 2.4 seconds. These are manually chosen policy parameters. They do not change steering geometry or remove unmatched obstacles.
-7. If matching fails, the model is disabled/unavailable, or evidence is older than 350 ms in either game time or wall time, use the original 1.8-second Raycast policy. Reset and toggle invalidate in-flight results. Unmatched visual detections alone cannot command steering or braking.
+7. If matching fails, the model is disabled/unavailable, or evidence is older than 350 ms in either game time or wall time, use the base 1.8-second Raycast horizon. Reset and toggle invalidate in-flight results. Unmatched visual detections alone cannot command steering or braking.
 
 The visual class comes only from RGB inference. Distance, velocity and object size still come from the simulated raycast/collider tracker. Exact collider bounds and the known route are simulator privileges; this is not a physical radar implementation.
 
@@ -81,7 +125,7 @@ To record the check with FFmpeg available:
 
 ```powershell
 & '<Unity Editor>/Unity.exe' -batchmode -projectPath '<checkout>' `
-  -executeMethod TaiwanRider.Editor.VisionFalsePositiveCapture.Begin `
+  -executeMethod TaiwanRider.Editor.VisionFalsePositiveCapture.Begin -visionModel v1 `
   -falsePositiveOutput '<absolute output directory>' -ffmpegPath '<ffmpeg.exe>' `
   -logFile '<absolute log file>'
 ```
@@ -103,7 +147,7 @@ Reproduce the fog pair with the same scene and assets:
 
 ```powershell
 & '<Unity Editor>/Unity.exe' -batchmode -projectPath '<checkout>' `
-  -executeMethod TaiwanRider.Editor.VisionFogCapture.Begin `
+  -executeMethod TaiwanRider.Editor.VisionFogCapture.Begin -visionModel v1 `
   -fogOutput '<absolute output directory>' -fogShowRays true `
   -ffmpegPath '<ffmpeg.exe>' `
   -logFile '<absolute log file>'
@@ -129,7 +173,7 @@ Run the editor with graphics enabled (do not use `-nographics`):
 
 ```powershell
 & '<Unity Editor>/Unity.exe' -batchmode -projectPath '<checkout>' `
-  -executeMethod TaiwanRider.Editor.VisionIntegrationCheck.Begin `
+  -executeMethod TaiwanRider.Editor.VisionIntegrationCheck.Begin -visionModel v1 `
   -visionOutput '<absolute output directory>' -logFile '<absolute log file>'
 ```
 

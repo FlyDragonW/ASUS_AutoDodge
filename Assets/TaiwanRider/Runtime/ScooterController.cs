@@ -20,12 +20,25 @@ namespace TaiwanRider
         public float Throttle { get; private set; }
         public float Brake { get; private set; }
         public float Steer { get; private set; }
+        public float ImpactSpeedKph { get; private set; }
+        public float ImpactRelativeSpeedKph { get; private set; }
         public bool cameraMotion = true;
         Quaternion cameraHome, steeringHome, frontHome, rearHome, needleHome;
         Vector3 cameraPosition;
         Vector3 lastRideVelocity;
         float lookYaw, lookPitch, wheelSpin, steeringAngle;
         AudioSource engine;
+        // Instrument.png uses a 195..345 degree arc on a 1024x512 image.
+        // Match the 273x159 mm dial plane, including its non-square pixel scale.
+        public static float GaugeAngleForSpeed(float speedKph)
+        {
+            float angle=(195f+1.5f*Mathf.Clamp(speedKph,0,100))*Mathf.Deg2Rad;
+            float x=Mathf.Cos(angle)*.273f/1024f;
+            float y=-Mathf.Sin(angle)*.159f/512f;
+            // FBX converts Blender's handedness; Unity positive local Z turns
+            // this imported needle clockwise as seen by the rider.
+            return Mathf.Atan2(x,y)*Mathf.Rad2Deg;
+        }
         void Awake()
         {
             Body = GetComponent<Rigidbody>();
@@ -60,9 +73,9 @@ namespace TaiwanRider
                     s=(keyboard.dKey.isPressed?1:0)-(keyboard.aKey.isPressed?1:0);
                 }
             }
-            Throttle=Mathf.MoveTowards(Throttle,Mathf.Clamp01(t),Time.deltaTime*3f);
-            Brake=Mathf.MoveTowards(Brake,Mathf.Clamp01(b),Time.deltaTime*7f);
-            Steer=Mathf.MoveTowards(Steer,Mathf.Clamp(s,-1,1),Time.deltaTime*3.5f);
+            // Automated commands are sampled immediately before integration in FixedUpdate.
+            // Keyboard input and free-look remain frame driven.
+            if(controls==null)ApplyControl(t,b,s,Time.deltaTime);
             // Looking around is independent of whether the rider or autopilot supplies driving input.
             if(active && Mouse.current!=null && Cursor.lockState==CursorLockMode.Locked && InputOverride==null && (!session.Demo || !session.Demo.ThirdPerson))
             {
@@ -73,9 +86,17 @@ namespace TaiwanRider
             }
             if(engine){engine.pitch=Mathf.Min(2.5f,.72f+SpeedKph*.026f+Throttle*.32f);engine.volume=HasCrashed?0:active?.055f+Throttle*.09f:.035f;}
         }
+        void ApplyControl(float throttle,float brake,float steer,float dt)
+        {
+            Throttle=Mathf.MoveTowards(Throttle,Mathf.Clamp01(throttle),dt*3f);
+            Brake=Mathf.MoveTowards(Brake,Mathf.Clamp01(brake),dt*7f);
+            Steer=Mathf.MoveTowards(Steer,Mathf.Clamp(steer,-1,1),dt*3.5f);
+        }
         void FixedUpdate()
         {
             if(!session || !session.IsRunning){frontWheel.brakeTorque=rearWheel.brakeTorque=600;rearWheel.motorTorque=0;return;}
+            var controls=InputOverride ?? (session.DemoMode?AutomaticInput:null);
+            if(controls!=null)ApplyControl(controls.Throttle,controls.Brake,controls.Steer,Time.fixedDeltaTime);
             steeringAngle=Steer*Mathf.Lerp(definition.steeringDegrees,10f,SpeedKph/definition.topSpeedKph);
             // Assisted bicycle model with a grounded rigidbody chassis.
             rearWheel.motorTorque=0;frontWheel.brakeTorque=rearWheel.brakeTorque=0;
@@ -104,14 +125,14 @@ namespace TaiwanRider
             wheelSpin+=SpeedKph/3.6f/definition.wheelRadius*Mathf.Rad2Deg*Time.deltaTime;
             if(frontVisualWheel) frontVisualWheel.localRotation=Quaternion.Euler(0,0,steeringAngle)*frontHome*Quaternion.Euler(wheelSpin,0,0);
             if(rearVisualWheel) rearVisualWheel.localRotation=rearHome*Quaternion.Euler(wheelSpin,0,0);
-            if(needle) needle.localRotation=needleHome*Quaternion.Euler(0,0,Mathf.Lerp(105,-105,SpeedKph/100f));
+            if(needle) needle.localRotation=needleHome*Quaternion.Euler(0,0,GaugeAngleForSpeed(SpeedKph));
             float motion=cameraMotion?Mathf.Sin(Time.time*19)*Mathf.Clamp01(SpeedKph/30)*.0016f:0;
             cameraRig.localPosition=cameraPosition+Vector3.up*motion;
             cameraRig.localRotation=cameraHome*Quaternion.Euler(lookPitch+(cameraMotion?Brake*.65f:0),lookYaw,cameraMotion?lean*.075f:0);
         }
         public void ResetVehicle(Vector3 position, Quaternion rotation)
         {
-            if(Crash)Crash.ResetCrash();lastRideVelocity=Vector3.zero;
+            if(Crash)Crash.ResetCrash();lastRideVelocity=Vector3.zero;ImpactSpeedKph=ImpactRelativeSpeedKph=0;
             transform.SetPositionAndRotation(position,rotation);
             Body.position=position;Body.rotation=rotation;
             Body.linearVelocity=Vector3.zero;Body.angularVelocity=Vector3.zero;
@@ -121,6 +142,8 @@ namespace TaiwanRider
             Throttle=Brake=Steer=lookYaw=lookPitch=wheelSpin=0;
             visualBody.localRotation=Quaternion.identity;
             cameraRig.localPosition=cameraPosition;cameraRig.localRotation=cameraHome;
+            var cameraData=riderCamera.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>();
+            if(cameraData)cameraData.resetHistory=true;
         }
         public void LaunchRider(Vector3 impactNormal,Collider struckCollider=null)
         {
@@ -133,6 +156,8 @@ namespace TaiwanRider
             if(!session || !session.IsRunning || Mathf.Max(SpeedKph,hit.relativeVelocity.magnitude*3.6f)<1.5f) return;
             if(hit.collider.gameObject.layer==10 || (hit.contacts.Length>0 && Mathf.Abs(hit.contacts[0].normal.y)<.6f))
             {
+                ImpactSpeedKph=Mathf.Max(SpeedKph,lastRideVelocity.magnitude*3.6f);
+                ImpactRelativeSpeedKph=hit.relativeVelocity.magnitude*3.6f;
                 LaunchRider(hit.contactCount>0?hit.GetContact(0).normal:-transform.forward,hit.collider);
                 session.Finish(true,hit.collider.transform.root.name);
             }

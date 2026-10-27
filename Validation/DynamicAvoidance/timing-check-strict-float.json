@@ -1,0 +1,61 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "id": "cut_in-40-clear-v1",
+      "tick30": 111,
+      "tick90": 111,
+      "position_delta": 3.938690080451909e-05,
+      "same_outcome": true
+    },
+    {
+      "id": "crossing-20-clear-v0",
+      "tick30": 267,
+      "tick90": 267,
+      "position_delta": 2.9815730416641737e-06,
+      "same_outcome": true
+    },
+    {
+      "id": "crossing-20-clear-v1",
+      "tick30": 283,
+      "tick90": 283,
+      "position_delta": 0.0,
+      "same_outcome": true
+    },
+    {
+      "id": "crossing-40-clear-v0",
+      "tick30": 113,
+      "tick90": 113,
+      "position_delta": 2.54472221635436e-05,
+      "same_outcome": true
+    },
+    {
+      "id": "crossing-40-clear-v1",
+      "tick30": 111,
+      "tick90": 111,
+      "position_delta": 0.0,
+      "same_outcome": true
+    },
+    {
+      "id": "cut_in-20-clear-v0",
+      "tick30": 267,
+      "tick90": 267,
+      "position_delta": 2.9815730416641737e-06,
+      "same_outcome": true
+    },
+    {
+      "id": "cut_in-20-clear-v1",
+      "tick30": 283,
+      "tick90": 283,
+      "position_delta": 3.5454744638786882e-06,
+      "same_outcome": true
+    },
+    {
+      "id": "cut_in-40-clear-v0",
+      "tick30": 113,
+      "tick90": 113,
+      "position_delta": 0.0,
+      "same_outcome": true
+    }
+  ]
+}

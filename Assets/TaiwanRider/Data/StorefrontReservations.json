@@ -1,0 +1,1035 @@
+{
+  "scope": "Additional photo-referenced shops; estimated metric subdivision. Empty buildingId identifies an explicit OSM footprint gap.",
+  "groups": [
+    {
+      "id": "E01",
+      "buildingId": "1287937527",
+      "edgeIndex": 1,
+      "center": {
+        "x": 9.60946836852323,
+        "y": 0,
+        "z": 76.95560950000001
+      },
+      "width": 2.78,
+      "height": 3.75,
+      "sceneName": "E01_225_NailCrop • OSM 1287937527",
+      "sourceFile": "east-shops.json"
+    },
+    {
+      "id": "E02",
+      "buildingId": "1287937527",
+      "edgeIndex": 1,
+      "center": {
+        "x": 9.35591088737734,
+        "y": 0,
+        "z": 74.029094797773
+      },
+      "width": 2.78,
+      "height": 3.75,
+      "sceneName": "E02_227_Snowball • OSM 1287937527",
+      "sourceFile": "east-shops.json"
+    },
+    {
+      "id": "E03",
+      "buildingId": "1287937528",
+      "edgeIndex": 1,
+      "center": {
+        "x": 8.761544913757598,
+        "y": 0,
+        "z": 64.9980825
+      },
+      "width": 2.2,
+      "height": 3.95,
+      "sceneName": "E03_233_XiHeJiaCrop • OSM 1287937528",
+      "sourceFile": "east-shops.json"
+    },
+    {
+      "id": "E04",
+      "buildingId": "1287937528",
+      "edgeIndex": 1,
+      "center": {
+        "x": 8.694745138929862,
+        "y": 0,
+        "z": 67.2580825
+      },
+      "width": 2.2,
+      "height": 3.95,
+      "sceneName": "E04_231_Rongcheng • OSM 1287937528",
+      "sourceFile": "east-shops.json"
+    },
+    {
+      "id": "NW01",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -10.616542573476742,
+        "y": 0,
+        "z": -16.996524733601714
+      },
+      "width": 13.229639,
+      "height": 11.4,
+      "sceneName": "Northwest shops • unmapped photo and POI estimate • 166–168",
+      "sourceFile": "northwest-shops.json"
+    },
+    {
+      "id": "W2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -8.483641882422365,
+        "y": 0,
+        "z": -2.5
+      },
+      "width": 3.9,
+      "height": 10.8,
+      "sceneName": "W2501_162 • unmapped estimated frontage",
+      "sourceFile": "walk-2025-shops.json"
+    },
+    {
+      "id": "W2502",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -9.07658329030513,
+        "y": 0,
+        "z": -6.53
+      },
+      "width": 3.9,
+      "height": 4.1,
+      "sceneName": "W2502_164 • unmapped estimated frontage",
+      "sourceFile": "walk-2025-shops.json"
+    },
+    {
+      "id": "W2503",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -11.695530451673182,
+        "y": 0,
+        "z": -24.33
+      },
+      "width": 3.85,
+      "height": 10.8,
+      "sceneName": "W2503_170 • unmapped estimated frontage",
+      "sourceFile": "walk-2025-shops.json"
+    },
+    {
+      "id": "W2504",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -12.2678733987362,
+        "y": 0,
+        "z": -28.22
+      },
+      "width": 3.85,
+      "height": 8.3,
+      "sceneName": "W2504_172 • unmapped estimated frontage",
+      "sourceFile": "walk-2025-shops.json"
+    },
+    {
+      "id": "W2505",
+      "buildingId": "430626213",
+      "edgeIndex": 2,
+      "center": {
+        "x": -13.393812445497248,
+        "y": 0,
+        "z": -41.4304195
+      },
+      "width": 3.05,
+      "height": 4.1,
+      "sceneName": "W2505_174 • OSM 430626213",
+      "sourceFile": "walk-2025-shops.json"
+    },
+    {
+      "id": "W2506",
+      "buildingId": "430626213",
+      "edgeIndex": 2,
+      "center": {
+        "x": -13.871334243380199,
+        "y": 0,
+        "z": -44.3704195
+      },
+      "width": 2.75,
+      "height": 4.1,
+      "sceneName": "W2506_174-1 • OSM 430626213",
+      "sourceFile": "walk-2025-shops.json"
+    },
+    {
+      "id": "W2507",
+      "buildingId": "430626213",
+      "edgeIndex": 2,
+      "center": {
+        "x": -14.618477192448761,
+        "y": 0,
+        "z": -48.9704195
+      },
+      "width": 6.35,
+      "height": 4.06,
+      "sceneName": "W2507_176 • OSM 430626213",
+      "sourceFile": "walk-2025-shops.json",
+      "visualHeight": 8.0
+    },
+    {
+      "id": "W2508",
+      "buildingId": "598376010",
+      "edgeIndex": 0,
+      "center": {
+        "x": -15.025601986610019,
+        "y": 0,
+        "z": -59.774345499999995
+      },
+      "width": 8.75,
+      "height": 4.08,
+      "sceneName": "W2508_178 • OSM 598376010",
+      "sourceFile": "walk-2025-shops.json",
+      "visualHeight": 7.85
+    },
+    {
+      "id": "W2509",
+      "buildingId": "598376010",
+      "edgeIndex": 0,
+      "center": {
+        "x": -17.091819365224598,
+        "y": 0,
+        "z": -68.9043455
+      },
+      "width": 9.35,
+      "height": 4.13,
+      "sceneName": "W2509_180 • OSM 598376010",
+      "sourceFile": "walk-2025-shops.json",
+      "visualHeight": 6.3
+    },
+    {
+      "id": "NR2501",
+      "buildingId": "751353368",
+      "edgeIndex": 1,
+      "center": {
+        "x": -6.0757533062758355,
+        "y": 0,
+        "z": 100.89553450000001
+      },
+      "width": 4.45,
+      "height": 4.1,
+      "visualHeight": 4.1,
+      "sceneName": "NR2501_128_辰TOY • OSM 751353368",
+      "sourceFile": "north-west-retail-2025.json"
+    },
+    {
+      "id": "NR2502",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -9.893352445775525,
+        "y": 0,
+        "z": 95.145853
+      },
+      "width": 3.95,
+      "height": 4.1,
+      "visualHeight": 7.05,
+      "sceneName": "NR2502_130_甘蔗媽媽 • unmapped estimated frontage",
+      "sourceFile": "north-west-retail-2025.json"
+    },
+    {
+      "id": "NR2503",
+      "buildingId": "1287937529",
+      "edgeIndex": 2,
+      "center": {
+        "x": -10.176269768596734,
+        "y": 0,
+        "z": 90.720153
+      },
+      "width": 4.45,
+      "height": 4.02,
+      "visualHeight": 5.93,
+      "sceneName": "NR2503_132_Mr. Wish • OSM 1287937529",
+      "sourceFile": "north-west-retail-2025.json"
+    },
+    {
+      "id": "NE2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 9.279032807968852,
+        "y": 0,
+        "z": 93.02899519490046
+      },
+      "width": 3.45,
+      "height": 4.05,
+      "visualHeight": 4.05,
+      "sceneName": "NE2501_217_台灣彩券 • unmapped estimated frontage",
+      "sourceFile": "north-east-2025-shops.json"
+    },
+    {
+      "id": "NE2502",
+      "buildingId": "1287937526",
+      "edgeIndex": 1,
+      "center": {
+        "x": 9.688406528223565,
+        "y": 0,
+        "z": 89.32487472303036
+      },
+      "width": 3.3,
+      "height": 3.65,
+      "visualHeight": 6.7,
+      "sceneName": "NE2502_219_泰國小館 • OSM 1287937526",
+      "sourceFile": "north-east-2025-shops.json"
+    },
+    {
+      "id": "NE2503",
+      "buildingId": "1287937526",
+      "edgeIndex": 1,
+      "center": {
+        "x": 10.403070658237096,
+        "y": 0,
+        "z": 82.8584067903862
+      },
+      "width": 3.4,
+      "height": 4.02,
+      "visualHeight": 6.72,
+      "sceneName": "NE2503_223_精展眼鏡 • OSM 1287937526",
+      "sourceFile": "north-east-2025-shops.json"
+    },
+    {
+      "id": "ME2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 8.899209169782777,
+        "y": 0,
+        "z": 52.991628031401156
+      },
+      "width": 4.8,
+      "height": 3.75,
+      "visualHeight": 3.75,
+      "sceneName": "ME2501_239 • unmapped estimated frontage",
+      "sourceFile": "mid-east-2025-shops.json"
+    },
+    {
+      "id": "ME2502",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 9.45120488032815,
+        "y": 0,
+        "z": 48.741628031401156
+      },
+      "width": 3.55,
+      "height": 4.04,
+      "visualHeight": 5.58,
+      "sceneName": "ME2502_241 • unmapped estimated frontage",
+      "sourceFile": "mid-east-2025-shops.json"
+    },
+    {
+      "id": "ME2503",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 9.918777717495995,
+        "y": 0,
+        "z": 45.141628031401154
+      },
+      "width": 3.5,
+      "height": 4.15,
+      "visualHeight": 4.15,
+      "sceneName": "ME2503_243 • unmapped estimated frontage",
+      "sourceFile": "mid-east-2025-shops.json"
+    },
+    {
+      "id": "ME2504",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 10.392844621846729,
+        "y": 0,
+        "z": 41.491628031401156
+      },
+      "width": 3.6,
+      "height": 3.68,
+      "visualHeight": 5.65,
+      "sceneName": "ME2504_245 • unmapped estimated frontage",
+      "sourceFile": "mid-east-2025-shops.json"
+    },
+    {
+      "id": "ME2505",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 11.139662347878705,
+        "y": 0,
+        "z": 35.741628031401156
+      },
+      "width": 7.7,
+      "height": 4.12,
+      "visualHeight": 4.12,
+      "sceneName": "ME2505_247 • unmapped estimated frontage",
+      "sourceFile": "mid-east-2025-shops.json"
+    },
+    {
+      "id": "MC2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 12.315088508190087,
+        "y": 0,
+        "z": 26.6916280312
+      },
+      "width": 9.6,
+      "height": 4.13,
+      "visualHeight": 7.2,
+      "sceneName": "MC2501_249_7-Eleven統全 • unmapped estimated frontage",
+      "sourceFile": "mid-convenience-2025.json"
+    },
+    {
+      "id": "MW2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -7.228545586221102,
+        "y": 0,
+        "z": 72.5958465
+      },
+      "width": 3.45,
+      "height": 4.12,
+      "visualHeight": 6.45,
+      "sceneName": "MW2501_140 • unmapped estimated frontage",
+      "sourceFile": "mid-west-retail-2025.json"
+    },
+    {
+      "id": "MW2502",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -7.476369591164205,
+        "y": 0,
+        "z": 68.7258465
+      },
+      "width": 4.15,
+      "height": 4.1,
+      "visualHeight": 4.1,
+      "sceneName": "MW2502_142 • unmapped estimated frontage",
+      "sourceFile": "mid-west-retail-2025.json"
+    },
+    {
+      "id": "MW2503",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -7.811284202495581,
+        "y": 0,
+        "z": 63.4958465
+      },
+      "width": 6.18,
+      "height": 4.1,
+      "visualHeight": 4.1,
+      "sceneName": "MW2503_144 • unmapped estimated frontage",
+      "sourceFile": "mid-west-retail-2025.json"
+    },
+    {
+      "id": "MW2504",
+      "buildingId": "767534280",
+      "edgeIndex": 3,
+      "center": {
+        "x": -8.136574021076841,
+        "y": 0,
+        "z": 58.416146499999996
+      },
+      "width": 3.72,
+      "height": 4.03,
+      "visualHeight": 6.15,
+      "sceneName": "MW2504_146 • OSM 767534280",
+      "sourceFile": "mid-west-retail-2025.json"
+    },
+    {
+      "id": "SR2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -5.46,
+        "y": 0,
+        "z": -81.94
+      },
+      "width": 6.4,
+      "height": 6.5,
+      "visualHeight": 7.14,
+      "sceneName": "SR2501_253_DreamSport_Nike • unmapped visible crop",
+      "sourceFile": "south-retail-2025-shops.json"
+    },
+    {
+      "id": "SR2502",
+      "buildingId": "366231798",
+      "edgeIndex": 4,
+      "center": {
+        "x": -25.124935892281584,
+        "y": 0,
+        "z": -87.54556886519748
+      },
+      "width": 13.68,
+      "height": 4.3,
+      "visualHeight": 4.19,
+      "sceneName": "SR2502_184-4_POYA • OSM 366231798 and north return",
+      "sourceFile": "south-retail-2025-shops.json"
+    },
+    {
+      "id": "NI2501",
+      "buildingId": "707821174",
+      "edgeIndex": 0,
+      "center": {
+        "x": 6.90066271721181,
+        "y": 0,
+        "z": 106.14448205259252
+      },
+      "width": 4.25,
+      "height": 4.05,
+      "visualHeight": 5.0,
+      "sceneName": "NI2501_Phone repair category front • OSM 707821174",
+      "sourceFile": "north-east-infill-2025.json"
+    },
+    {
+      "id": "NI2502",
+      "buildingId": "707821174",
+      "edgeIndex": 0,
+      "center": {
+        "x": 6.959140383763284,
+        "y": 0,
+        "z": 102.19991549053343
+      },
+      "width": 3.4,
+      "height": 4.05,
+      "visualHeight": 4.75,
+      "sceneName": "NI2502_Lottery A unknown door • OSM 707821174",
+      "sourceFile": "north-east-infill-2025.json"
+    },
+    {
+      "id": "NI2503",
+      "buildingId": "707821174",
+      "edgeIndex": 0,
+      "center": {
+        "x": 7.011318174957502,
+        "y": 0,
+        "z": 98.68030223363913
+      },
+      "width": 3.4,
+      "height": 3.92,
+      "visualHeight": 3.92,
+      "sceneName": "NI2503_Jinsheng orange facade • OSM 707821174",
+      "sourceFile": "north-east-infill-2025.json"
+    },
+    {
+      "id": "NI2504",
+      "buildingId": "1287937526",
+      "edgeIndex": 1,
+      "center": {
+        "x": 10.042992352372512,
+        "y": 0,
+        "z": 86.11648946213032
+      },
+      "width": 2.9958398645096813,
+      "height": 4.02,
+      "visualHeight": 3.9,
+      "sceneName": "NI2504_Anonymous closed pale 221 • OSM 1287937526",
+      "sourceFile": "north-east-infill-2025.json"
+    },
+    {
+      "id": "NI2505",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": 9.01145,
+        "y": 0,
+        "z": 70.52510000000001
+      },
+      "width": 3.75,
+      "height": 3.9,
+      "visualHeight": 5.52,
+      "sceneName": "NI2505_Fuer 229 closed frontage • unmapped estimated frontage",
+      "sourceFile": "north-east-infill-2025.json"
+    },
+    {
+      "id": "MI2501",
+      "buildingId": "767534280",
+      "edgeIndex": 3,
+      "center": {
+        "x": -8.50524551244494,
+        "y": 0,
+        "z": 52.65904608970214
+      },
+      "width": 6.0,
+      "height": 4.25,
+      "visualHeight": 4.2,
+      "sceneName": "MI2501_148_PORTER | OSM 767534280",
+      "sourceFile": "mid-west-infill-2025.json"
+    },
+    {
+      "id": "MI2502",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -8.912727090805134,
+        "y": 0,
+        "z": 46.29584608970213
+      },
+      "width": 4.3,
+      "height": 4.2,
+      "visualHeight": 6.45,
+      "sceneName": "MI2502_150_Agang | unmapped estimated frontage",
+      "sourceFile": "mid-west-infill-2025.json"
+    },
+    {
+      "id": "MI2503",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -5.89873870842915,
+        "y": 0,
+        "z": 27.227666725573314
+      },
+      "width": 3.7,
+      "height": 4.3,
+      "visualHeight": 6.1,
+      "sceneName": "MI2503_152_Lottery | unmapped estimated frontage",
+      "sourceFile": "mid-west-infill-2025.json"
+    },
+    {
+      "id": "NX2501",
+      "buildingId": "1287937531",
+      "edgeIndex": 2,
+      "center": {
+        "x": -10.203546446738217,
+        "y": 0,
+        "z": 132.61999493262493
+      },
+      "width": 4.7,
+      "height": 4.15,
+      "visualHeight": 4.15,
+      "sceneName": "NX2501_116 • OSM 1287937531",
+      "sourceFile": "north-west-infill-2025.json"
+    },
+    {
+      "id": "NX2502",
+      "buildingId": "1287937531",
+      "edgeIndex": 2,
+      "center": {
+        "x": -10.203857505609722,
+        "y": 0,
+        "z": 128.62999493262492
+      },
+      "width": 3.18,
+      "height": 4.14,
+      "visualHeight": 7.3,
+      "sceneName": "NX2502_116之1 • OSM 1287937531",
+      "sourceFile": "north-west-infill-2025.json"
+    },
+    {
+      "id": "NX2503",
+      "buildingId": "1287937530",
+      "edgeIndex": 2,
+      "center": {
+        "x": -9.342254565872514,
+        "y": 0,
+        "z": 119.99068249999999
+      },
+      "width": 7.38,
+      "height": 4.07,
+      "visualHeight": 4.07,
+      "sceneName": "NX2503_118-120 • OSM 1287937530",
+      "sourceFile": "north-west-infill-2025.json"
+    },
+    {
+      "id": "NX2504",
+      "buildingId": "1287937530",
+      "edgeIndex": 2,
+      "center": {
+        "x": -9.27331621833243,
+        "y": 0,
+        "z": 113.4206825
+      },
+      "width": 5.3,
+      "height": 4.18,
+      "visualHeight": 4.18,
+      "sceneName": "NX2504_122 • OSM 1287937530",
+      "sourceFile": "north-west-infill-2025.json"
+    },
+    {
+      "id": "NX2505",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -9.218018639712,
+        "y": 0,
+        "z": 108.1506825
+      },
+      "width": 4.72,
+      "height": 4.12,
+      "visualHeight": 7.2,
+      "sceneName": "NX2505_124 • unmapped estimated frontage",
+      "sourceFile": "north-west-infill-2025.json"
+    },
+    {
+      "id": "NX2506",
+      "buildingId": "751353368",
+      "edgeIndex": 1,
+      "center": {
+        "x": -5.849986752348741,
+        "y": 0,
+        "z": 104.17553450000001
+      },
+      "width": 1.68,
+      "height": 3.62,
+      "visualHeight": 5.02,
+      "sceneName": "NX2506_126 • OSM 751353368",
+      "sourceFile": "north-west-infill-2025.json"
+    },
+    {
+      "id": "WG2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -6.937176278083862,
+        "y": 0,
+        "z": 77.1458465
+      },
+      "width": 4.45,
+      "height": 4.25,
+      "visualHeight": 7.85,
+      "sceneName": "WG2501_138_聯強電信聯盟局部 • estimated unmapped frontage",
+      "sourceFile": "west-gap-2025/evidence.json"
+    },
+    {
+      "id": "SC2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -9.457486584461172,
+        "y": 0,
+        "z": -95.60106923808046
+      },
+      "width": 5.8,
+      "height": 3.73,
+      "visualHeight": 6.51,
+      "sceneName": "SC2501_257_威宇牛排 • unmapped estimated frontage",
+      "sourceFile": "south-continuation-2025.json"
+    },
+    {
+      "id": "SC2502",
+      "buildingId": "228711106",
+      "edgeIndex": 0,
+      "center": {
+        "x": -11.387558827411095,
+        "y": 0,
+        "z": -101.49125238687859
+      },
+      "width": 6.2,
+      "height": 4.25,
+      "visualHeight": 4.23,
+      "sceneName": "SC2502_261_全家水源店 • OSM 228711106 north entrance slice",
+      "sourceFile": "south-continuation-2025.json"
+    },
+    {
+      "id": "CA2501",
+      "buildingId": "228711106",
+      "edgeIndex": 0,
+      "center": {
+        "x": -15.644448785814902,
+        "y": 0,
+        "z": -113.5679619090142
+      },
+      "width": 19.15,
+      "height": 5.4,
+      "visualHeight": 5.4,
+      "sceneName": "CA2501_東南亞秀泰影城騎樓 • January2025 shared arcade",
+      "sourceFile": "cinema-arcade-2025.json"
+    },
+    {
+      "id": "LC2501",
+      "buildingId": "228711106",
+      "edgeIndex": 0,
+      "center": {
+        "x": -19.899196154005985,
+        "y": 0,
+        "z": -125.6385929466513
+      },
+      "width": 6.2,
+      "height": 5.4,
+      "visualHeight": 5.4,
+      "sceneName": "LC2501_265_Lucys corner • estimated January 2025 crop",
+      "sourceFile": "lucys-corner-2025.json"
+    },
+    {
+      "id": "SP2501",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -7.447562289703303,
+        "y": 0,
+        "z": -88.92951589931428
+      },
+      "width": 7.935482714661881,
+      "height": 4.2,
+      "visualHeight": 4.2,
+      "sceneName": "SP2501_SportsFacadeContinuation • January2025 visible canopy and retail crop",
+      "sourceFile": "sports-continuation-2025.json"
+    },
+    {
+      "id": "UA2501",
+      "buildingId": "366231798",
+      "edgeIndex": 0,
+      "center": {
+        "x": -39.5589104389347,
+        "y": 0,
+        "z": -130.7016064828974
+      },
+      "width": 8.7,
+      "height": 7.24,
+      "visualHeight": 7.2,
+      "sceneName": "UA2501_194_UnderArmour • observed January corner crop",
+      "sourceFile": "under-armour-2025.json"
+    },
+    {
+      "id": "AG2501",
+      "buildingId": "1287937529",
+      "edgeIndex": 2,
+      "center": {
+        "x": -10.483155849422372,
+        "y": 0,
+        "z": 85.91950765822166
+      },
+      "width": 4.85,
+      "height": 3.95,
+      "visualHeight": 3.95,
+      "sceneName": "AG2501_Anonymous gray closed frontage near 134 • OSM 1287937529",
+      "sourceFile": "anonymous-gap-2025.json"
+    },
+    {
+      "id": "AG2502",
+      "buildingId": "",
+      "edgeIndex": -1,
+      "center": {
+        "x": -10.736910618065155,
+        "y": 0,
+        "z": 81.95
+      },
+      "width": 2.4,
+      "height": 3.35,
+      "visualHeight": 3.35,
+      "sceneName": "AG2502_Anonymous narrow entrance near 136 • estimated unmapped fragment",
+      "sourceFile": "anonymous-gap-2025.json"
+    },
+    {
+      "id": "BN2501",
+      "buildingId": "707821174",
+      "edgeIndex": 0,
+      "center": {
+        "x": 6.834486372555248,
+        "y": 0,
+        "z": 110.60835709626913
+      },
+      "width": 4.44,
+      "height": 3.65,
+      "visualHeight": 3.65,
+      "sceneName": "BN2501_Anonymous bright white and gold entry • January2025",
+      "sourceFile": "bright-north-infill-2025.json"
+    },
+    {
+      "id": "NS2501",
+      "buildingId": "580823989",
+      "edgeIndex": 3,
+      "center": {
+        "x": 7.779321306588537,
+        "y": 0,
+        "z": 119.69753649106268
+      },
+      "width": 8.0,
+      "height": 4.85,
+      "visualHeight": 4.85,
+      "sceneName": "NS2501_Anonymous north multi-brand sports frontage • January2025 partial8m",
+      "sourceFile": "north-sports-infill-2025.json"
+    },
+    {
+      "id": "LV2501",
+      "buildingId": "580823989",
+      "edgeIndex": 3,
+      "center": {
+        "x": 7.401225087708322,
+        "y": 0,
+        "z": 125.4851995124616
+      },
+      "width": 3.4,
+      "height": 3.75,
+      "visualHeight": 5.1,
+      "sceneName": "LV2501_La Villa visible narrow entry and TAIYEN direction sign • January2025",
+      "sourceFile": "la-villa-frontage-2025.json"
+    }
+  ],
+  "visualCuts": [
+    {
+      "shopId": "NR2502",
+      "buildingId": "1287937529",
+      "edgeIndex": 2,
+      "fromMetres": 9.845177889366573,
+      "toMetres": 11.743722266811327,
+      "center": {
+        "x": -9.958789566007509,
+        "y": 0,
+        "z": 94.12221450334384
+      },
+      "width": 1.898544377444754,
+      "height": 4.1,
+      "purpose": "Visual facade cut only. Not an additional shop and not a new footprint. Keep collision policy under root integration control."
+    },
+    {
+      "shopId": "MC2501",
+      "buildingId": "773820273",
+      "edgeIndex": 0,
+      "center": {
+        "x": 12.742742813814035,
+        "y": 0,
+        "z": 22.7099044556
+      },
+      "width": 1.560327314859286,
+      "height": 4.13
+    },
+    {
+      "shopId": "MC2501",
+      "buildingId": "773820273",
+      "edgeIndex": 3,
+      "center": {
+        "x": 14.342875542200415,
+        "y": 0,
+        "z": 23.37938275549688
+      },
+      "width": 3.1,
+      "height": 4.13,
+      "purpose": "Remove only generic side return that intruded into visible photographed retail depth; colliders unchanged."
+    },
+    {
+      "shopId": "SR2502",
+      "buildingId": "366231798",
+      "edgeIndex": 5,
+      "fromMetres": 0,
+      "toMetres": 6.2,
+      "center": {
+        "x": -25.856459703956652,
+        "y": 0,
+        "z": -80.14724559021062
+      },
+      "width": 6.2,
+      "height": 4.3,
+      "purpose": "Only the first 6.2m of the actual north-facing footprint edge is a visible photo-referenced return. This is a visual shell cut, not another shop, new footprint or collision mutation. Edge5 is not classified as a roadFrontEdge."
+    },
+    {
+      "shopId": "MI2503",
+      "buildingId": "317180219",
+      "edgeIndex": 0,
+      "fromMetres": 0.0,
+      "toMetres": 2.6351741146347245,
+      "center": {
+        "x": -7.248507195368187,
+        "y": 0,
+        "z": 28.1637299920736
+      },
+      "width": 2.6351741146347245,
+      "height": 4.3,
+      "purpose": "Segment clipped against the estimated shallow shop interior rectangle; removes only generic visual wall, columns and trim, not the OSM footprint or collision."
+    },
+    {
+      "shopId": "MI2503",
+      "buildingId": "317180219",
+      "edgeIndex": 3,
+      "fromMetres": 14.83915273794159,
+      "toMetres": 17.556014642566232,
+      "center": {
+        "x": -5.981162956945341,
+        "y": 0,
+        "z": 26.743744540274648
+      },
+      "width": 2.716861904624642,
+      "height": 4.3,
+      "purpose": "Segment clipped against the estimated shallow shop interior rectangle; removes only generic visual wall, columns and trim, not the OSM footprint or collision."
+    },
+    {
+      "shopId": "LC2501",
+      "buildingId": "228711106",
+      "edgeIndex": 1,
+      "fromMetres": 0,
+      "toMetres": 4.2,
+      "center": {
+        "x": -18.952091624148366,
+        "y": 0,
+        "z": -129.46130419537195
+      },
+      "width": 4.2,
+      "height": 5.4,
+      "purpose": "Clear only the first 4.2m from the real south corner of footprint edge1 for the photographed Lucy/cinema return. This edge is not a roadFrontEdge. Visual mesh clearance only, without physics or footprint edits. Geometry sits slightly inside the edge; extents and height are photographic estimates."
+    },
+    {
+      "shopId": "LC2501",
+      "buildingId": "228711106",
+      "edgeIndex": 0,
+      "fromMetres": 31.923554950223757,
+      "toMetres": 32.023554950223755,
+      "center": {
+        "x": -20.885078016562268,
+        "y": 0,
+        "z": -128.63104377383002
+      },
+      "width": 0.09999999999999787,
+      "height": 5.4,
+      "purpose": "Unity render QA: clear the last 0.10m visual seam up to the surveyed corner. The generic 2m-deep arcade beam from this narrow residual strip intersects the photographed chamfered doorway and its sign. Collision geometry and the Lucy frontage width remain unchanged."
+    },
+    {
+      "shopId": "UA2501",
+      "buildingId": "366231798",
+      "edgeIndex": 1,
+      "fromMetres": 0,
+      "toMetres": 6.2,
+      "center": {
+        "x": -41.15493593135656,
+        "y": 0,
+        "z": -125.6777202612556
+      },
+      "width": 6.2,
+      "height": 7.24,
+      "purpose": "Partial visual cut follows the real north-return footprint edge and exposes the observed two-level glass corner. No collision or footprint change; no claim about full retail depth."
+    },
+    {
+      "shopId": "NR2502",
+      "buildingId": "1287937529",
+      "edgeIndex": 3,
+      "center": {
+        "x": -11.452110733881339,
+        "y": 0,
+        "z": 95.17598674151806
+      },
+      "width": 2.9850397271086497,
+      "height": 4.1,
+      "purpose": "Unity render QA: remove generic wall segment crossing this photo-referenced shallow interior; collision geometry unchanged."
+    },
+    {
+      "shopId": "ME2501",
+      "buildingId": "1287937528",
+      "edgeIndex": 1,
+      "center": {
+        "x": 9.12435798568234,
+        "y": 0,
+        "z": 54.923374677747745
+      },
+      "width": 1.031799771798189,
+      "height": 3.75,
+      "purpose": "Unity render QA: remove generic wall segment crossing this photo-referenced shallow interior; collision geometry unchanged."
+    },
+    {
+      "shopId": "ME2501",
+      "buildingId": "1287937528",
+      "edgeIndex": 2,
+      "center": {
+        "x": 10.484058778330127,
+        "y": 0,
+        "z": 54.26290698405466
+      },
+      "width": 2.7044662498138026,
+      "height": 3.75,
+      "purpose": "Unity render QA: remove generic wall segment crossing this photo-referenced shallow interior; collision geometry unchanged."
+    }
+  ]
+}

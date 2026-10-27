@@ -1,0 +1,73 @@
+{
+  "version": "Fusion hold/release regression, unchanged conditions from v2",
+  "cases": [
+    {
+      "id": "blocked_sides-20-clear-v0-vision_fusion-hold",
+      "condition": "blocked_sides-20-clear-v0",
+      "scenario": "blocked_sides",
+      "weather": "clear",
+      "controller": "vision_fusion",
+      "seed": 44001,
+      "speedKph": 20,
+      "conflictZ": -2,
+      "triggerTta": 0.85,
+      "parkedOffset": 2.65,
+      "horizon": 0,
+      "fusion": true,
+      "requiredHoldSeconds": 6,
+      "blockageReleaseAt": 0,
+      "timeLimit": 35
+    },
+    {
+      "id": "blocked_sides-20-clear-v0-vision_fusion-release",
+      "condition": "blocked_sides-20-clear-v0",
+      "scenario": "blocked_sides",
+      "weather": "clear",
+      "controller": "vision_fusion",
+      "seed": 44001,
+      "speedKph": 20,
+      "conflictZ": -2,
+      "triggerTta": 0.85,
+      "parkedOffset": 2.65,
+      "horizon": 0,
+      "fusion": true,
+      "requiredHoldSeconds": 6,
+      "blockageReleaseAt": 12,
+      "timeLimit": 35
+    },
+    {
+      "id": "blocked_sides-40-clear-v0-vision_fusion-hold",
+      "condition": "blocked_sides-40-clear-v0",
+      "scenario": "blocked_sides",
+      "weather": "clear",
+      "controller": "vision_fusion",
+      "seed": 44001,
+      "speedKph": 40,
+      "conflictZ": -2,
+      "triggerTta": 0.85,
+      "parkedOffset": 2.65,
+      "horizon": 0,
+      "fusion": true,
+      "requiredHoldSeconds": 6,
+      "blockageReleaseAt": 0,
+      "timeLimit": 35
+    },
+    {
+      "id": "blocked_sides-40-clear-v0-vision_fusion-release",
+      "condition": "blocked_sides-40-clear-v0",
+      "scenario": "blocked_sides",
+      "weather": "clear",
+      "controller": "vision_fusion",
+      "seed": 44001,
+      "speedKph": 40,
+      "conflictZ": -2,
+      "triggerTta": 0.85,
+      "parkedOffset": 2.65,
+      "horizon": 0,
+      "fusion": true,
+      "requiredHoldSeconds": 6,
+      "blockageReleaseAt": 12,
+      "timeLimit": 35
+    }
+  ]
+}

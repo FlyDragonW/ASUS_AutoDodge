@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-13T14:24:45.082749+00:00",
+  "files": [
+    {
+      "path": "Assets/TaiwanRider/Runtime/RiderVisionSensor.cs",
+      "sha256": "d090ab7048390adbb7df91b10cf4a46222148704ea56944acb27af507c049d9e"
+    },
+    {
+      "path": "Assets/TaiwanRider/Editor/AvoidanceBenchmark.cs",
+      "sha256": "f66775c5d63ab07ec4797f7042fb51ceef270eadb6e26da8cd1770ff729cd237"
+    },
+    {
+      "path": "Assets/TaiwanRider/Editor/VisionIntegrationCheck.cs",
+      "sha256": "cef59b345c90b9a87234c9875c668497d4f0e10ab467b14bb5185dccda1df12e"
+    },
+    {
+      "path": "Assets/TaiwanRider/Runtime/AutomaticAvoidance.cs",
+      "sha256": "7dd9cf1d64bf3e1bd5a76b3e6e9973a6b02606c680bebac4ad2a30bedcda9e8d"
+    },
+    {
+      "path": "Assets/TaiwanRider/Runtime/RadarSensor.cs",
+      "sha256": "ecf0499e5c7c6e5360dec2e2426767d7e874ecc28baec27dc7174e4ba8e8e1b2"
+    },
+    {
+      "path": "Assets/TaiwanRider/Runtime/ScooterController.cs",
+      "sha256": "511e3c3f24dc9bc13390d4d44dd27b576d9ca66e14e7f74b63e9d83c3da6ad67"
+    },
+    {
+      "path": "Assets/TaiwanRider/Runtime/HazardActor.cs",
+      "sha256": "d2e2b2e55af970bf05d6554871a3a2fe2a5e707387759ee4d0af841daeb70d18"
+    },
+    {
+      "path": "Assets/TaiwanRider/Scenes/GongguanRide.unity",
+      "sha256": "c3ccf01a22d531900cc49af73eb530b8a8f02595104d2536195f598fa4776b16"
+    },
+    {
+      "path": "docs/VISION_MODEL.md",
+      "sha256": "7d13e48de44da6a766676d93f372a0f1a24c270d54c64134a5220c2fd142797c"
+    },
+    {
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v1.onnx",
+      "sha256": "989305d3698e592074fb86c1100f2dbbcaf9283509f516e2fb6bf78c3fe53cd3"
+    },
+    {
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v2.onnx",
+      "sha256": "d0cd520e2b52d2518735eb3d5a04939a27c0777788bae7d8ad2ea9b37b70d219"
+    },
+    {
+      "path": "Assets/TaiwanRider/Resources/RideReflexVision/ridereflex-vision-v2.onnx.meta",
+      "sha256": "70bca662a9679fc8eac416d8f48e4ad11f87187cbb079d05cbbddc9fd10a602d"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "sha256": "99cc4edc61cc654695f8514afa7172b2f2d4cdbc78e8e7754e8e7e489de6815a"
+    }
+  ],
+  "protocol": "48 identical fusion conditions per model; repaired controller and confidence 0.60 unchanged; v1 then v2. Real-time sequential runs, not deterministic lockstep."
+}

@@ -1,0 +1,172 @@
+{
+  "auditDate": "2026-10-11",
+  "scope": "Read-only audit of canonical vehicle sources and final Unity screenshots; public reference and model acquisition research. No FBX, scene, code, account or purchase changes.",
+  "targetSite": "台北公館：汀州路三段 × 羅斯福路四段90巷",
+  "conclusion": "現有車輛是原創通用造型，沒有對應到現地某一台、某年份、某版本的實車。增加面數、螺絲或換色無法補足主輪廓和面板曲率。必須先辨識並鎖定實車，再採集或取得該車型的完整參考與模型。",
+  "inspectedLocalEvidence": [
+    "C:/General/Unity_Project/ASUS_AutoDodge/Validation/Realism/street-fleet-final/07-parked-sedan.png",
+    "C:/General/Unity_Project/ASUS_AutoDodge/Validation/Realism/street-fleet-final/06-parked-scooters.png",
+    "C:/General/Unity_Project/ASUS_AutoDodge/Sources/References/reference_3.jpg",
+    "C:/General/Unity_Project/ASUS_AutoDodge/Sources/References/credits.json",
+    "C:/General/Unity_Project/ASUS_AutoDodge/Tools/refine_car.py",
+    "C:/General/Unity_Project/ASUS_AutoDodge/Tools/refine_scooter.py",
+    "UnityStreetRefinement/Validation/CarDetail/model-report.json",
+    "UnityStreetRefinement/Validation/CarDetail/fbx-roundtrip.json",
+    "UnityRealismUpdate/Validation/ScooterHero/model-report.json",
+    "UnityStreetRefinement/Validation/ScooterFleet/fleet-report.json"
+  ],
+  "currentAssetFacts": {
+    "sedan": {
+      "identity": "Original contemporary compact sedan; not a verified Toyota, Mitsubishi or other production vehicle",
+      "bodyLengthMetres": 4.5,
+      "bodyWidthMetres": 1.77,
+      "wheelbaseMetres": 2.66,
+      "wheelRadiusMetres": 0.318,
+      "lod0TrianglesAfterFbxRoundtrip": 62054,
+      "renderersPerLod": 13,
+      "sourceEvidence": "refine_car.py lines 76–123 define the body from width, belt and crown scalar profiles; lines 164–172 use planar door-glazing quads; trim and lamp features are separate tubes, boxes and panels.",
+      "observation": "最終截圖的車身接近厚重平板：前鼻、葉子板、車門和輪拱缺少真車不同區域的曲率過渡，窗框接近等厚細桿，側窗四邊形過直。燈條/格柵像附著在外殼上；主面缺少實際引擎蓋分界、燈罩深度、保險桿凹槽和壓折關係。",
+      "interpretation": "These are shape-design limitations, not a remaining triangle-count or backface-culling defect. Existing geometry checks validate integrity, not resemblance to a real car."
+    },
+    "scooter": {
+      "identity": "Scooter125_Hero and derived Fleet are an original generic 125 cc scooter, not a verified GP125, Duke, Cygnus or other production model",
+      "wheelbaseMetres": 1.275,
+      "tyreRadiusMetres": 0.217,
+      "allMeshBoundsWidthLengthHeightMetres": [0.8, 1.77475673, 1.18174653],
+      "heroTriangles": 83345,
+      "fleetLod0Triangles": 48009,
+      "sourceEvidence": "Rear monocoque, saddle and leg shield are authored from a small number of loft/shield cross sections; fleet-report names the same Hero blend as source.",
+      "observation": "Final parked row repeats the same rounded rear body, rounded shield, twin round headlamp arrangement and round mirrors with paint changes. Side body looks inflated and seat outline is very thin; it reads as a stylized retro family, not a survey of distinct commuter scooters.",
+      "interpretation": "先校對前斜板/車頭燈殼/座墊/後側蓋/腳踏板的輪廓與位置，再處理螺絲、縫線和磨耗。不要把多種顏色當成多個真實車款。"
+    },
+    "materialsAndLighting": {
+      "observation": "Sedan uses ten largely uniform materials. The screenshots show broad uniform paint, strongly reflective opaque windows, very clean rims and repeated scooter paint response. Street reflections lack the local shopfront detail present in the real Outlander photo.",
+      "priority": "After silhouette approval: distinguish clearcoat paint, rough black moulded plastic, rubber, metal, layered lamp lenses and interior darkness; then localized wear and environment reflections. Avoid adding uniform noise to hide shape errors."
+    }
+  },
+  "existingPhotoCoverage": {
+    "reference0": {"location": "Roosevelt Road section 4 lane 78 near alley 2", "captureDate": "2023-07-16", "fit": "Different lane; neighborhood context only, not exact target junction evidence."},
+    "reference1And2": {"location": "Gongguan night market food-stall photos", "captureDate": "2019-10-08", "fit": "No multi-view vehicle reconstruction set or confirmed target-junction fleet inventory."},
+    "reference3": {
+      "source": "https://commons.wikimedia.org/wiki/File:TCPD_SWAT_ANA-0922_left_side_on_Tingzhou_Road_20240907.jpg",
+      "creator": "Solomon203",
+      "captureDate": "2024-09-07",
+      "licenseFromExistingCredits": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "visibleVehicle": "Third-generation Mitsubishi Outlander police vehicle; this identification is supported by the existing Commons metadata, not only visual guessing.",
+      "visibleSiteClue": "汀州路三段185號門牌 visible in the image background",
+      "usableFor": "Nearby street material/detail reference and this vehicle's visible side/front surface relationships.",
+      "notEstablished": ["Exact target-junction camera position", "Exact production year and Taiwan trim", "Right side, rear, underside or cabin geometry", "Presence at the target junction on the intended recreation date"],
+      "verificationNote": "Original file and saved credits inspected locally. Live Commons page open returned an error during this audit; saved license metadata has not been re-fetched."
+    }
+  },
+  "primaryReferences": [
+    {
+      "id": "kymco-gp125",
+      "url": "https://kymco.com.tw/motor/gp-125-eco7",
+      "type": "Manufacturer product page",
+      "verifiedContent": "360-degree viewer, side view, front lamp, instrument, seat, storage and stand close-ups; distinct SJ25ZG/SJ25ZH variants.",
+      "dimensionsMm": {"length": 1800, "width": 700, "height": 1080, "wheelbase": 1220},
+      "tyres": "100/90-10 front and rear",
+      "immediateUse": "Use as a matched reference package if on-site evidence identifies this version of GP125. Pick the drum/disc/instrument variant explicitly.",
+      "siteMatch": "Not yet demonstrated at target junction",
+      "assetReuseStatus": "Publicly viewable product reference; no downloadable 3D model or image-reuse license verified. Do not assume website pictures are game textures."
+    },
+    {
+      "id": "sym-duke2026",
+      "url": "https://tw.sym-global.com/duke125",
+      "type": "Manufacturer product page",
+      "verifiedContent": "2026 Duke variants, 360-degree images and feature close-ups; body dimensions and wheelbase.",
+      "dimensionsMm": {"length": 1795, "width": 685, "height": 1095, "wheelbase": 1252},
+      "tyres": "3.50-10 front and rear",
+      "immediateUse": "Identify exact generation first: this 2026 page must not be used as evidence for a scooter in a 2019 or 2024 street photograph.",
+      "siteMatch": "Not yet demonstrated at target junction",
+      "assetReuseStatus": "Reference only; manufacturer copyright notice, no game-asset license verified."
+    },
+    {
+      "id": "yamaha-limi2023",
+      "url": "https://www.yamaha-motor.com.tw/news/news_202305_Limi.aspx",
+      "type": "Dated manufacturer announcement, 2023-05-24",
+      "verifiedContent": "2023 color photos and complete model specifications, including seat height.",
+      "dimensionsMm": {"length": 1725, "width": 715, "height": 1100, "wheelbase": 1205, "seatHeight": 755},
+      "immediateUse": "Useful historical reference if this model/year is independently recognized in the site capture.",
+      "siteMatch": "Not yet demonstrated at target junction",
+      "assetReuseStatus": "Reference only; no 3D or texture redistribution permission established."
+    },
+    {
+      "id": "toyota-altis-taiwan",
+      "url": "https://www.toyota.com.tw/showroom/ALTIS/",
+      "datedReferenceUrl": "https://hotaicdn.azureedge.net/toyotaweb/CAR_2024092718041100000000.pdf",
+      "type": "Taiwan manufacturer showroom and 2024 brochure",
+      "verifiedContent": "Showroom has exterior/interior and 360-degree presentation. Dated brochure identifies Taiwan specification.",
+      "standardDimensionsMmFrom2024Brochure": {"length": 4630, "width": 1780, "height": 1435, "wheelbase": 2700},
+      "comparisonWithCurrentGenericSedan": "Current 4500 mm body is 130 mm shorter; 2660 mm wheelbase is 40 mm shorter. These comparisons do not imply Altis is the intended vehicle. Current total mesh width includes mirrors and total height includes aerial, so those bounds must not be compared directly with brochure body dimensions.",
+      "immediateUse": "If a Taiwan Altis is selected, lock facelift, trim, lamps, bumper and wheels; do not substitute a US Corolla or hatchback just because the name matches.",
+      "siteMatch": "Not yet demonstrated at target junction",
+      "assetReuseStatus": "Reference only; public showroom does not confer a game-model or game-texture license."
+    }
+  ],
+  "modelAcquisitionLeads": [
+    {
+      "title": "Toyota Corolla 2019 by podshyvalov-htc",
+      "url": "https://www.cgtrader.com/3d-models/car/car/toyota-corolla-2019-685296b0-2282-4d7e-95da-b4e7ea81e8a2",
+      "primarySellerListing": true,
+      "observed": "FBX/OBJ/MAX; 224389 polygons; listing claims CGTrader verification and describes TurboSmooth-ready main surfaces.",
+      "licenseObserved": "Search snapshot says Royalty Free License (no AI), opened older page says Royalty Free License. Recheck exact current license before acquisition.",
+      "status": "Conditional commercial-asset candidate; no file inspected or downloaded, no purchase made.",
+      "requiredBeforeUse": ["Match front/rear bumper and lamp design to Taiwan model/year", "Confirm game distribution rights and any third-party brand restrictions", "Inspect wireframe and UV/material deliverables rather than render thumbnails", "Retopology/LOD and URP material conversion needed; marketing verification does not establish site accuracy"]
+    },
+    {
+      "title": "Kymco Agility 2009 Moped Scooter",
+      "url": "https://www.cgtrader.com/3d-models/vehicle/motorcycle/kymco-agility-2009-moped-scooter",
+      "primarySellerListing": true,
+      "observed": "Author says it was modeled from their real scooter; BLEND source, UVs, textures, subdivision; listed 171154 polygons.",
+      "licenseObserved": "Royalty Free License (no AI)",
+      "status": "Conditional identified-model lead, not a GP125 substitute and not confirmed on site. No file inspected or acquired.",
+      "requiredBeforeUse": ["Verify actual on-site scooter is this Agility generation", "Confirm license for embedded game distribution", "Check source mesh quality, texture completeness and wheel pivots", "Create real-time LODs after close-up shape approval"]
+    },
+    {
+      "title": "Mitsubishi Outlander 2013 by SQUIR",
+      "url": "https://www.cgtrader.com/3d-models/car/suv/mitsubishi-outlander-2013--3",
+      "primarySellerListing": true,
+      "observed": "Same generation family as the local reference photo; 500000 polygons, FBX/OBJ/MAX. Vendor says advanced studio shaders are MAX-only; FBX uses standard materials.",
+      "licenseObserved": "Royalty Free License on opened listing",
+      "status": "Not currently ready to acquire: opened page explicitly says model is not available. Keep as a vendor/model lead only; do not promise an immediate replacement.",
+      "requiredBeforeUse": ["Verify Taiwan vehicle exact facelift and equipment against source photos", "Find an active original-author listing and confirm permission", "Do not infer police-specific fittings or unseen geometry from the single local photo"]
+    },
+    {
+      "title": "Toyota Corolla 2019 by BlackSpring",
+      "url": "https://www.turbosquid.com/3d-models/toyota-corolla-2019-model-1355098",
+      "observed": "822000 polygons, FBX and MAX; detailed exterior and partial interior.",
+      "licenseObserved": "Editorial Uses Only",
+      "status": "Not recommended as an immediately usable entertainment-game asset; this listing's stated restriction is a concrete mismatch. No purchase or download."
+    },
+    {
+      "title": "SYM DRT BT by syahrulk16",
+      "url": "https://www.cgtrader.com/3d-models/vehicle/motorcycle/sym-drt-bt",
+      "observed": "SYM DRT BT 160, BLEND/OBJ with materials and UVs.",
+      "licenseObserved": "Editorial License (no AI)",
+      "status": "Reject as a generic commuter replacement: wrong unverified model and editorial restriction. Listing availability alone is not suitability."
+    }
+  ],
+  "licenseSource": {
+    "terms": "https://www.cgtrader.com/pages/terms-and-conditions",
+    "aiTrainingClarification": "https://help.cgtrader.com/hc/en-us/articles/46191349842705-Can-my-models-still-be-licensed-for-AI-training",
+    "note": "Record the exact purchased license and source-asset receipt if acquisition is later authorized. No AI is not a quality claim or a blanket statement that ordinary engine import is prohibited; respect its defined restrictions. This audit has not cleared a specific third-party asset for release."
+  },
+  "priorityOrder": [
+    {"priority": 1, "action": "Fix target capture date and establish a vehicle inventory from the actual junction", "deliverable": "For each foreground vehicle: photo IDs, camera direction/location, suspected make/model/generation/trim, confidence, dimensions source, and whether it is a literal site match or representative filler. Unknown must remain unknown."},
+    {"priority": 2, "action": "Select one accessible physical scooter and one identified nearby car for complete reference capture", "deliverable": "Front/rear/left/right, front/rear three-quarter, elevated views and matched detail photos; measure wheelbase, wheel diameter, width, seat height and camera height. Use one vehicle through the full set and consistent exposure. Photograph close-up panel gaps, lights, mirrors, tyre sidewalls and cockpit separately."},
+    {"priority": 3, "action": "Acquire the same-generation authored asset or reconstruct from the complete reference set", "deliverable": "Prefer a verified original-author game-licensed source if it exactly matches. For poorly covered Taiwan commuter scooters, custom modeling from measured multi-view photography is more reliable than renaming an unrelated scooter asset. Glossy paint/glass cannot be assumed to scan cleanly; a scan is supporting shape evidence, followed by cleanup and authored surfaces."},
+    {"priority": 4, "action": "Approve proportions and primary surfaces before detail work", "deliverable": "Calibrated front/side/rear silhouette overlays; wheel centers and overall dimensions; hood/fender/bumper and scooter shield/seat/side-cover curvature under a neutral reflective test material. Existing gameplay collider dimensions are not the measurement authority for a real vehicle."},
+    {"priority": 5, "action": "Finish materials and secondary shapes, then optimize and integrate", "deliverable": "Realistic panel gaps, inset lamps, glass/interior relationship, PBR textures and localized wear; only then LODs, pivots, collision proxy fit and matched-camera Unity validation. Reuse several actually distinct source models for the parked fleet rather than color-only variants."}
+  ],
+  "captureAndAcceptanceLimits": [
+    "A single photograph cannot establish a complete vehicle shape, invisible surfaces, true scale or exact camera calibration.",
+    "Official 360 product images and real dimensions constrain silhouette but do not themselves supply production CAD, material maps or unseen underbody details.",
+    "More triangles, passing collider/anchor tests and corrected normals establish technical function, not photographic similarity.",
+    "No free, licensed, high-quality exact GP125/Duke replacement was verified in this bounded search. This is a search result, not a claim none exists.",
+    "No authenticated multi-view vehicle capture set for the exact target junction was found among current local references.",
+    "All external model leads remain uninspected candidates. No paid action, account creation, model download or Unity modification occurred."
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "scope": "Synthetic-only fine-tuning; COCO initialization. ACDC used after best.pt is fixed, never for early stopping or weight selection.",
+  "protocol": {
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "confidence_floor": 0.001,
+    "classwise_nms_iou": 0.7,
+    "max_detections": 100,
+    "operating_confidence": 0.6,
+    "operating_iou": 0.5,
+    "backend": "ONNX Runtime CPU, 2 threads",
+    "synthetic_test_images": 500,
+    "acdc_images": 406
+  },
+  "source_weights_sha256": "c432d48f7af0b3e650717ac67e5fd7b3eb08c9d8907b6e789fff11e59de19b32",
+  "dataset_manifest_sha256": "8bfb3ba51f8a78d67d728e1e5a8b1d40554a2bbaf0160f0f7919256ae3f7d9d6",
+  "model_sha256": "d0cd520e2b52d2518735eb3d5a04939a27c0777788bae7d8ad2ea9b37b70d219",
+  "export": {
+    "training_head_classes": 80,
+    "deployed_classes": [
+      "car",
+      "motorcycle"
+    ],
+    "gather_channels": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7
+    ],
+    "shape": [
+      1,
+      6,
+      8400
+    ],
+    "selection_max_abs_error": 0.0,
+    "pytorch_max_abs_error": 0.001678466796875
+  },
+  "synthetic": {
+    "v1_on_v2_test": {
+      "images": 500,
+      "map50_95": 0.4011448413334021,
+      "map50": 0.6613508168923226,
+      "classes": {
+        "car": {
+          "instances": 541,
+          "ap50": 0.8249741793195793,
+          "ap50_95": 0.6199737451944096,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 405,
+            "fp": 54,
+            "fn": 136,
+            "precision": 0.8823529411764706,
+            "recall": 0.7486136783733827
+          }
+        },
+        "motorcycle": {
+          "instances": 652,
+          "ap50": 0.49772745446506583,
+          "ap50_95": 0.18231593747239463,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 366,
+            "fp": 387,
+            "fn": 286,
+            "precision": 0.4860557768924303,
+            "recall": 0.5613496932515337
+          }
+        }
+      }
+    },
+    "v2_on_v2_test": {
+      "images": 500,
+      "map50_95": 0.5179020246516408,
+      "map50": 0.764275059347097,
+      "classes": {
+        "car": {
+          "instances": 541,
+          "ap50": 0.8618507641651557,
+          "ap50_95": 0.621072091499159,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 390,
+            "fp": 5,
+            "fn": 151,
+            "precision": 0.9873417721518988,
+            "recall": 0.7208872458410351
+          }
+        },
+        "motorcycle": {
+          "instances": 652,
+          "ap50": 0.6666993545290384,
+          "ap50_95": 0.4147319578041223,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 298,
+            "fp": 4,
+            "fn": 354,
+            "precision": 0.9867549668874173,
+            "recall": 0.4570552147239264
+          }
+        }
+      }
+    }
+  },
+  "acdc": {
+    "all": {
+      "images": 406,
+      "map50_95": 0.1342796327828507,
+      "map50": 0.22764045927977106,
+      "classes": {
+        "car": {
+          "instances": 1836,
+          "ap50": 0.3844115895437901,
+          "ap50_95": 0.2261607514154974,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 490,
+            "fp": 93,
+            "fn": 1346,
+            "precision": 0.8404802744425386,
+            "recall": 0.2668845315904139
+          }
+        },
+        "motorcycle": {
+          "instances": 59,
+          "ap50": 0.07086932901575196,
+          "ap50_95": 0.04239851415020395,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 8,
+            "fp": 71,
+            "fn": 51,
+            "precision": 0.10126582278481013,
+            "recall": 0.13559322033898305
+          }
+        }
+      }
+    },
+    "fog": {
+      "images": 100,
+      "map50_95": 0.15913546923680227,
+      "map50": 0.26953572720623026,
+      "classes": {
+        "car": {
+          "instances": 493,
+          "ap50": 0.5236804784055953,
+          "ap50_95": 0.31252954252158727,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 183,
+            "fp": 26,
+            "fn": 310,
+            "precision": 0.8755980861244019,
+            "recall": 0.3711967545638945
+          }
+        },
+        "motorcycle": {
+          "instances": 11,
+          "ap50": 0.0153909760068652,
+          "ap50_95": 0.005741395952017401,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 0,
+            "fp": 11,
+            "fn": 11,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    "night": {
+      "images": 106,
+      "map50_95": 0.06882465656397138,
+      "map50": 0.12473656734033656,
+      "classes": {
+        "car": {
+          "instances": 258,
+          "ap50": 0.20786229574056442,
+          "ap50_95": 0.11280453823217926,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 36,
+            "fp": 11,
+            "fn": 222,
+            "precision": 0.7659574468085106,
+            "recall": 0.13953488372093023
+          }
+        },
+        "motorcycle": {
+          "instances": 20,
+          "ap50": 0.04161083894010866,
+          "ap50_95": 0.024844774895763488,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 2,
+            "fp": 18,
+            "fn": 18,
+            "precision": 0.1,
+            "recall": 0.1
+          }
+        }
+      }
+    },
+    "rain": {
+      "images": 100,
+      "map50_95": 0.12469476016294541,
+      "map50": 0.21456408089603002,
+      "classes": {
+        "car": {
+          "instances": 526,
+          "ap50": 0.35051223740081233,
+          "ap50_95": 0.19519970104158604,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 118,
+            "fp": 33,
+            "fn": 408,
+            "precision": 0.7814569536423841,
+            "recall": 0.22433460076045628
+          }
+        },
+        "motorcycle": {
+          "instances": 12,
+          "ap50": 0.07861592439124761,
+          "ap50_95": 0.05418981928430476,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 2,
+            "fp": 22,
+            "fn": 10,
+            "precision": 0.08333333333333333,
+            "recall": 0.16666666666666666
+          }
+        }
+      }
+    },
+    "snow": {
+      "images": 100,
+      "map50_95": 0.1771349721174795,
+      "map50": 0.2942911133538102,
+      "classes": {
+        "car": {
+          "instances": 559,
+          "ap50": 0.37878219948478026,
+          "ap50_95": 0.23328238691976658,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 153,
+            "fp": 23,
+            "fn": 406,
+            "precision": 0.8693181818181818,
+            "recall": 0.2737030411449016
+          }
+        },
+        "motorcycle": {
+          "instances": 16,
+          "ap50": 0.20980002722284005,
+          "ap50_95": 0.12098755731519241,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 4,
+            "fp": 20,
+            "fn": 12,
+            "precision": 0.16666666666666666,
+            "recall": 0.25
+          }
+        }
+      }
+    }
+  }
+}

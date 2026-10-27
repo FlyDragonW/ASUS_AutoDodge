@@ -1,0 +1,249 @@
+{
+  "model_sha256": "c577e094acac900934b9ab361ab49db6cb4bbca0370cd19d4cacad5969feaa39",
+  "source_weights_sha256": "d9bd85601a6ce38202a4973489fe21a43d79a27490a4c4a03d0f3a31a7bc624c",
+  "scope": "COCO YOLOv8l initialization, four-epoch synthetic-only vehicle classification adaptation with fixed COCO teacher; regression/features frozen; best epoch selected on synthetic validation. ACDC is a development evaluation, not used by the optimizer.",
+  "export": {
+    "shape": [
+      1,
+      6,
+      8400
+    ],
+    "pytorch_max_abs_error": 0.002471923828125
+  },
+  "freeze_check": {
+    "frozen_feature_max_abs_change": 0.0,
+    "bn_moment_max_abs_change": 0.0,
+    "changed_head_tensors": 6,
+    "protected_parameter_max_abs_change": 0.0,
+    "other_class_rows_max_abs_change": 0.0
+  },
+  "protocol": {
+    "camera": [
+      640,
+      360
+    ],
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "confidence_floor": 0.001,
+    "classwise_nms_iou": 0.7,
+    "max_detections": 100,
+    "operating_confidence": 0.6,
+    "backend": "ONNX Runtime CPU, 2 threads"
+  },
+  "acdc": {
+    "all": {
+      "images": 406,
+      "map50_95": 0.3289327206159863,
+      "map50": 0.5246175419341241,
+      "classes": {
+        "car": {
+          "instances": 1836,
+          "ap50": 0.7321591246972281,
+          "ap50_95": 0.5145797838777388,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 845,
+            "fp": 19,
+            "fn": 991,
+            "precision": 0.9780092592592593,
+            "recall": 0.460239651416122
+          }
+        },
+        "motorcycle": {
+          "instances": 59,
+          "ap50": 0.31707595917102,
+          "ap50_95": 0.14328565735423374,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 18,
+            "fp": 9,
+            "fn": 41,
+            "precision": 0.6666666666666666,
+            "recall": 0.3050847457627119
+          }
+        }
+      }
+    },
+    "fog": {
+      "images": 100,
+      "map50_95": 0.4040254407092287,
+      "map50": 0.5920759210581253,
+      "classes": {
+        "car": {
+          "instances": 493,
+          "ap50": 0.8224080317126964,
+          "ap50_95": 0.6163774041070317,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 292,
+            "fp": 9,
+            "fn": 201,
+            "precision": 0.9700996677740864,
+            "recall": 0.592292089249493
+          }
+        },
+        "motorcycle": {
+          "instances": 11,
+          "ap50": 0.3617438104035544,
+          "ap50_95": 0.19167347731142567,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 3,
+            "fp": 1,
+            "fn": 8,
+            "precision": 0.75,
+            "recall": 0.2727272727272727
+          }
+        }
+      }
+    },
+    "night": {
+      "images": 106,
+      "map50_95": 0.23550492188461447,
+      "map50": 0.3987227074122568,
+      "classes": {
+        "car": {
+          "instances": 258,
+          "ap50": 0.592759199128304,
+          "ap50_95": 0.37373640456556384,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 80,
+            "fp": 1,
+            "fn": 178,
+            "precision": 0.9876543209876543,
+            "recall": 0.31007751937984496
+          }
+        },
+        "motorcycle": {
+          "instances": 20,
+          "ap50": 0.20468621569620954,
+          "ap50_95": 0.0972734392036651,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 3,
+            "fp": 0,
+            "fn": 17,
+            "precision": 1.0,
+            "recall": 0.15
+          }
+        }
+      }
+    },
+    "rain": {
+      "images": 100,
+      "map50_95": 0.31787498561404604,
+      "map50": 0.5748685093608894,
+      "classes": {
+        "car": {
+          "instances": 526,
+          "ap50": 0.7339437463295346,
+          "ap50_95": 0.4981146726480213,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 221,
+            "fp": 5,
+            "fn": 305,
+            "precision": 0.9778761061946902,
+            "recall": 0.42015209125475284
+          }
+        },
+        "motorcycle": {
+          "instances": 12,
+          "ap50": 0.41579327239224434,
+          "ap50_95": 0.13763529858007081,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 5,
+            "fp": 5,
+            "fn": 7,
+            "precision": 0.5,
+            "recall": 0.4166666666666667
+          }
+        }
+      }
+    },
+    "snow": {
+      "images": 100,
+      "map50_95": 0.4253075007333592,
+      "map50": 0.6289790562661633,
+      "classes": {
+        "car": {
+          "instances": 559,
+          "ap50": 0.7149720389979153,
+          "ap50_95": 0.5071966840392408,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 252,
+            "fp": 4,
+            "fn": 307,
+            "precision": 0.984375,
+            "recall": 0.45080500894454384
+          }
+        },
+        "motorcycle": {
+          "instances": 16,
+          "ap50": 0.5429860735344115,
+          "ap50_95": 0.3434183174274776,
+          "operating_point": {
+            "confidence": 0.6,
+            "iou": 0.5,
+            "tp": 7,
+            "fp": 3,
+            "fn": 9,
+            "precision": 0.7,
+            "recall": 0.4375
+          }
+        }
+      }
+    }
+  },
+  "synthetic": {
+    "images": 500,
+    "map50_95": 0.4553765325327013,
+    "map50": 0.6603518756179081,
+    "classes": {
+      "car": {
+        "instances": 541,
+        "ap50": 0.854883778284717,
+        "ap50_95": 0.6798830774355653,
+        "operating_point": {
+          "confidence": 0.6,
+          "iou": 0.5,
+          "tp": 342,
+          "fp": 1,
+          "fn": 199,
+          "precision": 0.9970845481049563,
+          "recall": 0.6321626617375231
+        }
+      },
+      "motorcycle": {
+        "instances": 652,
+        "ap50": 0.46581997295109917,
+        "ap50_95": 0.23086998762983718,
+        "operating_point": {
+          "confidence": 0.6,
+          "iou": 0.5,
+          "tp": 144,
+          "fp": 24,
+          "fn": 508,
+          "precision": 0.8571428571428571,
+          "recall": 0.22085889570552147
+        }
+      }
+    }
+  }
+}
