@@ -10,7 +10,7 @@ We have completed a working pipeline: **generate synthetic training images in Un
 
 This video and the screenshots below were recorded with **v1**. The current default is **v2 with the updated dynamic avoidance controller**; see the [fixed-timing controller comparison](Validation/DynamicAvoidance/RESULTS.md). COCO l and v4l remain selectable.
 
-[Watch the 2-minute demo — MP4, 720p](Validation/Demo/RideReflex-vision-demo.mp4) · [Chinese voiceover script](docs/DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](Validation/Demo/RideReflex-vision-demo.srt)
+[Watch the 2-minute demo — MP4, 1080p](Validation/Demo/RideReflex-Demo-v10-1080p.mp4) · [720p compact version](Validation/Demo/RideReflex-vision-demo.mp4) · [Chinese voiceover script](docs/DEMO_NARRATION_zh-TW.txt) · [Bilingual subtitles](Validation/Demo/RideReflex-vision-demo.srt)
 
 The video follows **digital twin → unassisted collisions and our motivation → trained vision model → Raycast distance sensing → fewer false alarms → dense-fog fallback → UGen300 plans**. It has Chinese / English subtitles, with **no in-game UI or slide screens**. Detection boxes come from actual model outputs. The soundtrack is left open for voiceover.
 
